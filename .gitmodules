@@ -1,0 +1,3 @@
+[submodule "vibe-coding-club"]
+	path = vibe-coding-club
+	url = https://github.com/engineercafe-jp/vibe-coding-club.git

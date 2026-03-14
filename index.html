@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="バイブコーディングクラブ - AIにコーディングを任せて高速に実装するイベント。挑戦者のプロダクト一覧を公開中。">
+  <title>バイブコーディングクラブ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__title">バイブコーディングクラブ</a>
+      <a href="#" class="header__cta" id="headerSignupLink">参加申し込み</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ヒーロー / ファーストビュー -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__heading">バイブコーディング<br>クラブ</h1>
+          <p class="hero__description" id="heroDescription"></p>
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span id="heroSchedule"></span>
+            </div>
+            <div class="hero__meta-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span id="heroLocation"></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn--primary" id="heroSignupBtn">参加申し込み</a>
+        </div>
+        <div class="hero__map">
+          <iframe id="heroMap" src="" width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- オンライン見学 -->
+      <div class="container">
+        <div class="online-viewing">
+          <p class="online-viewing__label">オンライン見学</p>
+          <div class="online-viewing__links" id="onlineViewingLinks"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- イベント詳細（折りたたみ） -->
+    <section class="event-details">
+      <div class="container">
+        <button class="event-details__toggle" id="eventToggle" aria-expanded="false">
+          <span>イベント詳細を見る</span>
+          <svg class="event-details__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="event-details__content" id="eventContent" hidden>
+          <div class="event-details__grid">
+            <div>
+              <h3>タイムライン</h3>
+              <table class="timeline-table" id="timelineTable">
+                <thead><tr><th>時間</th><th>内容</th></tr></thead>
+                <tbody></tbody>
+              </table>
+
+              <h3>挑戦者募集中</h3>
+              <p class="event-details__note">非エンジニアでも上級者でも挑戦可能です。参加登録後に支給する1ヶ月のClaude Code Proプランで、プロダクト開発に取り組んでいただきます。</p>
+
+              <h4>ルール</h4>
+              <ul class="event-details__list" id="rulesList"></ul>
+
+              <h4>メリット</h4>
+              <ul class="event-details__list" id="meritsList"></ul>
+
+              <h3>事前準備</h3>
+              <h4>必須</h4>
+              <ul class="event-details__list" id="prepRequired"></ul>
+              <h4>オプション</h4>
+              <ul class="event-details__list" id="prepOptional"></ul>
+            </div>
+            <div>
+              <h3>講師</h3>
+              <p class="event-details__instructor-name" id="instructorName"></p>
+              <p class="event-details__bio" id="instructorBio"></p>
+
+              <h3>エンジニアカフェ</h3>
+              <p class="event-details__bio" id="venueEngineerCafe"></p>
+
+              <h3>福岡市赤煉瓦文化館</h3>
+              <p class="event-details__bio" id="venueBuilding"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プロダクト一覧 -->
+    <section class="products" id="products">
+      <div class="container">
+        <h2 class="section-title">作品集</h2>
+        <p class="section-subtitle">バイブコーディングクラブで生まれたプロダクト</p>
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- モーダル -->
+  <div class="modal-overlay" id="productModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="閉じる">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-header">
+        <div class="modal-icon" id="modalIcon"></div>
+        <div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-overview" id="modalOverview"></p>
+        </div>
+      </div>
+      <p class="modal-details" id="modalDetails"></p>
+      <div class="modal-tech" id="modalTech"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 バイブコーディングクラブ</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
