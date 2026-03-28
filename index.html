@@ -76,42 +76,52 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .glass-nav { background: rgba(248, 249, 250, 0.8); backdrop-filter: blur(20px); }
         .hero-gradient { background: linear-gradient(135deg, #4800b2 0%, #6200ee 100%); }
+        @keyframes logo-breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+        .logo-breathe { animation: logo-breathe 3.5s ease-in-out infinite; }
     </style>
 </head>
 <body class="bg-surface text-on-surface antialiased">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10">
-<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
-<div class="text-xl font-bold tracking-tighter text-slate-900 font-headline">Vibe Coding Club</div>
-<div class="flex items-center space-x-4 text-sm font-medium">
+<div class="flex justify-between items-center px-4 sm:px-8 py-3 sm:py-6 max-w-7xl mx-auto">
+<div class="text-base sm:text-xl md:text-2xl font-extrabold tracking-tighter text-primary font-headline whitespace-nowrap uppercase">Vibe Coding Club</div>
+<div class="flex items-center space-x-2 sm:space-x-4 text-sm font-medium">
 <a class="text-slate-600 hover:text-primary transition-colors duration-300 hidden sm:block" href="https://i-love-ai.connpass.com/">オンライン見学</a>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-transform active:scale-95 text-xs sm:text-sm" href="https://forms.gle/aWRNPLQWq7Zc9pwo9">挑戦者として申し込む</a>
+<a class="bg-primary text-on-primary px-3 sm:px-6 py-1.5 sm:py-2 rounded-full font-semibold hover:opacity-90 transition-transform active:scale-95 text-xs whitespace-nowrap" href="https://forms.gle/aWRNPLQWq7Zc9pwo9">挑戦者として申し込む</a>
 </div>
 </div>
 </nav>
 <!-- Hero Section -->
-<header class="relative pt-48 pb-24 px-6 overflow-hidden flex flex-col items-center text-center">
+<header class="relative min-h-screen px-6 overflow-hidden flex items-center pt-20 sm:pt-24">
 <div class="absolute inset-0 -z-10 opacity-5">
 <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
 <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-container rounded-full blur-3xl"></div>
 </div>
-<div class="mb-12 transition-transform hover:scale-105 duration-700">
-<img alt="Vibe Coding Club Logo" class="w-64 h-auto md:w-96 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ui4OJx53nyeHaEQ6Fbq3_nqcwmQXmbq2zaDPKffAGbKIgXHaETYGPklUoP9M-W5h0yHWBashIISxuBgAY2j1DdEG87QmJzOw0tGcbWKyvNdPbJjyOKAJVInZeSINH7anN29rTHtZc7WDsuXq6wf4HQDJHrCZHC_I-DMkbE8qNmuAesb1wqsJwdAB-lhRYtTf_bHKcl4mWE64HXh-XRgUeDQse6syjzDei70BJPK9OoNM1k4F90o-NG0o6fTHyHqRqhSDHf_PC_7Lw"/>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+<!-- Left: Logo -->
+<div class="flex justify-center md:justify-end">
+<img alt="Vibe Coding Club Logo" class="w-72 h-auto md:w-full md:max-w-md object-contain logo-breathe" src="asset/vibe-coding-club-logo.png"/>
 </div>
-<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 font-headline leading-tight">
-            AIと、あたらしく創る。
+<!-- Right: Text & CTA -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter mb-6 font-headline leading-tight whitespace-nowrap">
+            AIとプロダクトを作ろう！
         </h1>
-<p class="max-w-2xl text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 font-body">
-            あなたのアイデアを、AIと共に形にする1ヶ月間の集中プロジェクト。<br class="hidden md:block"/>
-            プログラミングの壁を超え、最速でプロダクトを生み出すコミュニティ。
+<p class="max-w-xl text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 font-body" style="line-break: strict; overflow-wrap: anywhere;">
+            Claude Code Proプラン支給！挑戦者募集☆（未経験可）
         </p>
-<div class="flex flex-col sm:flex-row gap-4 items-center">
+<div class="flex flex-col sm:flex-row gap-4 items-center md:items-start">
 <a class="hero-gradient text-on-primary px-10 py-5 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transition-all active:scale-95" href="https://forms.gle/aWRNPLQWq7Zc9pwo9">
                 挑戦者として申し込む
             </a>
 <a class="bg-surface-container-high text-on-surface px-10 py-5 rounded-full text-lg font-bold hover:bg-surface-container-highest transition-all active:scale-95" href="https://i-love-ai.connpass.com/">
                 オンライン見学
             </a>
+</div>
+</div>
 </div>
 </header>
 <!-- Core Benefit Section -->
