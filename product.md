@@ -24,9 +24,9 @@
 
 ## Pet Content Generator
 
-- **概要**: ペットのAI動画・画像生成
-- **詳細**: テーマを入力して、ペット（猫・犬）の癒し系画像やショート動画を自動生成するフルスタックウェブアプリケーション。ReactとTypeScriptで構築したフロントエンドと、FastAPIを使ったPythonバックエンドで構成される。
-- **使用技術**: React, TypeScript, Vite, Tailwind CSS, FastAPI, Python
+- **概要**: テーマ入力だけでペットの画像・縦動画をAI生成
+- **詳細**: 「春のお花見」などのテーマと動物種（猫・犬・ランダム）を選ぶだけで、AIが癒し系画像（最大8枚）やSNS向け縦型ショート動画（1080×1920）を自動生成するフルスタックWebアプリ。生成画像はポラロイド風フレームで表示・ダウンロード可能。画像生成エンジンはGemini API・DALL-E 3・Stability AIをStrategyパターンで切り替えられる設計で、動画はffmpegによるズーム＆フェード合成で仕上げる。将来のSNS自動投稿連携も想定した拡張ポイントが設けられている。
+- **使用技術**: React 18, TypeScript, Vite, Tailwind CSS, FastAPI, Python 3.11, Gemini API, DALL-E 3, Stability AI, ffmpeg, Docker Compose
 - **実装者**: dssakamoto
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/pet_content_generater
@@ -36,9 +36,9 @@
 
 ## BTCタラレバ長者 vs 現実の地獄シミュレーター
 
-- **概要**: BTC投資シナリオ比較ツール
-- **詳細**: BTC-JPY の過去価格データを使い、「夢の理論値」と「手数料・ロスカットによる現実」を3つのシナリオで比較するWebシミュレーター。yfinanceで価格データを取得し、plotlyでインタラクティブなグラフを描画する。
-- **使用技術**: Python, Streamlit, yfinance, plotly, pandas
+- **概要**: レバレッジ取引の夢と地獄を可視化するBTCシミュレーター
+- **詳細**: 過去のBTC-JPY価格データを使い、3つのシナリオ（A「神の現物」毎日安値買い高値売りの理論最大値・B「現実のトレード」手数料+スリッページ適用後・C「レバレッジ・ガチホ」強制ロスカットリスクあり）を同時比較するWebアプリ。初期資金・手数料率・レバレッジ倍率・ロスカット維持率などをサイドバーで自由に設定でき、ローソク足チャート・資産推移グラフ・円グラフ・日次詳細テーブルでリアルタイムに結果を可視化。追証・ロスカット発生時はショッキングな警告ボックスで演出し、過度なレバレッジ取引の危険性を感情的に訴える教育的設計。yfinanceのデータはSQLiteにキャッシュして高速化している。
+- **使用技術**: Python 3.12, Streamlit, yfinance, Plotly, Pandas, SQLite3
 - **実装者**: umino-tori
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/bitc-tarareba
