@@ -84,6 +84,35 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface antialiased">
+<!-- Loading Screen -->
+<div id="loading-screen" style="position:fixed;inset:0;z-index:9999;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.4s ease">
+  <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;color:#888;margin-bottom:1rem;font-family:'SF Mono','Fira Code','Consolas','Courier New',monospace">LOADING...</p>
+  <div style="width:200px;height:3px;background:#e5e7eb;border-radius:9999px;overflow:hidden">
+    <div id="loading-bar" style="height:100%;width:0%;background:#4800b2;border-radius:9999px;transition:width 0.3s ease"></div>
+  </div>
+</div>
+<script>
+(function () {
+  const screen = document.getElementById('loading-screen');
+  const bar = document.getElementById('loading-bar');
+  let progress = 0;
+
+  // Animate bar to ~85% while page loads
+  const interval = setInterval(() => {
+    progress = Math.min(progress + Math.random() * 15, 85);
+    bar.style.width = progress + '%';
+  }, 200);
+
+  window.addEventListener('load', () => {
+    clearInterval(interval);
+    bar.style.width = '100%';
+    setTimeout(() => {
+      screen.style.opacity = '0';
+      setTimeout(() => screen.remove(), 400);
+    }, 300);
+  });
+})();
+</script>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10">
 <div class="flex justify-between items-center px-4 sm:px-8 py-3 sm:py-6 max-w-7xl mx-auto">
