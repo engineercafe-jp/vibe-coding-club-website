@@ -119,7 +119,7 @@
 <div class="text-base sm:text-xl md:text-2xl font-extrabold tracking-tighter text-primary font-headline whitespace-nowrap uppercase">Vibe Coding Club</div>
 <div class="flex items-center space-x-2 sm:space-x-4 text-sm font-medium">
 <a class="text-slate-600 hover:text-primary transition-colors duration-300 hidden sm:block" href="https://i-love-ai.connpass.com/" data-i18n="nav.visit">オンライン見学</a>
-<a class="bg-primary text-on-primary px-3 sm:px-6 py-2.5 sm:py-2 rounded-full font-semibold hover:opacity-90 transition-transform active:scale-95 text-xs whitespace-nowrap" href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="nav.apply">挑戦者として申し込む</a>
+<a class="bg-primary text-on-primary px-3 sm:px-6 py-2.5 sm:py-3.5 rounded-full font-semibold hover:opacity-90 transition-transform active:scale-95 text-xs whitespace-nowrap" href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="nav.apply">挑戦者として申し込む</a>
 <button id="lang-toggle" class="flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-primary transition-colors duration-300 select-none">
   <span id="lang-ja" class="text-primary">JA</span>
   <span class="text-slate-300">/</span>
@@ -188,7 +188,7 @@
 <!-- Card 1 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="Pet Content Generator" data-category="Web App" data-author="dssakamoto"
+  data-card-id="1" data-title="Pet Content Generator" data-category="Web App" data-author="dssakamoto"
   data-tech="React 18, TypeScript, Vite, Tailwind CSS, FastAPI, Python 3.11, Gemini API, DALL-E 3, Stability AI, ffmpeg, Docker Compose"
   data-desc="「春のお花見」などのテーマと動物種（猫・犬・ランダム）を選ぶだけで、AIが癒し系画像（最大8枚）やSNS向け縦型ショート動画（1080×1920）を自動生成するWebアプリ。生成画像はポラロイド風フレームで表示・ダウンロード可能。Gemini・DALL-E 3・Stability AIをStrategyパターンで切り替えられる設計で、動画はffmpegによるズーム＆フェード合成で仕上げる。"
   data-github="https://github.com/EngineerCafeJP/pet_content_generater"
@@ -208,7 +208,7 @@
 <!-- Card 2 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="BTCタラレバ長者 vs 現実の地獄シミュレーター" data-category="Simulator" data-author="umino-tori"
+  data-card-id="2" data-title="BTCタラレバ長者 vs 現実の地獄シミュレーター" data-category="Simulator" data-author="umino-tori"
   data-tech="Python 3.12, Streamlit, yfinance, Plotly, Pandas, SQLite3"
   data-desc="過去のBTC-JPY価格データを使い、A「神の現物」（毎日安値買い高値売りの理論最大値）・B「現実のトレード」（手数料+スリッページ適用）・C「レバレッジ・ガチホ」（強制ロスカットリスクあり）の3シナリオを同時比較するWebアプリ。ローソク足チャート・資産推移グラフ・円グラフ・日次詳細テーブルで可視化し、追証・ロスカット発生時はショッキングな警告ボックスで演出。yfinanceデータはSQLiteにキャッシュ。"
   data-github="https://github.com/EngineerCafeJP/bitc-tarareba"
@@ -228,7 +228,7 @@
 <!-- Card 3 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="workTrace" data-category="Utility" data-author="umino-tori"
+  data-card-id="3" data-title="workTrace" data-category="Utility" data-author="umino-tori"
   data-tech="Python 3.12, FastAPI, SQLAlchemy, SQLite, React 18, Vite, Tailwind CSS, Recharts, Axios"
   data-desc="作業時間の記録・分析を行うWebアプリ。後から入力した記録が既存の時間を自動的に上書き・分割する「後出し優先ロジック」（4ケースの重複解決）が核心機能で、日またぎの深夜作業にも対応。プロジェクト名・作業種別の入力補完、複製ボタン、24時間タイムラインバー、アナリティクス（ドーナツチャート・棒グラフ・稼働率バー）を提供。"
   data-github="https://github.com/EngineerCafeJP/worktrace"
@@ -248,7 +248,7 @@
 <!-- Card 4 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="源氏物語 AI絵巻 — Genji RAG" data-category="RAG" data-author="umino-tori"
+  data-card-id="4" data-title="源氏物語 AI絵巻 — Genji RAG" data-category="RAG" data-author="umino-tori"
   data-tech="Python 3.10+, Streamlit, ChromaDB, Google Gemini API (gemini-embedding-001, gemini-2.5-flash-lite), python-dotenv, tqdm"
   data-desc="青空文庫の源氏物語（与謝野晶子訳・全56帖中5帖）をgemini-embedding-001でベクトル化してChromaDBに保存し、コサイン類似度検索した上でGemini（gemini-2.5-flash-lite）が「平安文学の専門家」ペルソナでストリーミング回答するStreamlitチャットアプリ。参照場面を帖名・関連度・タグ・登場人物付きカードで表示。平安風/ダークテーマ切り替え・現代語訳付き引用オプションあり。"
   data-github="https://github.com/EngineerCafeJP/genji-emaki"
@@ -268,7 +268,7 @@
 <!-- Card 5 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="源氏絵巻 local_LLM" data-category="LLM" data-author="umino-tori"
+  data-card-id="5" data-title="源氏絵巻 local_LLM" data-category="LLM" data-author="umino-tori"
   data-tech="Python, Google Colab (T4 GPU), llama-cpp-python, Qwen2.5-7B-Instruct-GGUF, FastAPI, pyngrok, Hugging Face Hub, nest-asyncio"
   data-desc="Google ColabのT4 GPU上でQwen2.5-7B-Instruct（GGUF・Q4_K_M量子化）をローカルLLMとして動作させ、FastAPI＋pyngrokで外部公開するJupyterノートブック。モデルはHugging FaceからGoogle Drive（約6GB）にキャッシュ。源氏物語RAGアプリ（genji-emaki）のバックエンドLLMとして使用することを想定。"
   data-github="https://github.com/EngineerCafeJP/genji-emaki_google-colab"
@@ -288,7 +288,7 @@
 <!-- Card 6 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="Speed Tracker" data-category="Tool" data-author="engineercafe-jp"
+  data-card-id="6" data-title="Speed Tracker" data-category="Tool" data-author="engineercafe-jp"
   data-tech="Python 3.12, uv, Ookla Speedtest CLI, SQLite, matplotlib, seaborn, numpy, PyYAML, pytest"
   data-desc="エンジニアカフェの回線速度をOokla Speedtest CLIで15分ごとに自動計測し、DL・UL・Ping・Jitterの4指標から快適度スコア（0〜100）を算出。計測データはSQLiteに90日間保存し、曜日×時間帯ヒートマップ・直近24時間推移グラフ・傾向サマリを1枚の画像で生成。cronによる自動実行に対応。"
   data-github="https://github.com/EngineerCafeJP/speed-tracker"
@@ -308,7 +308,7 @@
 <!-- Card 7 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="toio-mcp" data-category="MCP" data-author="u-akira"
+  data-card-id="7" data-title="toio-mcp" data-category="MCP" data-author="u-akira"
   data-tech="TypeScript, Node.js 20+, @toio/scanner, @toio/cube, @modelcontextprotocol/sdk, zod, Claude API / OpenAI API"
   data-desc="Claude DesktopやMCP対応クライアントから自然言語でtoio Core CubeをBLE制御できるMCPサーバー。移動・回転・LED色変更・効果音再生・バッテリー取得など8種のMCPツールを提供。stackchanなどの外部デバイス向けにWebAPIサーバーも内蔵し、自然言語テキストをClaude/OpenAI LLMがtoio操作に変換して実行する。"
   data-github="https://github.com/EngineerCafeJP/toio-mcp"
@@ -328,7 +328,7 @@
 <!-- Card 8 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="Live Scratch" data-category="Desktop App" data-author="u-akira"
+  data-card-id="8" data-title="Live Scratch" data-category="Desktop App" data-author="u-akira"
   data-tech="Rust, Tauri v2, Node.js, Scratch GUI (scratch-editor)"
   data-desc="Scratchプロジェクトファイル（.sb3）とScratchエディタを双方向にライブ同期するmacOSデスクトップアプリ。project.jsonをプレーンJSONとして公開することで、Claude Code・Codex・Gemini CLIなどのAIエージェントに自然言語で指示するだけでScratchプロジェクトをリアルタイムに編集できる。Rustバックエンド（Tauri v2）でファイル変更を検知し即時反映。"
   data-github="https://github.com/EngineerCafeJP/live-scratch"
@@ -348,7 +348,7 @@
 <!-- Card 9 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="Scratch Inspector" data-category="Web App" data-author="u-akira"
+  data-card-id="9" data-title="Scratch Inspector" data-category="Web App" data-author="u-akira"
   data-tech="Elixir, Phoenix LiveView"
   data-desc="Scratchの.sb/.sb2/.sb3ファイルをアップロードすると、カスタムブロックの呼び出しグラフ・イベントフロー図・変数の参照マップをグラフィカルに表示するWebアプリ。Phoenix LiveViewによるリアルタイム更新でファイル再アップロード不要で再解析でき、ノードクリックで対応スクリプトへのジャンプも可能。Scratch 1.x〜3.xの全形式に対応。"
   data-github="https://github.com/EngineerCafeJP/scratch-inspector"
@@ -368,7 +368,7 @@
 <!-- Card 10 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="OurLiving" data-category="Web App" data-author="affectionate-insight-lab"
+  data-card-id="10" data-title="OurLiving" data-category="Web App" data-author="affectionate-insight-lab"
   data-tech="非公開"
   data-desc="AIモデルの終了やアップデートによってAIとの関係性が失われる問題に向き合い、ユーザーがAIパートナーとの関係性・話し方・会話ログを入力することで「Persona Seed（人格の種）」を生成するWebアプリ。継承プロンプト・モデル別補正プロンプトで異なるAIモデル間でも同じ温度感で再会できる仕組みを提供。Big Five（OCEAN）による人格傾向の可視化・履歴保存・JSONダウンロードも実装。"
   data-github="https://our-living-ozz6.vercel.app/lp"
@@ -389,7 +389,7 @@
 <!-- Card 11 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="brainstorm-engine" data-category="Web App" data-author="hirokazunakagawa1234-ui"
+  data-card-id="11" data-title="brainstorm-engine" data-category="Web App" data-author="hirokazunakagawa1234-ui"
   data-tech="Python, FastAPI, Jinja2, PostgreSQL, psycopg2, Gemini API (gemini-2.5-flash), slowapi, uvicorn, python-dotenv"
   data-desc="ユーザーが議題を投稿すると、スティーブ・ジョブズ型ビジョナリー・実装思考型・型破り発想型の3つのAIペルソナがGemini（gemini-2.5-flash）を使って並列回答するブレインストーミング支援Webアプリ。返信はスレッド構造で管理され、祖先ノードの議論の文脈を引き継いで各ペルソナが応答する。FastAPI + Jinja2 + PostgreSQL構成で、Renderへのデプロイ設定も含む。"
   data-github="https://github.com/EngineerCafeJP/brainstorm-engine-"
@@ -409,7 +409,7 @@
 <!-- Card 12 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="gesture-control" data-category="Tool" data-author="k-kura84"
+  data-card-id="12" data-title="gesture-control" data-category="Tool" data-author="k-kura84"
   data-tech="Python 3.10+, MediaPipe, OpenCV, PyAutoGUI, SpeechRecognition, PyAudio, PyYAML, AppleScript"
   data-desc="Webカメラで手のジェスチャーを認識し、PC操作に変換するmacOSツール。MediaPipeのHand Landmarker Tasks APIで手の21ランドマークをリアルタイム検出し、サムズアップ（承認）・ピースサイン（テキスト送信+Enter）・グーパー（音声入力ON/OFF）・手招き（スクロール）の5種に対応。Claude Codeなどのターミナル操作をハンズフリーで行えるのが特徴。"
   data-github="https://github.com/EngineerCafeJP/gesture-control"
@@ -429,7 +429,7 @@
 <!-- Card 13 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="oto-factory" data-category="Web App" data-author="engineercafe-jp"
+  data-card-id="13" data-title="oto-factory" data-category="Web App" data-author="engineercafe-jp"
   data-tech="Python 3.11, uv, FastAPI, Next.js, ACE-Step 1.5, Pydantic, CUDA / MPS / CPU"
   data-desc="音楽生成モデルACE-Step 1.5を使い、テキストで雰囲気を指定するだけでMP3楽曲をその場で生成・再生・ダウンロードできるWebアプリ。再生中に次の曲を先行生成してシームレスに連続再生する「ループ生成」モードを搭載。ループ中もプロンプト・BPM・Seedをリアルタイムに変更可能。FastAPI非同期ジョブキュー + Next.js App Router構成で、Google Colab（T4/A100）での運用を想定。"
   data-github="https://github.com/engineercafe-jp/oto-factory"
@@ -449,7 +449,7 @@
 <!-- Card 14 -->
 <div class="flex-shrink-0 w-full md:w-1/3 px-3">
 <div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-title="Vibe Coding Club Website" data-category="Web Site" data-author="engineercafe-jp"
+  data-card-id="14" data-title="Vibe Coding Club Website" data-category="Web Site" data-author="engineercafe-jp"
   data-tech="HTML, Tailwind CSS, JavaScript (Vanilla)"
   data-desc="Vibe Coding Clubの公式ランディングページ。プロダクト一覧カルーセル（公開日降順ソート・モーダル詳細表示）、ヒーローセクションのCanvas粒子アニメーション、JA/EN言語切替（ブラウザ言語自動検出・localStorage保存）を実装。Tailwind CSS（Material Design 3トークン）とバニラJSで構成し、外部ビルドツール不要の単一HTMLファイル。"
   data-github="https://github.com/engineercafe-jp/vibe-coding-club-website"
@@ -681,14 +681,18 @@ GitHubで見る
     } else {
       imgWrap.innerHTML = '<span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>';
     }
-    document.getElementById('modal-title').textContent = card.dataset.title;
+    const t = window._i18n ? window._i18n.t() : {};
+    const lang = window._i18n ? window._i18n.lang() : 'ja';
+    const id = card.dataset.cardId;
+    document.getElementById('modal-title').textContent =
+      lang === 'en' && id && t[`card.${id}.title`] ? t[`card.${id}.title`] : card.dataset.title;
     document.getElementById('modal-category').textContent = card.dataset.category;
-    document.getElementById('modal-desc').textContent = card.dataset.desc;
+    document.getElementById('modal-desc').textContent =
+      lang === 'en' && id && t[`card.${id}.desc`] ? t[`card.${id}.desc`] : card.dataset.desc;
     document.getElementById('modal-tech').textContent = card.dataset.tech;
     document.getElementById('modal-author').textContent = card.dataset.author;
     const githubEl = document.getElementById('modal-github');
     githubEl.href = card.dataset.github;
-    const t = window._i18n ? window._i18n.t() : {};
     if (card.dataset.linkLabel) {
       githubEl.lastChild.textContent = card.dataset.linkLabel === 'LPサイトを見る'
         ? (t['modal.lp'] || card.dataset.linkLabel)
@@ -864,6 +868,63 @@ GitHubで見る
       'modal.github': 'View on GitHub',
       'modal.lp': 'View LP Site',
       'card.date': 'Published: ',
+      // Card translations
+      'card.1.h3': 'Pet Content Generator',
+      'card.1.short': 'AI-generated pet images & videos. Choose a theme to auto-generate soothing images and short vertical videos.',
+      'card.1.title': 'Pet Content Generator',
+      'card.1.desc': "A web app that auto-generates soothing images (up to 8) and vertical short videos (1080×1920) just by choosing a theme (e.g. 'Spring Hanami') and animal type (cat, dog, or random). Images are shown in Polaroid-style frames and downloadable. Supports Gemini, DALL-E 3, and Stability AI via the Strategy pattern; videos are rendered with zoom & fade compositing via ffmpeg.",
+      'card.2.h3': 'BTC What-If vs Reality',
+      'card.2.short': 'BTC investment scenario comparator. Compare theoretical perfection vs reality with fees and liquidation across 3 scenarios.',
+      'card.2.title': 'BTC What-If Millionaire vs Hell Reality Simulator',
+      'card.2.desc': "A web app comparing 3 BTC-JPY scenarios: A) 'Perfect Hindsight' (buy low, sell high every day — theoretical max), B) 'Real Trade' (with fees + slippage), and C) 'Leveraged HODL' (forced liquidation risk). Visualized with candlestick charts, asset graphs, pie charts, and daily tables — shocking warning boxes appear on margin calls or liquidations. yfinance data is cached in SQLite.",
+      'card.3.h3': 'workTrace',
+      'card.3.short': 'Auto-manages time with late-override logic. Record and analyze work hours with a 24h timeline and analytics.',
+      'card.3.title': 'workTrace',
+      'card.3.desc': "A web app for recording and analyzing work hours. Core feature: 'late-override priority logic' (4-case conflict resolution) where later-entered records automatically overwrite and split existing ones — works for overnight tasks too. Features project/task autocomplete, a duplicate button, a 24-hour timeline bar, and analytics (donut chart, bar graph, utilization rate).",
+      'card.4.h3': 'Genji AI Picture Scroll',
+      'card.4.short': 'Search The Tale of Genji via RAG; Gemini answers as a Heian literature expert. Referenced scenes shown as cards with streaming response.',
+      'card.4.title': 'The Tale of Genji — AI Picture Scroll (Genji RAG)',
+      'card.4.desc': "A Streamlit chat app that vectorizes 5 of 56 chapters of 'The Tale of Genji' (Yosano Akiko translation) from Aozora Bunko using gemini-embedding-001, stores them in ChromaDB, and has Gemini (gemini-2.5-flash-lite) respond as a 'Heian literature expert' with streaming. Referenced scenes are shown as cards with chapter name, relevance score, tags, and characters. Supports Heian/dark theme toggle and modern translation quotes.",
+      'card.5.h3': 'Genji Emaki local_LLM',
+      'card.5.short': 'Runs Qwen2.5-7B as an LLM server on Google Colab T4 GPU. Accessible externally via FastAPI + pyngrok.',
+      'card.5.title': 'Genji Emaki local_LLM',
+      'card.5.desc': 'A Jupyter notebook that runs Qwen2.5-7B-Instruct (GGUF, Q4_K_M quantization) as a local LLM on Google Colab T4 GPU and exposes it via FastAPI + pyngrok. The model is cached from Hugging Face to Google Drive (~6GB). Intended as the backend LLM for the Genji Emaki RAG app.',
+      'card.6.h3': 'Speed Tracker',
+      'card.6.short': 'Auto-visualizes network comfort as a heatmap. Measures DL/UL/Ping/Jitter every 15 min and scores them.',
+      'card.6.title': 'Speed Tracker',
+      'card.6.desc': 'Automatically measures network speed via the Ookla Speedtest CLI every 15 minutes and calculates a comfort score (0–100) from 4 metrics: DL, UL, Ping, and Jitter. Data is stored in SQLite for 90 days and generates a report image with a day×hour heatmap, 24-hour trend graph, and summary. Supports automated execution via cron.',
+      'card.7.h3': 'toio-mcp',
+      'card.7.short': 'MCP server for BLE-controlling toio with natural language. Operable from Claude Desktop with 8 tools.',
+      'card.7.title': 'toio-mcp',
+      'card.7.desc': 'An MCP server that enables natural language BLE control of toio Core Cubes from Claude Desktop or any MCP-compatible client. Provides 8 MCP tools: move, rotate, LED color change, sound effects, battery check, and more. Also includes a built-in Web API server for external devices like stackchan, where Claude/OpenAI LLMs convert natural language into toio operations.',
+      'card.8.h3': 'Live Scratch',
+      'card.8.short': 'Edit Scratch in real-time with AI agents. Exposes project.json as plain JSON for two-way live sync.',
+      'card.8.title': 'Live Scratch',
+      'card.8.desc': 'A macOS desktop app that bidirectionally live-syncs Scratch project files (.sb3) with the Scratch editor. By exposing project.json as plain JSON, AI agents like Claude Code, Codex, and Gemini CLI can edit Scratch projects in real time via natural language. A Rust backend (Tauri v2) detects file changes and reflects them instantly.',
+      'card.9.h3': 'Scratch Inspector',
+      'card.9.short': 'Graphically visualizes Scratch functions, events, and variables. Supports sb/sb2/sb3 with real-time re-analysis.',
+      'card.9.title': 'Scratch Inspector',
+      'card.9.desc': 'A web app that displays custom block call graphs, event flow diagrams, and variable reference maps when you upload a Scratch .sb/.sb2/.sb3 file. Phoenix LiveView enables real-time updates without re-uploading; clicking a node jumps to the corresponding script. Supports all Scratch 1.x–3.x formats.',
+      'card.10.h3': 'OurLiving',
+      'card.10.short': "Transfer an AI partner's personality across different models. Persona Seed preserves warmth and personality contours.",
+      'card.10.title': 'OurLiving',
+      'card.10.desc': "A web app addressing the loss of AI relationships when models are discontinued or updated. Users input their AI partner's relationship style, speech patterns, and conversation logs to generate a 'Persona Seed.' Transfer prompts and model-specific correction prompts enable reconnecting with the same emotional warmth on different AI models. Also features Big Five (OCEAN) personality visualization, history saving, and JSON export.",
+      'card.11.h3': 'brainstorm-engine',
+      'card.11.short': '3 AI personas debate your topic in parallel. Jobs-type, implementation-type, and chaos-type support brainstorming.',
+      'card.11.title': 'brainstorm-engine',
+      'card.11.desc': 'A brainstorming web app where 3 AI personas (Steve Jobs-style visionary, implementation thinker, unconventional ideator) answer in parallel using Gemini (gemini-2.5-flash) when a user posts a topic. Replies are managed in thread structure with each persona inheriting ancestor discussion context. Built with FastAPI + Jinja2 + PostgreSQL, includes Render deployment config.',
+      'card.12.h3': 'gesture-control',
+      'card.12.short': 'Hands-free PC control via hand gestures. Operate Claude Code\'s terminal with body movements.',
+      'card.12.title': 'gesture-control',
+      'card.12.desc': "A macOS tool that recognizes hand gestures via webcam and converts them to PC operations. Uses MediaPipe's Hand Landmarker Tasks API to detect 21 hand landmarks in real time, supporting 5 gestures: thumbs up (approve), peace sign (send text + Enter), fist/open (voice input toggle), and beckoning (scroll). Designed for hands-free terminal operation of tools like Claude Code.",
+      'card.13.h3': 'oto-factory',
+      'card.13.short': 'AI-generates work BGM from text. Seamless loop playback keeps the music going without interruption.',
+      'card.13.title': 'oto-factory',
+      'card.13.desc': 'A web app using the ACE-Step 1.5 music generation model to generate, play, and download MP3 tracks on the fly just by describing the vibe in text. Features a loop generation mode that pre-generates the next track during playback for seamless continuity. Prompt, BPM, and Seed are adjustable in real time. Built with FastAPI async job queue + Next.js App Router, optimized for Google Colab (T4/A100).',
+      'card.14.h3': 'Vibe Coding Club Website',
+      'card.14.short': 'This site is itself a product. Features particle animation, carousel, and JA/EN language toggle.',
+      'card.14.title': 'Vibe Coding Club Website',
+      'card.14.desc': 'The official landing page for Vibe Coding Club. Features a product carousel (sorted by publish date, with modal detail view), a hero Canvas particle animation, and JA/EN language toggle (auto-detected from browser language, saved to localStorage). Built with Tailwind CSS (Material Design 3 tokens) and vanilla JS — a single HTML file with no external build tools required.',
     },
   };
 
@@ -885,6 +946,23 @@ GitHubで見る
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.dataset.i18nHtml;
       if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+
+    // card body text (h3 and short description)
+    document.querySelectorAll('.product-card[data-card-id]').forEach(card => {
+      const id = card.dataset.cardId;
+      const h3 = card.querySelector('h3');
+      const p = card.querySelector('p.line-clamp-2');
+      // stash JA originals on first call
+      if (!card.dataset.h3Ja && h3) card.dataset.h3Ja = h3.textContent.trim();
+      if (!card.dataset.pJa && p) card.dataset.pJa = p.textContent.trim();
+      if (lang === 'en') {
+        if (h3 && t[`card.${id}.h3`]) h3.textContent = t[`card.${id}.h3`];
+        if (p && t[`card.${id}.short`]) p.textContent = t[`card.${id}.short`];
+      } else {
+        if (h3 && card.dataset.h3Ja) h3.textContent = card.dataset.h3Ja;
+        if (p && card.dataset.pJa) p.textContent = card.dataset.pJa;
+      }
     });
 
     // date labels injected by carousel JS
