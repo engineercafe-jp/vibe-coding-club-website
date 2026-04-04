@@ -20,6 +20,28 @@
 
 ---
 
+## Vibe Coding Club Website
+
+- **概要**: バイブコーディングクラブの公式ウェブサイト
+- **詳細**: Vibe Coding Clubのランディングページ。プロダクト一覧カルーセル（公開日降順ソート・モーダル詳細表示）、ヒーローセクションのCanvas粒子アニメーション、JA/EN言語切替（ブラウザ言語自動検出・localStorage保存）を実装。Tailwind CSS（Material Design 3トークン）とバニラJSで構成し、外部ビルドツール不要の単一HTMLファイル。
+- **使用技術**: HTML, Tailwind CSS, JavaScript (Vanilla)
+- **実装者**: engineercafe-jp
+- **登録日時**: 2026-04-04
+- **GitHub URL**: https://github.com/engineercafe-jp/vibe-coding-club-website
+
+---
+
+## oto-factory
+
+- **概要**: テキストプロンプトから作業用BGMをAI生成するWebアプリ
+- **詳細**: 音楽生成モデルACE-Step 1.5を使い、テキストで雰囲気を指定するだけでMP3楽曲をその場で生成・再生・ダウンロードできるWebアプリ。単発生成のほか、再生中に次の曲を先行生成してシームレスに連続再生する「ループ生成」モードを搭載。ループ中もプロンプト・BPM・Seedをリアルタイムに変更でき、次の生成から反映される。バックエンドはFastAPI（非同期ジョブキュー・インメモリジョブストア）、フロントエンドはNext.js App Routerで構成。生成状況はポーリングでリアルタイム表示し、CUDA/MPS/CPUを自動選択してGPU推論する。Google Colab（T4/A100）での運用を想定し、SSHポートフォワーディングでローカルマシンから接続できる構成。
+- **使用技術**: Python 3.11, uv, FastAPI, Next.js, ACE-Step 1.5, Pydantic, CUDA / MPS / CPU
+- **実装者**: engineercafe-jp
+- **登録日時**: 2026-04-04
+- **GitHub URL**: https://github.com/engineercafe-jp/oto-factory
+
+---
+
 ## brainstorm-engine
 
 - **概要**: 議題に3つのAIペルソナが並列討論するブレスト支援Webアプリ
