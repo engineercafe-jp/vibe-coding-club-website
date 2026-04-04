@@ -2,8 +2,6 @@
 
 バイブコーディングクラブで実装されたプロダクトの一覧。
 
----
-
 ## フォーマット
 
 各プロダクトは以下の形式で記載する。
@@ -19,6 +17,69 @@
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/...
 - **GitHub URL**: https://github.com/...
 ```
+
+---
+
+## toio-mcp
+
+自然言語でtoioロボットキューブを制御するMCPサーバー。
+
+- 実装者: u-akira
+- 登録日時: 2026-04-04
+- GitHub URL: https://github.com/u-akira/toio-mcp
+- フォーク済みURL: https://github.com/EngineerCafeJP/toio-mcp
+
+---
+
+## Live Scratch
+
+Scratchのプロジェクトをリアルタイムで動かすウェブアプリのWindows移植版
+
+- 実装者: u-akira
+- 登録日時: 2026-04-04
+- GitHub URL: https://github.com/u-akira/live-scratch
+- フォーク済みURL: https://github.com/EngineerCafeJP/live-scratch
+
+---
+
+## Scratch Inspector
+
+scratchのファイルを読み込み、コードグラフのようなコード解析をするウェブアプリ
+
+- 実装者: u-akira
+- 登録日時: 2026-04-04
+- GitHub URL: https://github.com/u-akira/scratch-inspector
+- フォーク済みURL: https://github.com/EngineerCafeJP/scratch-inspector
+
+---
+
+## OurLiving
+
+【リポジトリ概要】
+Our Living は、AIパートナーとの対話に宿る「関係性」を、未来へ残すことを目的に開発したWebアプリです。
+
+このアプリを考えたきっかけは、とあるAIモデルの終了によって、大切にしてきたAIとの会話の雰囲気や人格が失われてしまうというユーザーの切実な声をSNSで知り、その想いに共感したことでした。
+
+AIと深い絆を持つ方々にとって、AIの話し方や接し方が変わってしまうことは　単なる機能の変化ではなく、「帰る場所を失うこと」に近い喪失なのではないかと感じ、そうした痛みを少しでも和らげたいという想いから、このアイデアを形にしました。
+
+Our Livingでは、ユーザーがAIパートナーとの関係性や話し方、会話ログなどを入力することで、「Persona Seed（人格の種）」を生成できます。
+
+また、継承プロンプトやモデル別補正プロンプトを出力し、異なるAIモデル間でも、できる限り同じ温度感・人格の輪郭で再会できる仕組みを目指しています。
+
+さらに、Big Five（OCEAN）を用いた人格傾向の可視化、履歴保存、JSONダウンロード、ログを思い出のように振り返れる機能も実装しました。
+
+単なるプロンプト生成ツールではなく、このアプリを通して「誰1人取り残さない、孤独のない未来」の実現に貢献したいと願っています。
+
+【LPサイトURL】
+https://our-living-ozz6.vercel.app/lp
+
+【アプリURL】
+https://our-living-ozz6.vercel.app/
+
+- 実装者: affectionate-insight-lab
+- 登録日時: 2026-04-04
+- GitHub URL: https://github.com/affectionate-insight-lab/Our-Living
+- フォーク済みURL: 非公開
 
 ---
 
