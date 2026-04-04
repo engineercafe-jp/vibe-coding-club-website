@@ -96,10 +96,7 @@
 </nav>
 <!-- Hero Section -->
 <header class="relative min-h-screen px-6 overflow-hidden flex items-center pt-20 sm:pt-24">
-<div class="absolute inset-0 -z-10 opacity-5">
-<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
-<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-container rounded-full blur-3xl"></div>
-</div>
+<canvas id="hero-canvas" class="absolute inset-0 -z-10 w-full h-full"></canvas>
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 <!-- Left: Logo -->
 <div class="flex justify-center md:justify-end">
@@ -160,7 +157,7 @@
   data-title="Pet Content Generator" data-category="Web App" data-author="dssakamoto"
   data-tech="React 18, TypeScript, Vite, Tailwind CSS, FastAPI, Python 3.11, Gemini API, DALL-E 3, Stability AI, ffmpeg, Docker Compose"
   data-desc="「春のお花見」などのテーマと動物種（猫・犬・ランダム）を選ぶだけで、AIが癒し系画像（最大8枚）やSNS向け縦型ショート動画（1080×1920）を自動生成するWebアプリ。生成画像はポラロイド風フレームで表示・ダウンロード可能。Gemini・DALL-E 3・Stability AIをStrategyパターンで切り替えられる設計で、動画はffmpegによるズーム＆フェード合成で仕上げる。"
-  data-github="https://github.com/dssakamoto/pet_content_generater"
+  data-github="https://github.com/EngineerCafeJP/pet_content_generater"
   data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
 <img alt="Pet Content Generator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/pet_content_generator.png"/>
@@ -180,7 +177,7 @@
   data-title="BTCタラレバ長者 vs 現実の地獄シミュレーター" data-category="Simulator" data-author="umino-tori"
   data-tech="Python 3.12, Streamlit, yfinance, Plotly, Pandas, SQLite3"
   data-desc="過去のBTC-JPY価格データを使い、A「神の現物」（毎日安値買い高値売りの理論最大値）・B「現実のトレード」（手数料+スリッページ適用）・C「レバレッジ・ガチホ」（強制ロスカットリスクあり）の3シナリオを同時比較するWebアプリ。ローソク足チャート・資産推移グラフ・円グラフ・日次詳細テーブルで可視化し、追証・ロスカット発生時はショッキングな警告ボックスで演出。yfinanceデータはSQLiteにキャッシュ。"
-  data-github="https://github.com/umino-tori/bitc-tarareba"
+  data-github="https://github.com/EngineerCafeJP/bitc-tarareba"
   data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
 <img alt="BTCタラレバ長者 vs 現実の地獄シミュレーター" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/bitc-tarareba.png"/>
@@ -200,7 +197,7 @@
   data-title="workTrace" data-category="Utility" data-author="umino-tori"
   data-tech="Python 3.12, FastAPI, SQLAlchemy, SQLite, React 18, Vite, Tailwind CSS, Recharts, Axios"
   data-desc="作業時間の記録・分析を行うWebアプリ。後から入力した記録が既存の時間を自動的に上書き・分割する「後出し優先ロジック」（4ケースの重複解決）が核心機能で、日またぎの深夜作業にも対応。プロジェクト名・作業種別の入力補完、複製ボタン、24時間タイムラインバー、アナリティクス（ドーナツチャート・棒グラフ・稼働率バー）を提供。"
-  data-github="https://github.com/umino-tori/worktrace"
+  data-github="https://github.com/EngineerCafeJP/worktrace"
   data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -220,7 +217,7 @@
   data-title="源氏物語 AI絵巻 — Genji RAG" data-category="RAG" data-author="umino-tori"
   data-tech="Python 3.10+, Streamlit, ChromaDB, Google Gemini API (gemini-embedding-001, gemini-2.5-flash-lite), python-dotenv, tqdm"
   data-desc="青空文庫の源氏物語（与謝野晶子訳・全56帖中5帖）をgemini-embedding-001でベクトル化してChromaDBに保存し、コサイン類似度検索した上でGemini（gemini-2.5-flash-lite）が「平安文学の専門家」ペルソナでストリーミング回答するStreamlitチャットアプリ。参照場面を帖名・関連度・タグ・登場人物付きカードで表示。平安風/ダークテーマ切り替え・現代語訳付き引用オプションあり。"
-  data-github="https://github.com/umino-tori/genji-emaki"
+  data-github="https://github.com/EngineerCafeJP/genji-emaki"
   data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -240,7 +237,7 @@
   data-title="源氏絵巻 local_LLM" data-category="LLM" data-author="umino-tori"
   data-tech="Python, Google Colab (T4 GPU), llama-cpp-python, Qwen2.5-7B-Instruct-GGUF, FastAPI, pyngrok, Hugging Face Hub, nest-asyncio"
   data-desc="Google ColabのT4 GPU上でQwen2.5-7B-Instruct（GGUF・Q4_K_M量子化）をローカルLLMとして動作させ、FastAPI＋pyngrokで外部公開するJupyterノートブック。モデルはHugging FaceからGoogle Drive（約6GB）にキャッシュ。源氏物語RAGアプリ（genji-emaki）のバックエンドLLMとして使用することを想定。"
-  data-github="https://github.com/umino-tori/genji-emaki_google-colab"
+  data-github="https://github.com/EngineerCafeJP/genji-emaki_google-colab"
   data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -260,7 +257,7 @@
   data-title="Speed Tracker" data-category="Tool" data-author="engineercafe-jp"
   data-tech="Python 3.12, uv, Ookla Speedtest CLI, SQLite, matplotlib, seaborn, numpy, PyYAML, pytest"
   data-desc="エンジニアカフェの回線速度をOokla Speedtest CLIで15分ごとに自動計測し、DL・UL・Ping・Jitterの4指標から快適度スコア（0〜100）を算出。計測データはSQLiteに90日間保存し、曜日×時間帯ヒートマップ・直近24時間推移グラフ・傾向サマリを1枚の画像で生成。cronによる自動実行に対応。"
-  data-github="https://github.com/engineercafe-jp/speed-tracker"
+  data-github="https://github.com/EngineerCafeJP/speed-tracker"
   data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -280,7 +277,7 @@
   data-title="toio-mcp" data-category="MCP" data-author="u-akira"
   data-tech="TypeScript, Node.js 20+, @toio/scanner, @toio/cube, @modelcontextprotocol/sdk, zod, Claude API / OpenAI API"
   data-desc="Claude DesktopやMCP対応クライアントから自然言語でtoio Core CubeをBLE制御できるMCPサーバー。移動・回転・LED色変更・効果音再生・バッテリー取得など8種のMCPツールを提供。stackchanなどの外部デバイス向けにWebAPIサーバーも内蔵し、自然言語テキストをClaude/OpenAI LLMがtoio操作に変換して実行する。"
-  data-github="https://github.com/u-akira/toio-mcp"
+  data-github="https://github.com/EngineerCafeJP/toio-mcp"
   data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -300,7 +297,7 @@
   data-title="Live Scratch" data-category="Desktop App" data-author="u-akira"
   data-tech="Rust, Tauri v2, Node.js, Scratch GUI (scratch-editor)"
   data-desc="Scratchプロジェクトファイル（.sb3）とScratchエディタを双方向にライブ同期するmacOSデスクトップアプリ。project.jsonをプレーンJSONとして公開することで、Claude Code・Codex・Gemini CLIなどのAIエージェントに自然言語で指示するだけでScratchプロジェクトをリアルタイムに編集できる。Rustバックエンド（Tauri v2）でファイル変更を検知し即時反映。"
-  data-github="https://github.com/u-akira/live-scratch"
+  data-github="https://github.com/EngineerCafeJP/live-scratch"
   data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -320,7 +317,7 @@
   data-title="Scratch Inspector" data-category="Web App" data-author="u-akira"
   data-tech="Elixir, Phoenix LiveView"
   data-desc="Scratchの.sb/.sb2/.sb3ファイルをアップロードすると、カスタムブロックの呼び出しグラフ・イベントフロー図・変数の参照マップをグラフィカルに表示するWebアプリ。Phoenix LiveViewによるリアルタイム更新でファイル再アップロード不要で再解析でき、ノードクリックで対応スクリプトへのジャンプも可能。Scratch 1.x〜3.xの全形式に対応。"
-  data-github="https://github.com/u-akira/scratch-inspector"
+  data-github="https://github.com/EngineerCafeJP/scratch-inspector"
   data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -361,7 +358,7 @@
   data-title="brainstorm-engine" data-category="Web App" data-author="hirokazunakagawa1234-ui"
   data-tech="Python, FastAPI, Jinja2, PostgreSQL, psycopg2, Gemini API (gemini-2.5-flash), slowapi, uvicorn, python-dotenv"
   data-desc="ユーザーが議題を投稿すると、スティーブ・ジョブズ型ビジョナリー・実装思考型・型破り発想型の3つのAIペルソナがGemini（gemini-2.5-flash）を使って並列回答するブレインストーミング支援Webアプリ。返信はスレッド構造で管理され、祖先ノードの議論の文脈を引き継いで各ペルソナが応答する。FastAPI + Jinja2 + PostgreSQL構成で、Renderへのデプロイ設定も含む。"
-  data-github="https://github.com/hirokazunakagawa1234-ui/brainstorm-engine-"
+  data-github="https://github.com/EngineerCafeJP/brainstorm-engine-"
   data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -381,7 +378,7 @@
   data-title="gesture-control" data-category="Tool" data-author="k-kura84"
   data-tech="Python 3.10+, MediaPipe, OpenCV, PyAutoGUI, SpeechRecognition, PyAudio, PyYAML, AppleScript"
   data-desc="Webカメラで手のジェスチャーを認識し、PC操作に変換するmacOSツール。MediaPipeのHand Landmarker Tasks APIで手の21ランドマークをリアルタイム検出し、サムズアップ（承認）・ピースサイン（テキスト送信+Enter）・グーパー（音声入力ON/OFF）・手招き（スクロール）の5種に対応。Claude Codeなどのターミナル操作をハンズフリーで行えるのが特徴。"
-  data-github="https://github.com/k-kura84/gesture-control"
+  data-github="https://github.com/EngineerCafeJP/gesture-control"
   data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
@@ -632,6 +629,85 @@ GitHubで見る
   closeBtn.addEventListener('click', closeModal);
   backdrop.addEventListener('click', closeModal);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+})();
+</script>
+<script>
+(function () {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+
+  const NODE_COUNT = 55;
+  const CONNECTION_DIST = 160;
+  const NODE_COLOR = 'rgba(99, 102, 241, ';   // indigo-ish, matches primary
+  const LINE_COLOR  = 'rgba(99, 102, 241, ';
+
+  let nodes = [];
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  function initNodes() {
+    nodes = Array.from({ length: NODE_COUNT }, () => ({
+      x:  Math.random() * canvas.width,
+      y:  Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      r:  Math.random() * 2 + 1.5,
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // connections
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < CONNECTION_DIST) {
+          const alpha = (1 - dist / CONNECTION_DIST) * 0.18;
+          ctx.beginPath();
+          ctx.strokeStyle = LINE_COLOR + alpha + ')';
+          ctx.lineWidth = 1;
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // nodes
+    for (const n of nodes) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = NODE_COLOR + '0.25)';
+      ctx.fill();
+    }
+  }
+
+  function update() {
+    for (const n of nodes) {
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
+      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+    }
+  }
+
+  function loop() {
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  resize();
+  initNodes();
+  loop();
+
+  window.addEventListener('resize', () => { resize(); initNodes(); });
 })();
 </script>
 <!-- Footer -->
