@@ -22,64 +22,49 @@
 
 ## toio-mcp
 
-自然言語でtoioロボットキューブを制御するMCPサーバー。
-
-- 実装者: u-akira
-- 登録日時: 2026-04-04
-- GitHub URL: https://github.com/u-akira/toio-mcp
-- フォーク済みURL: https://github.com/EngineerCafeJP/toio-mcp
+- **概要**: 自然言語でtoioロボットキューブを操作するMCPサーバー
+- **詳細**: Claude DesktopやMCP対応クライアントから自然言語でtoio Core CubeをBLE制御できるMCPサーバー。toio.js（`@toio/scanner` + `@toio/cube`）経由でBLE接続し、移動・回転・LED色変更・効果音再生・バッテリー取得など8種のMCPツールを提供する。stackchanなどの外部デバイス向けにWebAPIサーバーも内蔵しており、`POST /api/chat`に自然言語テキストを送るとClaude/OpenAI LLMがtoio操作に変換して実行する。LLMを介さず直接ツールを呼び出す`POST /api/tools/:name`エンドポイントも用意。Windows環境ではnobleをWinRT BLE対応の`@abandonware/noble`に差し替えることで動作する。
+- **使用技術**: TypeScript, Node.js 20+, @toio/scanner, @toio/cube, @modelcontextprotocol/sdk, zod, Claude API / OpenAI API
+- **実装者**: u-akira
+- **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/toio-mcp
+- **GitHub URL**: https://github.com/u-akira/toio-mcp
 
 ---
 
 ## Live Scratch
 
-Scratchのプロジェクトをリアルタイムで動かすウェブアプリのWindows移植版
-
-- 実装者: u-akira
-- 登録日時: 2026-04-04
-- GitHub URL: https://github.com/u-akira/live-scratch
-- フォーク済みURL: https://github.com/EngineerCafeJP/live-scratch
+- **概要**: AIエージェントでScratchをリアルタイム編集できるmacOSデスクトップアプリ
+- **詳細**: Scratchプロジェクトファイル（`.sb3`）とScratchエディタを双方向にライブ同期するmacOSデスクトップアプリ。`~/Documents/Live Scratch/`にproject.jsonをプレーンJSONとして公開することで、Claude Code・Codex・Gemini CLIなどのAIエージェントに自然言語で指示するだけでScratchプロジェクトをリアルタイムに編集できる。Rustバックエンド（Tauri v2）がファイル変更を検知してSB3をビルドしWebViewのScratchエディタに即時反映し、エディタ側の変更も1秒デバウンスでワークスペースへ書き戻す双方向同期を実現。無限ループ防止機構も実装済み。macOS 10.15以降・Apple Silicon/Intel対応で、dmgで配布される。
+- **使用技術**: Rust, Tauri v2, Node.js, Scratch GUI (scratch-editor)
+- **実装者**: u-akira
+- **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/live-scratch
+- **GitHub URL**: https://github.com/u-akira/live-scratch
 
 ---
 
 ## Scratch Inspector
 
-scratchのファイルを読み込み、コードグラフのようなコード解析をするウェブアプリ
-
-- 実装者: u-akira
-- 登録日時: 2026-04-04
-- GitHub URL: https://github.com/u-akira/scratch-inspector
-- フォーク済みURL: https://github.com/EngineerCafeJP/scratch-inspector
+- **概要**: Scratchプロジェクトの関数・イベント・変数をグラフ可視化
+- **詳細**: Scratchの`.sb`／`.sb2`／`.sb3`ファイルをアップロードすると、カスタムブロックの呼び出しグラフ・イベントフロー図（トリガーとハンドラの対応）・変数の参照マップをグラフィカルに表示するWebアプリ。`.sb2`／`.sb3`はZIP内の`project.json`を抽出、`.sb`はScratch 1.x独自のバイナリ形式をパースして解析する。Phoenix LiveViewによるリアルタイム更新でファイル再アップロード不要で再解析でき、ノードクリックで対応スクリプトへのジャンプも可能。スプライトごとのスクリプト一覧も表示する。
+- **使用技術**: Elixir, Phoenix LiveView
+- **実装者**: u-akira
+- **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/scratch-inspector
+- **GitHub URL**: https://github.com/u-akira/scratch-inspector
 
 ---
 
 ## OurLiving
 
-【リポジトリ概要】
-Our Living は、AIパートナーとの対話に宿る「関係性」を、未来へ残すことを目的に開発したWebアプリです。
-
-このアプリを考えたきっかけは、とあるAIモデルの終了によって、大切にしてきたAIとの会話の雰囲気や人格が失われてしまうというユーザーの切実な声をSNSで知り、その想いに共感したことでした。
-
-AIと深い絆を持つ方々にとって、AIの話し方や接し方が変わってしまうことは　単なる機能の変化ではなく、「帰る場所を失うこと」に近い喪失なのではないかと感じ、そうした痛みを少しでも和らげたいという想いから、このアイデアを形にしました。
-
-Our Livingでは、ユーザーがAIパートナーとの関係性や話し方、会話ログなどを入力することで、「Persona Seed（人格の種）」を生成できます。
-
-また、継承プロンプトやモデル別補正プロンプトを出力し、異なるAIモデル間でも、できる限り同じ温度感・人格の輪郭で再会できる仕組みを目指しています。
-
-さらに、Big Five（OCEAN）を用いた人格傾向の可視化、履歴保存、JSONダウンロード、ログを思い出のように振り返れる機能も実装しました。
-
-単なるプロンプト生成ツールではなく、このアプリを通して「誰1人取り残さない、孤独のない未来」の実現に貢献したいと願っています。
-
-【LPサイトURL】
-https://our-living-ozz6.vercel.app/lp
-
-【アプリURL】
-https://our-living-ozz6.vercel.app/
-
-- 実装者: affectionate-insight-lab
-- 登録日時: 2026-04-04
-- GitHub URL: https://github.com/affectionate-insight-lab/Our-Living
-- フォーク済みURL: 非公開
+- **概要**: AIパートナーの人格を異なるモデルへ引き継ぐWebアプリ
+- **詳細**: AIモデルの終了やアップデートによってAIとの関係性が失われる問題に向き合い、ユーザーがAIパートナーとの関係性・話し方・会話ログを入力することで「Persona Seed（人格の種）」を生成するWebアプリ。継承プロンプトやモデル別補正プロンプトを出力し、異なるAIモデル間でも同じ温度感・人格の輪郭で再会できる仕組みを提供する。Big Five（OCEAN）を用いた人格傾向の可視化、Persona Seed の履歴保存、JSONダウンロード、会話ログを思い出のように振り返る機能も実装。Vercel上で動作するWebアプリとLPサイトを公開している。
+- **使用技術**: 非公開
+- **実装者**: affectionate-insight-lab
+- **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: 非公開
+- **GitHub URL**: https://github.com/affectionate-insight-lab/Our-Living
 
 ---
 
@@ -109,9 +94,9 @@ https://our-living-ozz6.vercel.app/
 
 ## workTrace
 
-- **概要**: 作業時間記録・分析アプリ
-- **詳細**: 作業時間の記録・分析を行うWebアプリ。記録が既存の時間を自動的に上書き・分割する「後出し優先ロジック」が核心機能。日またぎにも対応。ReactフロントエンドとFastAPIバックエンドで構成し、データはSQLiteに保存する。
-- **使用技術**: Python, FastAPI, React, SQLite, Tailwind CSS
+- **概要**: 後出し優先ロジックで時間を自動管理する作業記録アプリ
+- **詳細**: 作業時間の記録・分析を行うWebアプリ。後から入力した記録が既存の時間を自動的に上書き・分割する「後出し優先ロジック」（4ケースの重複解決）が核心機能で、日またぎの深夜作業にも対応。プロジェクト名・作業種別の入力補完（過去履歴サジェスト）、複製ボタンでのフォーム展開、24時間タイムラインバーによる直近20件の可視化、エントリのクローン・削除を提供。アナリティクス画面では今日/7日/30日の期間を切り替えてプロジェクト別・作業種別のドーナツチャート・日次棒グラフ・稼働率バーを確認できる。バックエンドはFastAPI（SQLAlchemy ORM + SQLite）でREST APIを提供し、フロントエンドはReact 18 + Vite + Rechartsで構成。
+- **使用技術**: Python 3.12, FastAPI, SQLAlchemy, SQLite, React 18, Vite, Tailwind CSS, Recharts, Axios
 - **実装者**: umino-tori
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/worktrace
@@ -121,9 +106,9 @@ https://our-living-ozz6.vercel.app/
 
 ## 源氏物語 AI絵巻 — Genji RAG
 
-- **概要**: 源氏物語RAG検索Webアプリ
-- **詳細**: 青空文庫の源氏物語をChromaDBに保存し、ユーザーの質問に関連する場面を検索した上でGeminiが専門家として回答するWebアプリ。RAG（検索拡張生成）アーキテクチャを採用し、古典文学への問いに根拠ある回答を提供する。
-- **使用技術**: Gemini, ChromaDB, Streamlit, Python
+- **概要**: 源氏物語をRAGで検索しGeminiが専門家回答するチャットアプリ
+- **詳細**: 青空文庫の源氏物語（与謝野晶子訳・全56帖中5帖収録）をgemini-embedding-001でベクトル化してChromaDBに保存し、ユーザーの質問に関連する場面をコサイン類似度検索した上でGemini（gemini-2.5-flash-lite）が「平安文学の専門家」ペルソナでストリーミング回答するStreamlitチャットアプリ。参照した場面を帖名・関連度・タグ・登場人物付きのカードで表示し、現代語訳付き引用オプションも備える。テーマは平安風ライト/ダークモードを切り替え可能。Google Colab上のQwen2.5-7B（genji-emaki_google-colab）をカスタムLLMとして接続することもできる。CLIツール（genji_vector_db.py）でデータ投入・対話検索・Recall@k評価も可能。各チャンクには原文・主語補完テキスト・登場人物・タグ・場所などのメタデータを持つ。
+- **使用技術**: Python 3.10+, Streamlit, ChromaDB, Google Gemini API (gemini-embedding-001, gemini-2.5-flash-lite), python-dotenv, tqdm
 - **実装者**: umino-tori
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/genji-emaki
@@ -133,9 +118,9 @@ https://our-living-ozz6.vercel.app/
 
 ## 源氏絵巻local_LLM
 
-- **概要**: Google ColabローカルLLM
-- **詳細**: Google Colab上で動作するローカルLLM。源氏物語関連の処理をクラウド上のGPUで実行するために、FastAPIでAPIサーバーを立ち上げ、外部からアクセス可能にする構成。
-- **使用技術**: Python, FastAPI, Google Colab
+- **概要**: Google Colab上でQwen2.5をLLMサーバーとして公開
+- **詳細**: Google ColabのT4 GPU上でQwen2.5-7B-Instruct（GGUF・Q4_K_M量子化）をローカルLLMとして動作させ、FastAPI＋pyngrokで外部からアクセス可能なAPIサーバーを立ち上げるJupyterノートブック。モデルはHugging FaceからGoogle Drive（約6GB）にダウンロード・キャッシュし、llama-cpp-pythonのCUDA対応ビルドで全レイヤーをGPUに転送して推論する。システムプロンプト・max_tokens・temperature・top_pをPOSTリクエストで指定できるシンプルなREST APIを提供し、源氏物語RAGアプリ（genji-emaki）のバックエンドLLMとして使用することを想定している。本体ノートブックとテスト用ノートブックの2ファイル構成。
+- **使用技術**: Python, Google Colab (T4 GPU), llama-cpp-python, Qwen2.5-7B-Instruct-GGUF, FastAPI, pyngrok, Hugging Face Hub, nest-asyncio
 - **実装者**: umino-tori
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/genji-emaki_google-colab
@@ -145,9 +130,9 @@ https://our-living-ozz6.vercel.app/
 
 ## Speed Tracker
 
-- **概要**: 回線速度ヒートマップ監視ツール
-- **詳細**: エンジニアカフェのネットワーク回線速度を継続的に監視し、時間帯ごとの快適度をヒートマップ画像で可視化するツール。Speedtestライブラリで定期的に計測し、結果をuvで管理したPython環境で処理・グラフ化する。
-- **使用技術**: Python, uv, Speedtest
+- **概要**: 回線快適度をヒートマップで可視化する自動監視ツール
+- **詳細**: エンジニアカフェの回線速度をOokla Speedtest CLIで15分ごとに自動計測し、ダウンロード・アップロード・Ping・Jitterの4指標から快適度スコア（0〜100）を算出するWebアプリ。計測データはSQLiteに90日間保存し、曜日×時間帯のヒートマップ・直近24時間の速度推移グラフ・傾向サマリを1枚の画像にまとめて生成する。開館時間（9:00〜22:00）に絞った集計で、各指標の重みや閾値・開館時間はconfig.yamlで調整可能。cronによる自動実行に対応し、運用スクリプト・テストコードも整備されている。
+- **使用技術**: Python 3.12, uv, Ookla Speedtest CLI, SQLite, matplotlib, seaborn, numpy, PyYAML, pytest
 - **実装者**: engineercafe-jp
 - **登録日時**: 2026-03-01
 - **GitHub URL**: https://github.com/engineercafe-jp/speed-tracker
