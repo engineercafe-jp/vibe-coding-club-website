@@ -601,7 +601,7 @@
 <!-- Product Modal -->
 <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
 <div id="modal-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-<div class="relative bg-surface-container-lowest rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto overscroll-contain">
+<div id="modal-scroll" class="relative bg-surface-container-lowest rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto overscroll-contain">
 <button id="modal-close" class="absolute top-4 right-4 p-2 rounded-full hover:bg-surface-container transition-colors">
 <span class="material-symbols-outlined">close</span>
 </button>
@@ -668,6 +668,7 @@ GitHubで見る
       githubEl.lastChild.textContent = t['modal.github'] || 'GitHubで見る';
     }
     modal.classList.remove('hidden');
+    document.getElementById('modal-scroll').scrollTop = 0;
     document.body.style.overflow = 'hidden';
   }
 
