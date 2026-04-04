@@ -20,6 +20,30 @@
 
 ---
 
+## brainstorm-engine
+
+- **概要**: 議題に3つのAIペルソナが並列討論するブレスト支援Webアプリ
+- **詳細**: ユーザーが議題を投稿すると、スティーブ・ジョブズ型ビジョナリー・実装思考型・型破り発想型の3つのAIペルソナがGemini（gemini-2.5-flash）を使って並列回答するブレインストーミング支援Webアプリ。返信はスレッド構造（parent_id）で管理され、祖先ノードの議論の文脈を引き継いで各ペルソナが応答する。FastAPI + Jinja2テンプレートで構成し、データはPostgreSQLに保存。slowapiによるIPベースのレート制限（議題5回/分・ノード10回/分）、GZip圧縮ミドルウェアも実装。Renderへのデプロイ設定（render.yaml）も含む。
+- **使用技術**: Python, FastAPI, Jinja2, PostgreSQL, psycopg2, Gemini API (gemini-2.5-flash), slowapi, uvicorn, python-dotenv
+- **実装者**: hirokazunakagawa1234-ui
+- **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/brainstorm-engine-
+- **GitHub URL**: https://github.com/hirokazunakagawa1234-ui/brainstorm-engine-
+
+---
+
+## gesture-control
+
+- **概要**: ハンドジェスチャーでPCをハンズフリー操作するツール
+- **詳細**: Webカメラで手のジェスチャーを認識し、PC操作に変換するmacOSアプリ。MediaPipeのHand Landmarker Tasks APIで手の21ランドマークをリアルタイム検出し、サムズアップ（承認）・ピースサイン（テキスト送信+Enter）・グーパー（音声入力ON/OFF）・手招き（スクロール）の5種のジェスチャーに対応。Claude Codeなどのターミナルアプリとのやり取りをハンズフリーで行えるのが特徴。キーストロークはPyAutoGUI+AppleScriptで送信し、日本語テキストはpbcopy経由でクリップボード入力する。音声入力はGoogle Speech-to-Text API（ja-JP）に対応。カメラ設定・閾値・割り当てキーはconfig.yamlで調整可能。
+- **使用技術**: Python 3.10+, MediaPipe, OpenCV, PyAutoGUI, SpeechRecognition, PyAudio, PyYAML, AppleScript
+- **実装者**: k-kura84
+- **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/gesture-control
+- **GitHub URL**: https://github.com/k-kura84/gesture-control
+
+---
+
 ## toio-mcp
 
 - **概要**: 自然言語でtoioロボットキューブを操作するMCPサーバー
