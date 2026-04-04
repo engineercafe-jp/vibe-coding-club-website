@@ -160,13 +160,14 @@
   data-title="Pet Content Generator" data-category="Web App" data-author="dssakamoto"
   data-tech="React 18, TypeScript, Vite, Tailwind CSS, FastAPI, Python 3.11, Gemini API, DALL-E 3, Stability AI, ffmpeg, Docker Compose"
   data-desc="「春のお花見」などのテーマと動物種（猫・犬・ランダム）を選ぶだけで、AIが癒し系画像（最大8枚）やSNS向け縦型ショート動画（1080×1920）を自動生成するWebアプリ。生成画像はポラロイド風フレームで表示・ダウンロード可能。Gemini・DALL-E 3・Stability AIをStrategyパターンで切り替えられる設計で、動画はffmpegによるズーム＆フェード合成で仕上げる。"
-  data-github="https://github.com/dssakamoto/pet_content_generater">
+  data-github="https://github.com/dssakamoto/pet_content_generater"
+  data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
 <img alt="Pet Content Generator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/pet_content_generator.png"/>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">Pet Content Generator</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">Pet Content Generator</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">ペットのAI動画・画像生成。テーマを入力して癒し系画像やショート動画を自動生成。</p>
@@ -179,13 +180,14 @@
   data-title="BTCタラレバ長者 vs 現実の地獄シミュレーター" data-category="Simulator" data-author="umino-tori"
   data-tech="Python 3.12, Streamlit, yfinance, Plotly, Pandas, SQLite3"
   data-desc="過去のBTC-JPY価格データを使い、A「神の現物」（毎日安値買い高値売りの理論最大値）・B「現実のトレード」（手数料+スリッページ適用）・C「レバレッジ・ガチホ」（強制ロスカットリスクあり）の3シナリオを同時比較するWebアプリ。ローソク足チャート・資産推移グラフ・円グラフ・日次詳細テーブルで可視化し、追証・ロスカット発生時はショッキングな警告ボックスで演出。yfinanceデータはSQLiteにキャッシュ。"
-  data-github="https://github.com/umino-tori/bitc-tarareba">
+  data-github="https://github.com/umino-tori/bitc-tarareba"
+  data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
 <img alt="BTCタラレバ長者 vs 現実の地獄シミュレーター" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/bitc-tarareba.png"/>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">BTCタラレバ長者 vs 現実</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">BTCタラレバ長者 vs 現実</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Simulator</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">BTC投資シナリオ比較ツール。「夢の理論値」と「手数料・ロスカットによる現実」を3シナリオで比較。</p>
@@ -198,13 +200,14 @@
   data-title="workTrace" data-category="Utility" data-author="umino-tori"
   data-tech="Python 3.12, FastAPI, SQLAlchemy, SQLite, React 18, Vite, Tailwind CSS, Recharts, Axios"
   data-desc="作業時間の記録・分析を行うWebアプリ。後から入力した記録が既存の時間を自動的に上書き・分割する「後出し優先ロジック」（4ケースの重複解決）が核心機能で、日またぎの深夜作業にも対応。プロジェクト名・作業種別の入力補完、複製ボタン、24時間タイムラインバー、アナリティクス（ドーナツチャート・棒グラフ・稼働率バー）を提供。"
-  data-github="https://github.com/umino-tori/worktrace">
+  data-github="https://github.com/umino-tori/worktrace"
+  data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">workTrace</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">workTrace</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Utility</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">後出し優先ロジックで時間を自動管理。24hタイムライン・アナリティクスで作業時間を記録・分析。</p>
@@ -217,13 +220,14 @@
   data-title="源氏物語 AI絵巻 — Genji RAG" data-category="RAG" data-author="umino-tori"
   data-tech="Python 3.10+, Streamlit, ChromaDB, Google Gemini API (gemini-embedding-001, gemini-2.5-flash-lite), python-dotenv, tqdm"
   data-desc="青空文庫の源氏物語（与謝野晶子訳・全56帖中5帖）をgemini-embedding-001でベクトル化してChromaDBに保存し、コサイン類似度検索した上でGemini（gemini-2.5-flash-lite）が「平安文学の専門家」ペルソナでストリーミング回答するStreamlitチャットアプリ。参照場面を帖名・関連度・タグ・登場人物付きカードで表示。平安風/ダークテーマ切り替え・現代語訳付き引用オプションあり。"
-  data-github="https://github.com/umino-tori/genji-emaki">
+  data-github="https://github.com/umino-tori/genji-emaki"
+  data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">源氏物語 AI絵巻</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">源氏物語 AI絵巻</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">RAG</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">源氏物語をRAGで検索しGeminiが専門家回答。参照場面をカード表示しストリーミング回答。</p>
@@ -236,13 +240,14 @@
   data-title="源氏絵巻 local_LLM" data-category="LLM" data-author="umino-tori"
   data-tech="Python, Google Colab (T4 GPU), llama-cpp-python, Qwen2.5-7B-Instruct-GGUF, FastAPI, pyngrok, Hugging Face Hub, nest-asyncio"
   data-desc="Google ColabのT4 GPU上でQwen2.5-7B-Instruct（GGUF・Q4_K_M量子化）をローカルLLMとして動作させ、FastAPI＋pyngrokで外部公開するJupyterノートブック。モデルはHugging FaceからGoogle Drive（約6GB）にキャッシュ。源氏物語RAGアプリ（genji-emaki）のバックエンドLLMとして使用することを想定。"
-  data-github="https://github.com/umino-tori/genji-emaki_google-colab">
+  data-github="https://github.com/umino-tori/genji-emaki_google-colab"
+  data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">源氏絵巻 local_LLM</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">源氏絵巻 local_LLM</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">LLM</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">Google Colab T4 GPU上でQwen2.5-7BをLLMサーバーとして公開。FastAPI+pyngrokで外部から接続可能。</p>
@@ -255,13 +260,14 @@
   data-title="Speed Tracker" data-category="Tool" data-author="engineercafe-jp"
   data-tech="Python 3.12, uv, Ookla Speedtest CLI, SQLite, matplotlib, seaborn, numpy, PyYAML, pytest"
   data-desc="エンジニアカフェの回線速度をOokla Speedtest CLIで15分ごとに自動計測し、DL・UL・Ping・Jitterの4指標から快適度スコア（0〜100）を算出。計測データはSQLiteに90日間保存し、曜日×時間帯ヒートマップ・直近24時間推移グラフ・傾向サマリを1枚の画像で生成。cronによる自動実行に対応。"
-  data-github="https://github.com/engineercafe-jp/speed-tracker">
+  data-github="https://github.com/engineercafe-jp/speed-tracker"
+  data-date="2026-03-01">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">Speed Tracker</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">Speed Tracker</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Tool</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">回線快適度をヒートマップで自動可視化。15分間隔でDL/UL/Ping/Jitterを計測しスコア化。</p>
@@ -274,13 +280,14 @@
   data-title="toio-mcp" data-category="MCP" data-author="u-akira"
   data-tech="TypeScript, Node.js 20+, @toio/scanner, @toio/cube, @modelcontextprotocol/sdk, zod, Claude API / OpenAI API"
   data-desc="Claude DesktopやMCP対応クライアントから自然言語でtoio Core CubeをBLE制御できるMCPサーバー。移動・回転・LED色変更・効果音再生・バッテリー取得など8種のMCPツールを提供。stackchanなどの外部デバイス向けにWebAPIサーバーも内蔵し、自然言語テキストをClaude/OpenAI LLMがtoio操作に変換して実行する。"
-  data-github="https://github.com/u-akira/toio-mcp">
+  data-github="https://github.com/u-akira/toio-mcp"
+  data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">toio-mcp</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">toio-mcp</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">MCP</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">自然言語でtoioをBLE制御するMCPサーバー。Claude Desktopから8種のツールで操作可能。</p>
@@ -293,13 +300,14 @@
   data-title="Live Scratch" data-category="Desktop App" data-author="u-akira"
   data-tech="Rust, Tauri v2, Node.js, Scratch GUI (scratch-editor)"
   data-desc="Scratchプロジェクトファイル（.sb3）とScratchエディタを双方向にライブ同期するmacOSデスクトップアプリ。project.jsonをプレーンJSONとして公開することで、Claude Code・Codex・Gemini CLIなどのAIエージェントに自然言語で指示するだけでScratchプロジェクトをリアルタイムに編集できる。Rustバックエンド（Tauri v2）でファイル変更を検知し即時反映。"
-  data-github="https://github.com/u-akira/live-scratch">
+  data-github="https://github.com/u-akira/live-scratch"
+  data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">Live Scratch</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">Live Scratch</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Desktop App</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">AIエージェントでScratchをリアルタイム編集。project.jsonをプレーンJSONとして公開し双方向同期。</p>
@@ -312,13 +320,14 @@
   data-title="Scratch Inspector" data-category="Web App" data-author="u-akira"
   data-tech="Elixir, Phoenix LiveView"
   data-desc="Scratchの.sb/.sb2/.sb3ファイルをアップロードすると、カスタムブロックの呼び出しグラフ・イベントフロー図・変数の参照マップをグラフィカルに表示するWebアプリ。Phoenix LiveViewによるリアルタイム更新でファイル再アップロード不要で再解析でき、ノードクリックで対応スクリプトへのジャンプも可能。Scratch 1.x〜3.xの全形式に対応。"
-  data-github="https://github.com/u-akira/scratch-inspector">
+  data-github="https://github.com/u-akira/scratch-inspector"
+  data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">Scratch Inspector</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">Scratch Inspector</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">Scratchの関数・イベント・変数をグラフ可視化。sb/sb2/sb3の全形式に対応しリアルタイム再解析。</p>
@@ -331,13 +340,14 @@
   data-title="OurLiving" data-category="Web App" data-author="affectionate-insight-lab"
   data-tech="非公開"
   data-desc="AIモデルの終了やアップデートによってAIとの関係性が失われる問題に向き合い、ユーザーがAIパートナーとの関係性・話し方・会話ログを入力することで「Persona Seed（人格の種）」を生成するWebアプリ。継承プロンプト・モデル別補正プロンプトで異なるAIモデル間でも同じ温度感で再会できる仕組みを提供。Big Five（OCEAN）による人格傾向の可視化・履歴保存・JSONダウンロードも実装。"
-  data-github="https://github.com/affectionate-insight-lab/Our-Living">
+  data-github="https://github.com/affectionate-insight-lab/Our-Living"
+  data-date="2026-04-04">
 <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline">OurLiving</h3>
+<h3 class="text-xl font-bold font-headline truncate min-w-0">OurLiving</h3>
 <span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
 </div>
 <p class="text-sm text-on-surface-variant line-clamp-2">AIパートナーの人格を異なるモデルへ引き継ぐ。Persona Seedで温度感・人格の輪郭を継承。</p>
@@ -364,7 +374,7 @@
   const dotsContainer = document.getElementById('carousel-dots');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
-  const TOTAL_CARDS = 6;
+  const TOTAL_CARDS = track.children.length;
   let currentPage = 0;
 
   function cardsPerPage() {
@@ -409,13 +419,27 @@
     updateUI();
   });
 
-  // シャッフル
+  // 公開日降順ソート
   const cards = Array.from(track.children);
-  for (let i = cards.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    track.appendChild(cards[j]);
-    cards.splice(j, 1);
-  }
+  cards.sort((a, b) => {
+    const dateA = a.querySelector('[data-date]')?.dataset.date || '';
+    const dateB = b.querySelector('[data-date]')?.dataset.date || '';
+    return dateB.localeCompare(dateA);
+  });
+  cards.forEach(card => track.appendChild(card));
+
+  // 公開日表示を各カードに注入
+  cards.forEach(card => {
+    const inner = card.querySelector('[data-date]');
+    if (!inner) return;
+    const date = inner.dataset.date;
+    const p6 = card.querySelector('.p-6');
+    if (!p6) return;
+    const dateEl = document.createElement('p');
+    dateEl.className = 'text-xs text-on-surface-variant/60 mt-2';
+    dateEl.textContent = '公開日: ' + date;
+    p6.appendChild(dateEl);
+  });
 
   buildDots();
   updateUI();
