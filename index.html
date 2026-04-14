@@ -1229,6 +1229,32 @@
       document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     })();
   </script>
+
+  <!-- Image Loading Skeleton Script -->
+  <script>
+    (function () {
+      document.querySelectorAll('.product-card img').forEach(img => {
+        const wrapper = img.parentElement;
+        if (wrapper && wrapper.classList.contains('aspect-[4/3]')) {
+          wrapper.classList.add('animate-pulse');
+          img.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+          if (img.complete) {
+            wrapper.classList.remove('animate-pulse');
+            img.classList.remove('opacity-0');
+          } else {
+            img.addEventListener('load', () => {
+              wrapper.classList.remove('animate-pulse');
+              img.classList.remove('opacity-0');
+            });
+            img.addEventListener('error', () => {
+              wrapper.classList.remove('animate-pulse');
+              img.classList.remove('opacity-0');
+            });
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
