@@ -1,1014 +1,1160 @@
 <!DOCTYPE html>
 
-<html class="light" lang="ja"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vibe Coding Club | AIと、あたらしく創る。</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "on-secondary-container": "#11278e",
-                        "inverse-surface": "#2e3132",
-                        "secondary-container": "#8596ff",
-                        "on-tertiary": "#ffffff",
-                        "outline-variant": "#cbc3d9",
-                        "on-secondary-fixed": "#00105c",
-                        "surface-tint": "#6d23f9",
-                        "surface-container-highest": "#e1e3e4",
-                        "error-container": "#ffdad6",
-                        "tertiary-fixed-dim": "#ffb59a",
-                        "surface-container-high": "#e7e8e9",
-                        "surface-container": "#edeeef",
-                        "error": "#ba1a1a",
-                        "on-tertiary-fixed-variant": "#802a00",
-                        "on-primary-fixed-variant": "#5300cd",
-                        "on-error": "#ffffff",
-                        "on-tertiary-fixed": "#380d00",
-                        "on-error-container": "#93000a",
-                        "tertiary-container": "#963200",
-                        "on-surface-variant": "#494456",
-                        "inverse-primary": "#cfbdff",
-                        "surface": "#f8f9fa",
-                        "on-tertiary-container": "#ffb79d",
-                        "tertiary": "#6f2300",
-                        "primary": "#4800b2",
-                        "on-secondary-fixed-variant": "#293ca0",
-                        "tertiary-fixed": "#ffdbcf",
-                        "secondary-fixed-dim": "#bac3ff",
-                        "secondary-fixed": "#dee0ff",
-                        "surface-container-lowest": "#ffffff",
-                        "primary-container": "#6200ee",
-                        "on-secondary": "#ffffff",
-                        "inverse-on-surface": "#f0f1f2",
-                        "background": "#f8f9fa",
-                        "outline": "#7a7488",
-                        "on-primary-fixed": "#22005d",
-                        "on-primary-container": "#d0beff",
-                        "on-background": "#191c1d",
-                        "surface-dim": "#d9dadb",
-                        "secondary": "#4355b9",
-                        "primary-fixed": "#e8ddff",
-                        "on-surface": "#191c1d",
-                        "surface-variant": "#e1e3e4",
-                        "on-primary": "#ffffff",
-                        "surface-container-low": "#f3f4f5",
-                        "surface-bright": "#f8f9fa",
-                        "primary-fixed-dim": "#cfbdff"
-                    },
-                    fontFamily: {
-                        "headline": ["Manrope", "Zen Kaku Gothic New"],
-                        "body": ["Inter", "Zen Kaku Gothic New"],
-                        "label": ["Inter", "Zen Kaku Gothic New"]
-                    },
-                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-                },
-            },
-        }
-    </script>
-<style>
-        body { font-family: 'Inter', 'Zen Kaku Gothic New', sans-serif; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .glass-nav { background: rgba(248, 249, 250, 0.8); backdrop-filter: blur(20px); }
-        .hero-gradient { background: linear-gradient(135deg, #4800b2 0%, #6200ee 100%); }
-        @keyframes logo-breathe {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.06); }
-        }
-        .logo-breathe { animation: logo-breathe 3.5s ease-in-out infinite; }
-    </style>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<html class="light" lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Vibe Coding Club | AIと、あたらしく創る。</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-container": "#11278e",
+            "inverse-surface": "#2e3132",
+            "secondary-container": "#8596ff",
+            "on-tertiary": "#ffffff",
+            "outline-variant": "#cbc3d9",
+            "on-secondary-fixed": "#00105c",
+            "surface-tint": "#6d23f9",
+            "surface-container-highest": "#e1e3e4",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#ffb59a",
+            "surface-container-high": "#e7e8e9",
+            "surface-container": "#edeeef",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#802a00",
+            "on-primary-fixed-variant": "#5300cd",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#380d00",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#963200",
+            "on-surface-variant": "#494456",
+            "inverse-primary": "#cfbdff",
+            "surface": "#f8f9fa",
+            "on-tertiary-container": "#ffb79d",
+            "tertiary": "#6f2300",
+            "primary": "#4800b2",
+            "on-secondary-fixed-variant": "#293ca0",
+            "tertiary-fixed": "#ffdbcf",
+            "secondary-fixed-dim": "#bac3ff",
+            "secondary-fixed": "#dee0ff",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#6200ee",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f0f1f2",
+            "background": "#f8f9fa",
+            "outline": "#7a7488",
+            "on-primary-fixed": "#22005d",
+            "on-primary-container": "#d0beff",
+            "on-background": "#191c1d",
+            "surface-dim": "#d9dadb",
+            "secondary": "#4355b9",
+            "primary-fixed": "#e8ddff",
+            "on-surface": "#191c1d",
+            "surface-variant": "#e1e3e4",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#f3f4f5",
+            "surface-bright": "#f8f9fa",
+            "primary-fixed-dim": "#cfbdff"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "Zen Kaku Gothic New"],
+            "body": ["Inter", "Zen Kaku Gothic New"],
+            "label": ["Inter", "Zen Kaku Gothic New"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', 'Zen Kaku Gothic New', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-nav {
+      background: rgba(248, 249, 250, 0.8);
+      backdrop-filter: blur(20px);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #4800b2 0%, #6200ee 100%);
+    }
+
+    @keyframes logo-breathe {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.06);
+      }
+    }
+
+    .logo-breathe {
+      animation: logo-breathe 3.5s ease-in-out infinite;
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
+
 <body class="bg-surface text-on-surface antialiased">
-<!-- Loading Screen -->
-<div id="loading-screen" style="position:fixed;inset:0;z-index:9999;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.4s ease">
-  <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;color:#888;margin-bottom:1rem;font-family:'SF Mono','Fira Code','Consolas','Courier New',monospace">LOADING...</p>
-  <div style="width:200px;height:3px;background:#e5e7eb;border-radius:9999px;overflow:hidden">
-    <div id="loading-bar" style="height:100%;width:0%;background:#4800b2;border-radius:9999px;transition:width 0.3s ease"></div>
+  <!-- Loading Screen -->
+  <div id="loading-screen"
+    style="position:fixed;inset:0;z-index:9999;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.4s ease">
+    <p
+      style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;color:#888;margin-bottom:1rem;font-family:'SF Mono','Fira Code','Consolas','Courier New',monospace">
+      LOADING...</p>
+    <div style="width:200px;height:3px;background:#e5e7eb;border-radius:9999px;overflow:hidden">
+      <div id="loading-bar"
+        style="height:100%;width:0%;background:#4800b2;border-radius:9999px;transition:width 0.3s ease"></div>
+    </div>
   </div>
-</div>
-<script>
-(function () {
-  const screen = document.getElementById('loading-screen');
-  const bar = document.getElementById('loading-bar');
-  let progress = 0;
+  <script>
+      (function () {
+        const screen = document.getElementById('loading-screen');
+        const bar = document.getElementById('loading-bar');
+        let progress = 0;
 
-  // Animate bar to ~85% while page loads
-  const interval = setInterval(() => {
-    progress = Math.min(progress + Math.random() * 15, 85);
-    bar.style.width = progress + '%';
-  }, 200);
+        // Animate bar to ~85% while page loads
+        const interval = setInterval(() => {
+          progress = Math.min(progress + Math.random() * 15, 85);
+          bar.style.width = progress + '%';
+        }, 200);
 
-  window.addEventListener('load', () => {
-    clearInterval(interval);
-    bar.style.width = '100%';
-    setTimeout(() => {
-      screen.style.opacity = '0';
-      setTimeout(() => screen.remove(), 400);
-    }, 300);
-  });
-})();
-</script>
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10">
-<div class="flex justify-between items-center px-4 sm:px-8 py-3 sm:py-6 max-w-7xl mx-auto">
-<div class="text-base sm:text-xl md:text-2xl font-extrabold tracking-tighter text-primary font-headline whitespace-nowrap uppercase">Vibe Coding Club</div>
-<div class="flex items-center space-x-2 sm:space-x-4 text-sm font-medium">
-<a class="text-slate-600 hover:text-primary transition-colors duration-300 hidden sm:block" href="https://i-love-ai.connpass.com/" data-i18n="nav.visit">オンライン見学</a>
-<a class="bg-primary text-on-primary px-3 sm:px-6 py-2.5 sm:py-3.5 rounded-full font-semibold hover:opacity-90 transition-transform active:scale-95 text-xs whitespace-nowrap" href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="nav.apply">挑戦者として申し込む</a>
-<button id="lang-toggle" class="flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-primary transition-colors duration-300 select-none">
-  <span id="lang-ja" class="text-primary">JA</span>
-  <span class="text-slate-300">/</span>
-  <span id="lang-en" class="text-slate-400">EN</span>
-</button>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative min-h-screen px-6 overflow-hidden flex items-center pt-20 sm:pt-24">
-<canvas id="hero-canvas" class="absolute inset-0 -z-10 w-full h-full"></canvas>
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-<!-- Left: Logo -->
-<div class="flex justify-center md:justify-end">
-<img alt="Vibe Coding Club Logo" class="w-72 h-auto md:w-full md:max-w-md object-contain logo-breathe" src="asset/vibe-coding-club-logo.webp"/>
-</div>
-<!-- Right: Text & CTA -->
-<div class="flex flex-col items-center md:items-start text-center md:text-left">
-<h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter mb-6 font-headline leading-tight whitespace-nowrap" data-i18n="hero.title">
-            AIとプロダクトを作ろう！
+        window.addEventListener('load', () => {
+          clearInterval(interval);
+          bar.style.width = '100%';
+          setTimeout(() => {
+            screen.style.opacity = '0';
+            setTimeout(() => screen.remove(), 400);
+          }, 300);
+        });
+      })();
+  </script>
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10">
+    <div class="flex justify-between items-center px-4 sm:px-8 py-3 sm:py-6 max-w-7xl mx-auto">
+      <div
+        class="text-base sm:text-xl md:text-2xl font-extrabold tracking-tighter text-primary font-headline whitespace-nowrap uppercase">
+        Vibe Coding Club</div>
+      <div class="flex items-center space-x-2 sm:space-x-4 text-sm font-medium">
+        <a class="text-slate-600 hover:text-primary transition-colors duration-300 hidden sm:block"
+          href="https://i-love-ai.connpass.com/" data-i18n="nav.visit">オンライン見学</a>
+        <a class="bg-primary text-on-primary px-3 sm:px-6 py-2.5 sm:py-3.5 rounded-full font-semibold hover:opacity-90 transition-transform active:scale-95 text-xs whitespace-nowrap"
+          href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="nav.apply">挑戦者として申し込む</a>
+        <button id="lang-toggle"
+          class="flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-primary transition-colors duration-300 select-none">
+          <span id="lang-ja" class="text-primary">JA</span>
+          <span class="text-slate-300">/</span>
+          <span id="lang-en" class="text-slate-400">EN</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="relative min-h-screen px-6 overflow-hidden flex items-center pt-20 sm:pt-24">
+    <canvas id="hero-canvas" class="absolute inset-0 -z-10 w-full h-full"></canvas>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <!-- Left: Logo -->
+      <div class="flex justify-center md:justify-end">
+        <img alt="Vibe Coding Club Logo" class="w-72 h-auto md:w-full md:max-w-md object-contain logo-breathe"
+          src="asset/vibe-coding-club-logo.webp" />
+      </div>
+      <!-- Right: Text & CTA -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h1
+          class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter mb-6 font-headline leading-tight whitespace-nowrap"
+          data-i18n="hero.title">
+          AIとプロダクトを作ろう！
         </h1>
-<p class="max-w-xl text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 font-body" style="line-break: strict; overflow-wrap: anywhere;" data-i18n="hero.subtitle">
-            Claude Code Proプラン支給！挑戦者募集☆（未経験可）
+        <p class="max-w-xl text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 font-body"
+          style="line-break: strict; overflow-wrap: anywhere;" data-i18n="hero.subtitle">
+          Claude Code Proプラン支給！挑戦者募集☆（未経験可）
         </p>
-<div class="flex flex-col sm:flex-row gap-4 md:items-start w-full sm:w-auto">
-<a class="hero-gradient text-on-primary px-10 py-4 rounded-full text-base font-bold shadow-xl hover:shadow-2xl transition-all active:scale-95 text-center" href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="hero.apply">
-                挑戦者として申し込む
-            </a>
-<a class="bg-surface-container-high text-on-surface px-10 py-4 rounded-full text-base font-bold hover:bg-surface-container-highest transition-all active:scale-95 text-center" href="https://i-love-ai.connpass.com/" data-i18n="hero.visit">
-                オンライン見学
-            </a>
-</div>
-</div>
-</div>
-</header>
-<!-- Core Benefit Section -->
-<section class="py-24 bg-surface-container-low" id="benefits">
-<div class="max-w-5xl mx-auto px-6">
-<div class="bg-surface-container-lowest rounded-3xl p-8 md:p-16 shadow-sm border border-outline-variant/10 flex flex-col md:flex-row items-center gap-12">
-<div class="flex-1">
-<span class="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6" data-i18n="benefits.badge">挑戦者特典</span>
-<h2 class="text-xl sm:text-2xl md:text-4xl font-bold mb-6 tracking-tight font-headline" data-i18n="benefits.title">Claude Code Pro プラン、1ヶ月分の利用料を補助。</h2>
-<p class="text-on-surface-variant leading-relaxed text-lg mb-8" data-i18n="benefits.desc">
-                        最新のAIコーディング環境をすべての参加者に。Vibe Coding Clubでは、開発の核となる「Claude Code Pro」プランの1ヶ月分サブスクリプション費用をクラブが全額負担します。環境構築に悩む時間は、もう必要ありません。
-                    </p>
-<div class="flex items-center gap-4 text-primary font-semibold">
-<span class="material-symbols-outlined">verified</span>
-<span data-i18n="benefits.backed">エンジニアカフェ公式バックアップ</span>
-</div>
-</div>
-<div class="w-full md:w-1/3 aspect-square bg-surface-container-high rounded-2xl flex items-center justify-center">
-<img alt="Claude AI Logo" class="w-1/2 h-auto object-contain" src="asset/Claude_AI_logo.svg"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Product Gallery -->
-<section class="py-24 px-6 max-w-7xl mx-auto" id="projects">
-<div class="mb-12">
-<h2 class="text-4xl font-bold tracking-tighter font-headline mb-4" data-i18n="products.title">プロダクト一覧</h2>
-<p class="text-on-surface-variant max-w-lg" data-i18n="products.subtitle">歴代挑戦者がバイブコーディングで作成したプロダクト</p>
-</div>
-<!-- Carousel -->
-<div class="overflow-hidden" id="carousel-viewport">
-<div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
-<!-- Card 1 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="1" data-title="Pet Content Generator" data-category="Web App" data-author="dssakamoto"
-  data-tech="React 18, TypeScript, Vite, Tailwind CSS, FastAPI, Python 3.11, Gemini API, DALL-E 3, Stability AI, ffmpeg, Docker Compose"
-  data-desc="「春のお花見」などのテーマと動物種（猫・犬・ランダム）を選ぶだけで、AIが癒し系画像（最大8枚）やSNS向け縦型ショート動画（1080×1920）を自動生成するWebアプリ。生成画像はポラロイド風フレームで表示・ダウンロード可能。Gemini・DALL-E 3・Stability AIをStrategyパターンで切り替えられる設計で、動画はffmpegによるズーム＆フェード合成で仕上げる。"
-  data-github="https://github.com/EngineerCafeJP/pet_content_generater"
-  data-date="2026-03-01">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="Pet Content Generator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/pet_content_generator.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">Pet Content Generator</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">ペットのAI動画・画像生成。テーマを入力して癒し系画像やショート動画を自動生成。</p>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="2" data-title="BTCタラレバ長者 vs 現実の地獄シミュレーター" data-category="Simulator" data-author="umino-tori"
-  data-tech="Python 3.12, Streamlit, yfinance, Plotly, Pandas, SQLite3"
-  data-desc="過去のBTC-JPY価格データを使い、A「神の現物」（毎日安値買い高値売りの理論最大値）・B「現実のトレード」（手数料+スリッページ適用）・C「レバレッジ・ガチホ」（強制ロスカットリスクあり）の3シナリオを同時比較するWebアプリ。ローソク足チャート・資産推移グラフ・円グラフ・日次詳細テーブルで可視化し、追証・ロスカット発生時はショッキングな警告ボックスで演出。yfinanceデータはSQLiteにキャッシュ。"
-  data-github="https://github.com/EngineerCafeJP/bitc-tarareba"
-  data-date="2026-03-01">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="BTCタラレバ長者 vs 現実の地獄シミュレーター" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/bitc-tarareba.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">BTCタラレバ長者 vs 現実</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Simulator</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">BTC投資シナリオ比較ツール。「夢の理論値」と「手数料・ロスカットによる現実」を3シナリオで比較。</p>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="3" data-title="workTrace" data-category="Utility" data-author="umino-tori"
-  data-tech="Python 3.12, FastAPI, SQLAlchemy, SQLite, React 18, Vite, Tailwind CSS, Recharts, Axios"
-  data-desc="作業時間の記録・分析を行うWebアプリ。後から入力した記録が既存の時間を自動的に上書き・分割する「後出し優先ロジック」（4ケースの重複解決）が核心機能で、日またぎの深夜作業にも対応。プロジェクト名・作業種別の入力補完、複製ボタン、24時間タイムラインバー、アナリティクス（ドーナツチャート・棒グラフ・稼働率バー）を提供。"
-  data-github="https://github.com/EngineerCafeJP/worktrace"
-  data-date="2026-03-01">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
-<span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">workTrace</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Utility</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">後出し優先ロジックで時間を自動管理。24hタイムライン・アナリティクスで作業時間を記録・分析。</p>
-</div>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="4" data-title="源氏物語 AI絵巻 — Genji RAG" data-category="RAG" data-author="umino-tori"
-  data-tech="Python 3.10+, Streamlit, ChromaDB, Google Gemini API (gemini-embedding-001, gemini-2.5-flash-lite), python-dotenv, tqdm"
-  data-desc="青空文庫の源氏物語（与謝野晶子訳・全56帖中5帖）をgemini-embedding-001でベクトル化してChromaDBに保存し、コサイン類似度検索した上でGemini（gemini-2.5-flash-lite）が「平安文学の専門家」ペルソナでストリーミング回答するStreamlitチャットアプリ。参照場面を帖名・関連度・タグ・登場人物付きカードで表示。平安風/ダークテーマ切り替え・現代語訳付き引用オプションあり。"
-  data-github="https://github.com/EngineerCafeJP/genji-emaki"
-  data-date="2026-03-01">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
-<span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">源氏物語 AI絵巻</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">RAG</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">源氏物語をRAGで検索しGeminiが専門家回答。参照場面をカード表示しストリーミング回答。</p>
-</div>
-</div>
-</div>
-<!-- Card 5 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="5" data-title="源氏絵巻 local_LLM" data-category="LLM" data-author="umino-tori"
-  data-tech="Python, Google Colab (T4 GPU), llama-cpp-python, Qwen2.5-7B-Instruct-GGUF, FastAPI, pyngrok, Hugging Face Hub, nest-asyncio"
-  data-desc="Google ColabのT4 GPU上でQwen2.5-7B-Instruct（GGUF・Q4_K_M量子化）をローカルLLMとして動作させ、FastAPI＋pyngrokで外部公開するJupyterノートブック。モデルはHugging FaceからGoogle Drive（約6GB）にキャッシュ。源氏物語RAGアプリ（genji-emaki）のバックエンドLLMとして使用することを想定。"
-  data-github="https://github.com/EngineerCafeJP/genji-emaki_google-colab"
-  data-date="2026-03-01">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
-<span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">源氏絵巻 local_LLM</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">LLM</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">Google Colab T4 GPU上でQwen2.5-7BをLLMサーバーとして公開。FastAPI+pyngrokで外部から接続可能。</p>
-</div>
-</div>
-</div>
-<!-- Card 6 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="6" data-title="Speed Tracker" data-category="Tool" data-author="engineercafe-jp"
-  data-tech="Python 3.12, uv, Ookla Speedtest CLI, SQLite, matplotlib, seaborn, numpy, PyYAML, pytest"
-  data-desc="エンジニアカフェの回線速度をOokla Speedtest CLIで15分ごとに自動計測し、DL・UL・Ping・Jitterの4指標から快適度スコア（0〜100）を算出。計測データはSQLiteに90日間保存し、曜日×時間帯ヒートマップ・直近24時間推移グラフ・傾向サマリを1枚の画像で生成。cronによる自動実行に対応。"
-  data-github="https://github.com/EngineerCafeJP/speed-tracker"
-  data-date="2026-03-01">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
-<span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">Speed Tracker</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Tool</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">回線快適度をヒートマップで自動可視化。15分間隔でDL/UL/Ping/Jitterを計測しスコア化。</p>
-</div>
-</div>
-</div>
-<!-- Card 7 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="7" data-title="toio-mcp" data-category="MCP" data-author="u-akira"
-  data-tech="TypeScript, Node.js 20+, @toio/scanner, @toio/cube, @modelcontextprotocol/sdk, zod, Claude API / OpenAI API"
-  data-desc="Claude DesktopやMCP対応クライアントから自然言語でtoio Core CubeをBLE制御できるMCPサーバー。移動・回転・LED色変更・効果音再生・バッテリー取得など8種のMCPツールを提供。stackchanなどの外部デバイス向けにWebAPIサーバーも内蔵し、自然言語テキストをClaude/OpenAI LLMがtoio操作に変換して実行する。"
-  data-github="https://github.com/EngineerCafeJP/toio-mcp"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="toio-mcp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/toio-mcp.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">toio-mcp</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">MCP</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">自然言語でtoioをBLE制御するMCPサーバー。Claude Desktopから8種のツールで操作可能。</p>
-</div>
-</div>
-</div>
-<!-- Card 8 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="8" data-title="Live Scratch" data-category="Desktop App" data-author="u-akira"
-  data-tech="Rust, Tauri v2, Node.js, Scratch GUI (scratch-editor)"
-  data-desc="Scratchプロジェクトファイル（.sb3）とScratchエディタを双方向にライブ同期するmacOSデスクトップアプリ。project.jsonをプレーンJSONとして公開することで、Claude Code・Codex・Gemini CLIなどのAIエージェントに自然言語で指示するだけでScratchプロジェクトをリアルタイムに編集できる。Rustバックエンド（Tauri v2）でファイル変更を検知し即時反映。"
-  data-github="https://github.com/EngineerCafeJP/live-scratch"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="Live Scratch" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/live-scratch.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">Live Scratch</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Desktop App</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">AIエージェントでScratchをリアルタイム編集。project.jsonをプレーンJSONとして公開し双方向同期。</p>
-</div>
-</div>
-</div>
-<!-- Card 9 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="9" data-title="Scratch Inspector" data-category="Web App" data-author="u-akira"
-  data-tech="Elixir, Phoenix LiveView"
-  data-desc="Scratchの.sb/.sb2/.sb3ファイルをアップロードすると、カスタムブロックの呼び出しグラフ・イベントフロー図・変数の参照マップをグラフィカルに表示するWebアプリ。Phoenix LiveViewによるリアルタイム更新でファイル再アップロード不要で再解析でき、ノードクリックで対応スクリプトへのジャンプも可能。Scratch 1.x〜3.xの全形式に対応。"
-  data-github="https://github.com/EngineerCafeJP/scratch-inspector"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="Scratch Inspector" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/scratch-inspector.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">Scratch Inspector</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">Scratchの関数・イベント・変数をグラフ可視化。sb/sb2/sb3の全形式に対応しリアルタイム再解析。</p>
-</div>
-</div>
-</div>
-<!-- Card 10 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="10" data-title="OurLiving" data-category="Web App" data-author="affectionate-insight-lab"
-  data-tech="非公開"
-  data-desc="AIモデルの終了やアップデートによってAIとの関係性が失われる問題に向き合い、ユーザーがAIパートナーとの関係性・話し方・会話ログを入力することで「Persona Seed（人格の種）」を生成するWebアプリ。継承プロンプト・モデル別補正プロンプトで異なるAIモデル間でも同じ温度感で再会できる仕組みを提供。Big Five（OCEAN）による人格傾向の可視化・履歴保存・JSONダウンロードも実装。"
-  data-github="https://our-living-ozz6.vercel.app/lp"
-  data-link-label="LPサイトを見る"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="OurLiving" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/our-living.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">OurLiving</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">AIパートナーの人格を異なるモデルへ引き継ぐ。Persona Seedで温度感・人格の輪郭を継承。</p>
-</div>
-</div>
-</div>
-<!-- Card 11 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="11" data-title="brainstorm-engine" data-category="Web App" data-author="hirokazunakagawa1234-ui"
-  data-tech="Python, FastAPI, Jinja2, PostgreSQL, psycopg2, Gemini API (gemini-2.5-flash), slowapi, uvicorn, python-dotenv"
-  data-desc="ユーザーが議題を投稿すると、スティーブ・ジョブズ型ビジョナリー・実装思考型・型破り発想型の3つのAIペルソナがGemini（gemini-2.5-flash）を使って並列回答するブレインストーミング支援Webアプリ。返信はスレッド構造で管理され、祖先ノードの議論の文脈を引き継いで各ペルソナが応答する。FastAPI + Jinja2 + PostgreSQL構成で、Renderへのデプロイ設定も含む。"
-  data-github="https://github.com/EngineerCafeJP/brainstorm-engine-"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="brainstorm-engine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/brainstorm-engine.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">brainstorm-engine</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">議題に3つのAIペルソナが並列討論。ジョブズ型・実装型・カオス型がブレストをサポート。</p>
-</div>
-</div>
-</div>
-<!-- Card 12 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="12" data-title="gesture-control" data-category="Tool" data-author="k-kura84"
-  data-tech="Python 3.10+, MediaPipe, OpenCV, PyAutoGUI, SpeechRecognition, PyAudio, PyYAML, AppleScript"
-  data-desc="Webカメラで手のジェスチャーを認識し、PC操作に変換するmacOSツール。MediaPipeのHand Landmarker Tasks APIで手の21ランドマークをリアルタイム検出し、サムズアップ（承認）・ピースサイン（テキスト送信+Enter）・グーパー（音声入力ON/OFF）・手招き（スクロール）の5種に対応。Claude Codeなどのターミナル操作をハンズフリーで行えるのが特徴。"
-  data-github="https://github.com/EngineerCafeJP/gesture-control"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="gesture-control" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/gesture-control.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">gesture-control</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Tool</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">ハンドジェスチャーでPCをハンズフリー操作。Claude Codeのターミナル操作も身振りで。</p>
-</div>
-</div>
-</div>
-<!-- Card 13 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="13" data-title="oto-factory" data-category="Web App" data-author="engineercafe-jp"
-  data-tech="Python 3.11, uv, FastAPI, Next.js, ACE-Step 1.5, Pydantic, CUDA / MPS / CPU"
-  data-desc="音楽生成モデルACE-Step 1.5を使い、テキストで雰囲気を指定するだけでMP3楽曲をその場で生成・再生・ダウンロードできるWebアプリ。再生中に次の曲を先行生成してシームレスに連続再生する「ループ生成」モードを搭載。ループ中もプロンプト・BPM・Seedをリアルタイムに変更可能。FastAPI非同期ジョブキュー + Next.js App Router構成で、Google Colab（T4/A100）での運用を想定。"
-  data-github="https://github.com/engineercafe-jp/oto-factory"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-<img alt="oto-factory" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="asset/oto-factory.png" loading="lazy"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">oto-factory</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">テキストから作業用BGMをAI生成。シームレスなループ再生でBGMが途切れない。</p>
-</div>
-</div>
-</div>
-<!-- Card 14 -->
-<div class="flex-shrink-0 w-full md:w-1/3 px-3">
-<div class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
-  data-card-id="14" data-title="Vibe Coding Club Website" data-category="Web Site" data-author="engineercafe-jp"
-  data-tech="HTML, Tailwind CSS, JavaScript (Vanilla)"
-  data-desc="Vibe Coding Clubの公式ランディングページ。プロダクト一覧カルーセル（公開日降順ソート・モーダル詳細表示）、ヒーローセクションのCanvas粒子アニメーション、JA/EN言語切替（ブラウザ言語自動検出・localStorage保存）を実装。Tailwind CSS（Material Design 3トークン）とバニラJSで構成し、外部ビルドツール不要の単一HTMLファイル。"
-  data-github="https://github.com/engineercafe-jp/vibe-coding-club-website"
-  data-date="2026-04-04">
-<div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
-<span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-4">
-<h3 class="text-xl font-bold font-headline truncate min-w-0">Vibe Coding Club Website</h3>
-<span class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web Site</span>
-</div>
-<p class="text-sm text-on-surface-variant line-clamp-2">このサイト自体もプロダクト。粒子アニメーション・カルーセル・JA/EN切替を実装。</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Pager -->
-<div class="flex justify-center items-center gap-6 mt-10">
-<button id="carousel-prev" class="p-3 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">
-<span class="material-symbols-outlined">arrow_back</span>
-</button>
-<div id="carousel-dots" class="flex gap-2"></div>
-<button id="carousel-next" class="p-3 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</section>
-<script>
-(function () {
-  const track = document.getElementById('carousel-track');
-  const viewport = document.getElementById('carousel-viewport');
-  const dotsContainer = document.getElementById('carousel-dots');
-  const prevBtn = document.getElementById('carousel-prev');
-  const nextBtn = document.getElementById('carousel-next');
-  const TOTAL_CARDS = track.children.length;
-  let currentPage = 0;
+        <div class="flex flex-col sm:flex-row gap-4 md:items-start w-full sm:w-auto">
+          <a class="hero-gradient text-on-primary px-10 py-4 rounded-full text-base font-bold shadow-xl hover:shadow-2xl transition-all active:scale-95 text-center"
+            href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="hero.apply">
+            挑戦者として申し込む
+          </a>
+          <a class="bg-surface-container-high text-on-surface px-10 py-4 rounded-full text-base font-bold hover:bg-surface-container-highest transition-all active:scale-95 text-center"
+            href="https://i-love-ai.connpass.com/" data-i18n="hero.visit">
+            オンライン見学
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Overview Section -->
+  <section class="py-32 hero-gradient shadow-inner relative overflow-hidden" id="overview">
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-loose md:leading-relaxed text-white font-headline tracking-tighter"
+        data-i18n-html="overview.desc" style="line-break: strict; overflow-wrap: anywhere;">
+        バイブコーディングクラブは、<br class="hidden sm:block" />
+        挑戦者が持参するアイデアでバイブコーディングを行い、<br />
+        <span class="text-primary-fixed-dim">1ヶ月間でプロダクトを完成させる</span>イベントです。
+      </p>
+    </div>
+  </section>
+  <!-- Core Benefit Section -->
+  <section class="py-24 bg-surface-container-low" id="benefits">
+    <div class="max-w-5xl mx-auto px-6">
+      <div
+        class="bg-surface-container-lowest rounded-3xl p-8 md:p-16 shadow-sm border border-outline-variant/10 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1">
+          <span
+            class="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6"
+            data-i18n="benefits.badge">挑戦者特典</span>
+          <h2 class="text-xl sm:text-2xl md:text-4xl font-bold mb-6 tracking-tight font-headline"
+            data-i18n="benefits.title">Claude Code Pro プラン、1ヶ月分の利用料を補助。</h2>
+          <p class="text-on-surface-variant leading-relaxed text-lg mb-8" data-i18n="benefits.desc">
+            最新のAIコーディング環境をすべての参加者に。Vibe Coding Clubでは、開発の核となる「Claude Code
+            Pro」プランの1ヶ月分サブスクリプション費用をクラブが全額負担します。環境構築に悩む時間は、もう必要ありません。
+          </p>
+          <div class="flex items-center gap-4 text-primary font-semibold">
+            <span class="material-symbols-outlined">verified</span>
+            <span data-i18n="benefits.backed">エンジニアカフェ公式バックアップ</span>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-1/3 aspect-square bg-surface-container-high rounded-2xl flex items-center justify-center">
+          <img alt="Claude AI Logo" class="w-1/2 h-auto object-contain" src="asset/Claude_AI_logo.svg" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Product Gallery -->
+  <section class="py-24 px-6 max-w-7xl mx-auto" id="projects">
+    <div class="mb-12">
+      <h2 class="text-4xl font-bold tracking-tighter font-headline mb-4" data-i18n="products.title">プロダクト一覧</h2>
+      <p class="text-on-surface-variant max-w-lg" data-i18n="products.subtitle">歴代挑戦者がバイブコーディングで作成したプロダクト</p>
+    </div>
+    <!-- Carousel -->
+    <div class="overflow-hidden" id="carousel-viewport">
+      <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="1" data-title="Pet Content Generator" data-category="Web App" data-author="dssakamoto"
+            data-tech="React 18, TypeScript, Vite, Tailwind CSS, FastAPI, Python 3.11, Gemini API, DALL-E 3, Stability AI, ffmpeg, Docker Compose"
+            data-desc="「春のお花見」などのテーマと動物種（猫・犬・ランダム）を選ぶだけで、AIが癒し系画像（最大8枚）やSNS向け縦型ショート動画（1080×1920）を自動生成するWebアプリ。生成画像はポラロイド風フレームで表示・ダウンロード可能。Gemini・DALL-E 3・Stability AIをStrategyパターンで切り替えられる設計で、動画はffmpegによるズーム＆フェード合成で仕上げる。"
+            data-github="https://github.com/EngineerCafeJP/pet_content_generater" data-date="2026-03-01">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="Pet Content Generator"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/pet_content_generator.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">Pet Content Generator</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web
+                  App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">ペットのAI動画・画像生成。テーマを入力して癒し系画像やショート動画を自動生成。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="2" data-title="BTCタラレバ長者 vs 現実の地獄シミュレーター" data-category="Simulator" data-author="umino-tori"
+            data-tech="Python 3.12, Streamlit, yfinance, Plotly, Pandas, SQLite3"
+            data-desc="過去のBTC-JPY価格データを使い、A「神の現物」（毎日安値買い高値売りの理論最大値）・B「現実のトレード」（手数料+スリッページ適用）・C「レバレッジ・ガチホ」（強制ロスカットリスクあり）の3シナリオを同時比較するWebアプリ。ローソク足チャート・資産推移グラフ・円グラフ・日次詳細テーブルで可視化し、追証・ロスカット発生時はショッキングな警告ボックスで演出。yfinanceデータはSQLiteにキャッシュ。"
+            data-github="https://github.com/EngineerCafeJP/bitc-tarareba" data-date="2026-03-01">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="BTCタラレバ長者 vs 現実の地獄シミュレーター"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/bitc-tarareba.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">BTCタラレバ長者 vs 現実</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Simulator</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">BTC投資シナリオ比較ツール。「夢の理論値」と「手数料・ロスカットによる現実」を3シナリオで比較。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="3" data-title="workTrace" data-category="Utility" data-author="umino-tori"
+            data-tech="Python 3.12, FastAPI, SQLAlchemy, SQLite, React 18, Vite, Tailwind CSS, Recharts, Axios"
+            data-desc="作業時間の記録・分析を行うWebアプリ。後から入力した記録が既存の時間を自動的に上書き・分割する「後出し優先ロジック」（4ケースの重複解決）が核心機能で、日またぎの深夜作業にも対応。プロジェクト名・作業種別の入力補完、複製ボタン、24時間タイムラインバー、アナリティクス（ドーナツチャート・棒グラフ・稼働率バー）を提供。"
+            data-github="https://github.com/EngineerCafeJP/worktrace" data-date="2026-03-01">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
+              <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">workTrace</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Utility</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">後出し優先ロジックで時間を自動管理。24hタイムライン・アナリティクスで作業時間を記録・分析。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="4" data-title="源氏物語 AI絵巻 — Genji RAG" data-category="RAG" data-author="umino-tori"
+            data-tech="Python 3.10+, Streamlit, ChromaDB, Google Gemini API (gemini-embedding-001, gemini-2.5-flash-lite), python-dotenv, tqdm"
+            data-desc="青空文庫の源氏物語（与謝野晶子訳・全56帖中5帖）をgemini-embedding-001でベクトル化してChromaDBに保存し、コサイン類似度検索した上でGemini（gemini-2.5-flash-lite）が「平安文学の専門家」ペルソナでストリーミング回答するStreamlitチャットアプリ。参照場面を帖名・関連度・タグ・登場人物付きカードで表示。平安風/ダークテーマ切り替え・現代語訳付き引用オプションあり。"
+            data-github="https://github.com/EngineerCafeJP/genji-emaki" data-date="2026-03-01">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
+              <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">源氏物語 AI絵巻</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">RAG</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">源氏物語をRAGで検索しGeminiが専門家回答。参照場面をカード表示しストリーミング回答。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="5" data-title="源氏絵巻 local_LLM" data-category="LLM" data-author="umino-tori"
+            data-tech="Python, Google Colab (T4 GPU), llama-cpp-python, Qwen2.5-7B-Instruct-GGUF, FastAPI, pyngrok, Hugging Face Hub, nest-asyncio"
+            data-desc="Google ColabのT4 GPU上でQwen2.5-7B-Instruct（GGUF・Q4_K_M量子化）をローカルLLMとして動作させ、FastAPI＋pyngrokで外部公開するJupyterノートブック。モデルはHugging FaceからGoogle Drive（約6GB）にキャッシュ。源氏物語RAGアプリ（genji-emaki）のバックエンドLLMとして使用することを想定。"
+            data-github="https://github.com/EngineerCafeJP/genji-emaki_google-colab" data-date="2026-03-01">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
+              <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">源氏絵巻 local_LLM</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">LLM</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">Google Colab T4
+                GPU上でQwen2.5-7BをLLMサーバーとして公開。FastAPI+pyngrokで外部から接続可能。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="6" data-title="Speed Tracker" data-category="Tool" data-author="engineercafe-jp"
+            data-tech="Python 3.12, uv, Ookla Speedtest CLI, SQLite, matplotlib, seaborn, numpy, PyYAML, pytest"
+            data-desc="エンジニアカフェの回線速度をOokla Speedtest CLIで15分ごとに自動計測し、DL・UL・Ping・Jitterの4指標から快適度スコア（0〜100）を算出。計測データはSQLiteに90日間保存し、曜日×時間帯ヒートマップ・直近24時間推移グラフ・傾向サマリを1枚の画像で生成。cronによる自動実行に対応。"
+            data-github="https://github.com/EngineerCafeJP/speed-tracker" data-date="2026-03-01">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
+              <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">Speed Tracker</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Tool</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">
+                回線快適度をヒートマップで自動可視化。15分間隔でDL/UL/Ping/Jitterを計測しスコア化。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="7" data-title="toio-mcp" data-category="MCP" data-author="u-akira"
+            data-tech="TypeScript, Node.js 20+, @toio/scanner, @toio/cube, @modelcontextprotocol/sdk, zod, Claude API / OpenAI API"
+            data-desc="Claude DesktopやMCP対応クライアントから自然言語でtoio Core CubeをBLE制御できるMCPサーバー。移動・回転・LED色変更・効果音再生・バッテリー取得など8種のMCPツールを提供。stackchanなどの外部デバイス向けにWebAPIサーバーも内蔵し、自然言語テキストをClaude/OpenAI LLMがtoio操作に変換して実行する。"
+            data-github="https://github.com/EngineerCafeJP/toio-mcp" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="toio-mcp"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/toio-mcp.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">toio-mcp</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">MCP</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">自然言語でtoioをBLE制御するMCPサーバー。Claude
+                Desktopから8種のツールで操作可能。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="8" data-title="Live Scratch" data-category="Desktop App" data-author="u-akira"
+            data-tech="Rust, Tauri v2, Node.js, Scratch GUI (scratch-editor)"
+            data-desc="Scratchプロジェクトファイル（.sb3）とScratchエディタを双方向にライブ同期するmacOSデスクトップアプリ。project.jsonをプレーンJSONとして公開することで、Claude Code・Codex・Gemini CLIなどのAIエージェントに自然言語で指示するだけでScratchプロジェクトをリアルタイムに編集できる。Rustバックエンド（Tauri v2）でファイル変更を検知し即時反映。"
+            data-github="https://github.com/EngineerCafeJP/live-scratch" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="Live Scratch"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/live-scratch.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">Live Scratch</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Desktop
+                  App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">
+                AIエージェントでScratchをリアルタイム編集。project.jsonをプレーンJSONとして公開し双方向同期。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="9" data-title="Scratch Inspector" data-category="Web App" data-author="u-akira"
+            data-tech="Elixir, Phoenix LiveView"
+            data-desc="Scratchの.sb/.sb2/.sb3ファイルをアップロードすると、カスタムブロックの呼び出しグラフ・イベントフロー図・変数の参照マップをグラフィカルに表示するWebアプリ。Phoenix LiveViewによるリアルタイム更新でファイル再アップロード不要で再解析でき、ノードクリックで対応スクリプトへのジャンプも可能。Scratch 1.x〜3.xの全形式に対応。"
+            data-github="https://github.com/EngineerCafeJP/scratch-inspector" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="Scratch Inspector"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/scratch-inspector.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">Scratch Inspector</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web
+                  App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">
+                Scratchの関数・イベント・変数をグラフ可視化。sb/sb2/sb3の全形式に対応しリアルタイム再解析。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="10" data-title="OurLiving" data-category="Web App" data-author="affectionate-insight-lab"
+            data-tech="非公開"
+            data-desc="AIモデルの終了やアップデートによってAIとの関係性が失われる問題に向き合い、ユーザーがAIパートナーとの関係性・話し方・会話ログを入力することで「Persona Seed（人格の種）」を生成するWebアプリ。継承プロンプト・モデル別補正プロンプトで異なるAIモデル間でも同じ温度感で再会できる仕組みを提供。Big Five（OCEAN）による人格傾向の可視化・履歴保存・JSONダウンロードも実装。"
+            data-github="https://our-living-ozz6.vercel.app/lp" data-link-label="LPサイトを見る" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="OurLiving"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/our-living.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">OurLiving</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web
+                  App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">AIパートナーの人格を異なるモデルへ引き継ぐ。Persona Seedで温度感・人格の輪郭を継承。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="11" data-title="brainstorm-engine" data-category="Web App"
+            data-author="hirokazunakagawa1234-ui"
+            data-tech="Python, FastAPI, Jinja2, PostgreSQL, psycopg2, Gemini API (gemini-2.5-flash), slowapi, uvicorn, python-dotenv"
+            data-desc="ユーザーが議題を投稿すると、スティーブ・ジョブズ型ビジョナリー・実装思考型・型破り発想型の3つのAIペルソナがGemini（gemini-2.5-flash）を使って並列回答するブレインストーミング支援Webアプリ。返信はスレッド構造で管理され、祖先ノードの議論の文脈を引き継いで各ペルソナが応答する。FastAPI + Jinja2 + PostgreSQL構成で、Renderへのデプロイ設定も含む。"
+            data-github="https://github.com/EngineerCafeJP/brainstorm-engine-" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="brainstorm-engine"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/brainstorm-engine.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">brainstorm-engine</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web
+                  App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">議題に3つのAIペルソナが並列討論。ジョブズ型・実装型・カオス型がブレストをサポート。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="12" data-title="gesture-control" data-category="Tool" data-author="k-kura84"
+            data-tech="Python 3.10+, MediaPipe, OpenCV, PyAutoGUI, SpeechRecognition, PyAudio, PyYAML, AppleScript"
+            data-desc="Webカメラで手のジェスチャーを認識し、PC操作に変換するmacOSツール。MediaPipeのHand Landmarker Tasks APIで手の21ランドマークをリアルタイム検出し、サムズアップ（承認）・ピースサイン（テキスト送信+Enter）・グーパー（音声入力ON/OFF）・手招き（スクロール）の5種に対応。Claude Codeなどのターミナル操作をハンズフリーで行えるのが特徴。"
+            data-github="https://github.com/EngineerCafeJP/gesture-control" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="gesture-control"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/gesture-control.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">gesture-control</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Tool</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">ハンドジェスチャーでPCをハンズフリー操作。Claude Codeのターミナル操作も身振りで。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 13 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="13" data-title="oto-factory" data-category="Web App" data-author="engineercafe-jp"
+            data-tech="Python 3.11, uv, FastAPI, Next.js, ACE-Step 1.5, Pydantic, CUDA / MPS / CPU"
+            data-desc="音楽生成モデルACE-Step 1.5を使い、テキストで雰囲気を指定するだけでMP3楽曲をその場で生成・再生・ダウンロードできるWebアプリ。再生中に次の曲を先行生成してシームレスに連続再生する「ループ生成」モードを搭載。ループ中もプロンプト・BPM・Seedをリアルタイムに変更可能。FastAPI非同期ジョブキュー + Next.js App Router構成で、Google Colab（T4/A100）での運用を想定。"
+            data-github="https://github.com/engineercafe-jp/oto-factory" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+              <img alt="oto-factory"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src="asset/oto-factory.png" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">oto-factory</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web
+                  App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">テキストから作業用BGMをAI生成。シームレスなループ再生でBGMが途切れない。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 14 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10"
+            data-card-id="14" data-title="Vibe Coding Club Website" data-category="Web Site"
+            data-author="engineercafe-jp" data-tech="HTML, Tailwind CSS, JavaScript (Vanilla)"
+            data-desc="Vibe Coding Clubの公式ランディングページ。プロダクト一覧カルーセル（公開日降順ソート・モーダル詳細表示）、ヒーローセクションのCanvas粒子アニメーション、JA/EN言語切替（ブラウザ言語自動検出・localStorage保存）を実装。Tailwind CSS（Material Design 3トークン）とバニラJSで構成し、外部ビルドツール不要の単一HTMLファイル。"
+            data-github="https://github.com/engineercafe-jp/vibe-coding-club-website" data-date="2026-04-04">
+            <div class="aspect-[4/3] bg-slate-200 overflow-hidden flex items-center justify-center">
+              <span class="material-symbols-outlined text-slate-400 scale-[3]">image</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">Vibe Coding Club Website</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web
+                  Site</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">このサイト自体もプロダクト。粒子アニメーション・カルーセル・JA/EN切替を実装。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pager -->
+    <div class="flex justify-center items-center gap-6 mt-10">
+      <button id="carousel-prev"
+        class="p-3 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+      <div id="carousel-dots" class="flex gap-2"></div>
+      <button id="carousel-next"
+        class="p-3 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </button>
+    </div>
+  </section>
+  <script>
+    (function () {
+      const track = document.getElementById('carousel-track');
+      const viewport = document.getElementById('carousel-viewport');
+      const dotsContainer = document.getElementById('carousel-dots');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      const TOTAL_CARDS = track.children.length;
+      let currentPage = 0;
 
-  function cardsPerPage() {
-    return window.innerWidth >= 768 ? 3 : 1;
-  }
+      function cardsPerPage() {
+        return window.innerWidth >= 768 ? 3 : 1;
+      }
 
-  function totalPages() {
-    return Math.ceil(TOTAL_CARDS / cardsPerPage());
-  }
+      function totalPages() {
+        return Math.ceil(TOTAL_CARDS / cardsPerPage());
+      }
 
-  function buildDots() {
-    dotsContainer.innerHTML = '';
-    for (let i = 0; i < totalPages(); i++) {
-      const dot = document.createElement('button');
-      dot.className = 'w-2 h-2 rounded-full transition-colors duration-300';
-      dot.addEventListener('click', () => goToPage(i));
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  function updateUI() {
-    const offset = currentPage * viewport.offsetWidth;
-    track.style.transform = `translateX(-${offset}px)`;
-    Array.from(dotsContainer.children).forEach((dot, i) => {
-      dot.className = 'w-2 h-2 rounded-full transition-colors duration-300 ' +
-        (i === currentPage ? 'bg-primary' : 'bg-outline-variant');
-    });
-  }
-
-  function goToPage(page) {
-    const pages = totalPages();
-    currentPage = ((page % pages) + pages) % pages;
-    updateUI();
-  }
-
-  prevBtn.addEventListener('click', () => goToPage(currentPage - 1));
-  nextBtn.addEventListener('click', () => goToPage(currentPage + 1));
-
-  window.addEventListener('resize', () => {
-    currentPage = 0;
-    buildDots();
-    updateUI();
-  });
-
-  // 公開日降順ソート
-  const cards = Array.from(track.children);
-  cards.sort((a, b) => {
-    const dateA = a.querySelector('[data-date]')?.dataset.date || '';
-    const dateB = b.querySelector('[data-date]')?.dataset.date || '';
-    return dateB.localeCompare(dateA);
-  });
-  cards.forEach(card => track.appendChild(card));
-
-  // 公開日表示を各カードに注入
-  cards.forEach(card => {
-    const inner = card.querySelector('[data-date]');
-    if (!inner) return;
-    const date = inner.dataset.date;
-    const p6 = card.querySelector('.p-6');
-    if (!p6) return;
-    const dateEl = document.createElement('p');
-    dateEl.className = 'text-xs text-on-surface-variant/60 mt-2';
-    dateEl.dataset.dateLabel = date;
-    const prefix = window._i18n ? window._i18n.t()['card.date'] : '公開日: ';
-    dateEl.textContent = prefix + date;
-    p6.appendChild(dateEl);
-  });
-
-  buildDots();
-  updateUI();
-})();
-</script>
-<!-- Event Details & Map -->
-<section class="py-24 bg-surface-container" id="access">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-<div>
-<h2 class="text-4xl font-bold tracking-tighter font-headline mb-12" data-i18n="event.title">イベント詳細</h2>
-<div class="space-y-10">
-<div class="flex gap-6">
-<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-primary-container">location_on</span>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-1" data-i18n="event.venue.label">場所</h4>
-<p class="text-on-surface-variant" data-i18n="event.venue.value">エンジニアカフェ 地下1階 会議室</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-primary-container">calendar_month</span>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-1" data-i18n="event.schedule.label">日程</h4>
-<p class="text-on-surface-variant" data-i18n="event.schedule.value">毎週土曜日 16:00 〜 18:00（開場15:00・撤収19:00）</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-primary-container">schedule</span>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-2" data-i18n="event.timeline.label">タイムライン</h4>
-<table class="text-sm text-on-surface-variant w-full">
-<tbody>
-<tr class="border-b border-outline-variant/30"><td class="py-1.5 pr-4 font-medium whitespace-nowrap">16:00 - 16:15</td><td class="py-1.5" data-i18n="event.timeline.1">今日の目標発表</td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-1.5 pr-4 font-medium whitespace-nowrap">16:15 - 17:45</td><td class="py-1.5" data-i18n="event.timeline.2">バイブコーディング ※</td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-1.5 pr-4 font-medium whitespace-nowrap">17:45 - 18:00</td><td class="py-1.5" data-i18n="event.timeline.3">進捗・最終発表</td></tr>
-<tr><td class="py-1.5 pr-4 font-medium whitespace-nowrap">18:00 -</td><td class="py-1.5" data-i18n="event.timeline.4">オフレコ交流会（自由参加）</td></tr>
-</tbody>
-</table>
-<p class="text-xs text-on-surface-variant mt-3" data-i18n="event.timeline.note">※ 挑戦者の希望に応じて、Claude Code・Codex・Antigravity・Gemini CLI の初心者講習をします🔰</p>
-</div>
-</div>
-</div>
-</div>
-<div class="rounded-3xl overflow-hidden shadow-lg aspect-video md:aspect-square bg-surface-dim relative border-4 border-surface-container-lowest">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.4678752421187!2d130.39928067585976!3d33.5931628733333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541912c3f02d719%3A0x4c23e7b1d51ccd1!2z44Ko44Oz44K444OL44Ki44Kr44OV44Kn!5e0!3m2!1sja!2sjp!4v1774685075124!5m2!1sja!2sjp" class="absolute inset-0 w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-</div>
-</div>
-</section>
-<!-- Final CTA -->
-<section class="py-32 px-6">
-<div class="max-w-4xl mx-auto text-center">
-<h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 font-headline" data-i18n="cta.title">一歩、踏み出す準備はできましたか？</h2>
-<p class="text-xl text-on-surface-variant mb-12 leading-relaxed" data-i18n-html="cta.desc">
-                非エンジニアでもプロダクトの完成までサポートします🙆<br/>
-                バイブコーディングを楽しもう🧪
-            </p>
-<div class="flex flex-col md:flex-row justify-center gap-6">
-<a class="hero-gradient text-on-primary px-10 py-4 rounded-full text-base font-bold shadow-xl hover:shadow-2xl transition-all active:scale-95" href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="cta.apply">
-                    挑戦者として申し込む
-                </a>
-<a class="bg-surface-container-high text-on-surface px-10 py-4 rounded-full text-base font-bold hover:bg-surface-container-highest transition-all active:scale-95" href="https://i-love-ai.connpass.com/" data-i18n="cta.visit">
-                    オンライン見学
-                </a>
-</div>
-</div>
-</section>
-<!-- Product Modal -->
-<div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
-<div id="modal-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-<div id="modal-scroll" class="relative bg-surface-container-lowest rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto overscroll-contain">
-<button id="modal-close" class="absolute top-4 right-4 p-2 rounded-full hover:bg-surface-container transition-colors">
-<span class="material-symbols-outlined">close</span>
-</button>
-<div id="modal-image-wrap" class="aspect-[4/3] bg-slate-200 flex items-center justify-center rounded-t-3xl overflow-hidden">
-<span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>
-</div>
-<div class="p-8">
-<div class="flex items-center gap-3 mb-4">
-<span id="modal-category" class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full"></span>
-</div>
-<h2 id="modal-title" class="text-2xl font-bold font-headline mb-4"></h2>
-<p id="modal-desc" class="text-on-surface-variant leading-relaxed mb-6"></p>
-<div class="space-y-3">
-<div class="flex gap-2 items-start">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5">build</span>
-<div>
-<span class="text-xs text-on-surface-variant font-semibold uppercase tracking-widest" data-i18n="modal.tech">使用技術</span>
-<p id="modal-tech" class="text-sm mt-1"></p>
-</div>
-</div>
-<div class="flex gap-2 items-start">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5">person</span>
-<div>
-<span class="text-xs text-on-surface-variant font-semibold uppercase tracking-widest" data-i18n="modal.author">実装者</span>
-<p id="modal-author" class="text-sm mt-1"></p>
-</div>
-</div>
-</div>
-<a id="modal-github" href="#" target="_blank" rel="noopener noreferrer"
-  class="mt-8 flex items-center justify-center gap-2 w-full py-3 rounded-full border border-outline-variant hover:bg-surface-container transition-colors font-semibold text-sm">
-<span class="material-symbols-outlined text-sm">open_in_new</span>
-GitHubで見る
-</a>
-</div>
-</div>
-</div>
-<script>
-(function () {
-  const modal = document.getElementById('product-modal');
-  const backdrop = document.getElementById('modal-backdrop');
-  const closeBtn = document.getElementById('modal-close');
-
-  function openModal(card) {
-    const imgWrap = document.getElementById('modal-image-wrap');
-    const cardImg = card.querySelector('img');
-    if (cardImg) {
-      imgWrap.innerHTML = `<img src="${cardImg.src}" alt="${cardImg.alt}" class="w-full h-full object-cover"/>`;
-    } else {
-      imgWrap.innerHTML = '<span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>';
-    }
-    const t = window._i18n ? window._i18n.t() : {};
-    const lang = window._i18n ? window._i18n.lang() : 'ja';
-    const id = card.dataset.cardId;
-    document.getElementById('modal-title').textContent =
-      lang === 'en' && id && t[`card.${id}.title`] ? t[`card.${id}.title`] : card.dataset.title;
-    document.getElementById('modal-category').textContent = card.dataset.category;
-    document.getElementById('modal-desc').textContent =
-      lang === 'en' && id && t[`card.${id}.desc`] ? t[`card.${id}.desc`] : card.dataset.desc;
-    document.getElementById('modal-tech').textContent = card.dataset.tech;
-    document.getElementById('modal-author').textContent = card.dataset.author;
-    const githubEl = document.getElementById('modal-github');
-    githubEl.href = card.dataset.github;
-    if (card.dataset.linkLabel) {
-      githubEl.lastChild.textContent = card.dataset.linkLabel === 'LPサイトを見る'
-        ? (t['modal.lp'] || card.dataset.linkLabel)
-        : card.dataset.linkLabel;
-    } else {
-      githubEl.lastChild.textContent = t['modal.github'] || 'GitHubで見る';
-    }
-    modal.classList.remove('hidden');
-    document.getElementById('modal-scroll').scrollTop = 0;
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('click', () => openModal(card));
-  });
-
-  closeBtn.addEventListener('click', closeModal);
-  backdrop.addEventListener('click', closeModal);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-})();
-</script>
-<script>
-(function () {
-  const canvas = document.getElementById('hero-canvas');
-  const ctx = canvas.getContext('2d');
-
-  const NODE_COUNT = 55;
-  const CONNECTION_DIST = 160;
-  const NODE_COLOR = 'rgba(99, 102, 241, ';   // indigo-ish, matches primary
-  const LINE_COLOR  = 'rgba(99, 102, 241, ';
-
-  let nodes = [];
-
-  function resize() {
-    canvas.width  = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  }
-
-  function initNodes() {
-    nodes = Array.from({ length: NODE_COUNT }, () => ({
-      x:  Math.random() * canvas.width,
-      y:  Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      r:  Math.random() * 2 + 1.5,
-    }));
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // connections
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < CONNECTION_DIST) {
-          const alpha = (1 - dist / CONNECTION_DIST) * 0.18;
-          ctx.beginPath();
-          ctx.strokeStyle = LINE_COLOR + alpha + ')';
-          ctx.lineWidth = 1;
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.stroke();
+      function buildDots() {
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalPages(); i++) {
+          const dot = document.createElement('button');
+          dot.className = 'w-2 h-2 rounded-full transition-colors duration-300';
+          dot.addEventListener('click', () => goToPage(i));
+          dotsContainer.appendChild(dot);
         }
       }
-    }
 
-    // nodes
-    for (const n of nodes) {
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = NODE_COLOR + '0.25)';
-      ctx.fill();
-    }
-  }
-
-  function update() {
-    for (const n of nodes) {
-      n.x += n.vx;
-      n.y += n.vy;
-      if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
-      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
-    }
-  }
-
-  function loop() {
-    update();
-    draw();
-    requestAnimationFrame(loop);
-  }
-
-  resize();
-  initNodes();
-  loop();
-
-  window.addEventListener('resize', () => { resize(); initNodes(); });
-})();
-</script>
-<script>
-(function () {
-  const T = {
-    ja: {
-      'nav.visit': 'オンライン見学',
-      'nav.apply': '挑戦者として申し込む',
-      'hero.title': 'AIとプロダクトを作ろう！',
-      'hero.subtitle': 'Claude Code Proプラン支給！挑戦者募集☆（未経験可）',
-      'hero.apply': '挑戦者として申し込む',
-      'hero.visit': 'オンライン見学',
-      'benefits.badge': '挑戦者特典',
-      'benefits.title': 'Claude Code Pro プラン、1ヶ月分の利用料を補助。',
-      'benefits.desc': '最新のAIコーディング環境をすべての参加者に。Vibe Coding Clubでは、開発の核となる「Claude Code Pro」プランの1ヶ月分サブスクリプション費用をクラブが全額負担します。環境構築に悩む時間は、もう必要ありません。',
-      'benefits.backed': 'エンジニアカフェ公式バックアップ',
-      'products.title': 'プロダクト一覧',
-      'products.subtitle': '歴代挑戦者がバイブコーディングで作成したプロダクト',
-      'event.title': 'イベント詳細',
-      'event.venue.label': '場所',
-      'event.venue.value': 'エンジニアカフェ 地下1階 会議室',
-      'event.schedule.label': '日程',
-      'event.schedule.value': '毎週土曜日 16:00 〜 18:00（開場15:00・撤収19:00）',
-      'event.timeline.label': 'タイムライン',
-      'event.timeline.1': '今日の目標発表',
-      'event.timeline.2': 'バイブコーディング ※',
-      'event.timeline.3': '進捗・最終発表',
-      'event.timeline.4': 'オフレコ交流会（自由参加）',
-      'event.timeline.note': '※ 挑戦者の希望に応じて、Claude Code・Codex・Antigravity・Gemini CLI の初心者講習をします🔰',
-      'cta.title': '一歩、踏み出す準備はできましたか？',
-      'cta.desc': '非エンジニアでもプロダクトの完成までサポートします🙆<br/>バイブコーディングを楽しもう🧪',
-      'cta.apply': '挑戦者として申し込む',
-      'cta.visit': 'オンライン見学',
-      'modal.tech': '使用技術',
-      'modal.author': '実装者',
-      'modal.github': 'GitHubで見る',
-      'modal.lp': 'LPサイトを見る',
-      'card.date': '公開日: ',
-    },
-    en: {
-      'nav.visit': 'Online Visit',
-      'nav.apply': 'Apply as Challenger',
-      'hero.title': 'Build Products with AI!',
-      'hero.subtitle': 'Claude Code Pro plan provided! Challengers wanted ☆ (beginners welcome)',
-      'hero.apply': 'Apply as Challenger',
-      'hero.visit': 'Online Visit',
-      'benefits.badge': 'Challenger Benefits',
-      'benefits.title': 'Claude Code Pro Plan — 1 month subscription covered.',
-      'benefits.desc': 'The latest AI coding environment for every participant. Vibe Coding Club fully covers one month of the "Claude Code Pro" subscription — the core tool for development. No more time wasted on setup.',
-      'benefits.backed': 'Officially backed by Engineer Cafe',
-      'products.title': 'Products',
-      'products.subtitle': 'Products built by challengers through vibe coding',
-      'event.title': 'Event Details',
-      'event.venue.label': 'Venue',
-      'event.venue.value': 'Engineer Cafe B1F Meeting Room',
-      'event.schedule.label': 'Schedule',
-      'event.schedule.value': 'Every Saturday 16:00 – 18:00 (Doors 15:00, Close 19:00)',
-      'event.timeline.label': 'Timeline',
-      'event.timeline.1': 'Goal announcement',
-      'event.timeline.2': 'Vibe coding ※',
-      'event.timeline.3': 'Progress & final presentation',
-      'event.timeline.4': 'Off-the-record mixer (optional)',
-      'event.timeline.note': '※ Beginner workshops for Claude Code, Codex, Antigravity & Gemini CLI available on request 🔰',
-      'cta.title': 'Ready to take the first step?',
-      'cta.desc': 'We support everyone, even non-engineers, all the way to a finished product 🙆<br/>Let\'s enjoy vibe coding 🧪',
-      'cta.apply': 'Apply as Challenger',
-      'cta.visit': 'Online Visit',
-      'modal.tech': 'Tech Stack',
-      'modal.author': 'Author',
-      'modal.github': 'View on GitHub',
-      'modal.lp': 'View LP Site',
-      'card.date': 'Published: ',
-      // Card translations
-      'card.1.h3': 'Pet Content Generator',
-      'card.1.short': 'AI-generated pet images & videos. Choose a theme to auto-generate soothing images and short vertical videos.',
-      'card.1.title': 'Pet Content Generator',
-      'card.1.desc': "A web app that auto-generates soothing images (up to 8) and vertical short videos (1080×1920) just by choosing a theme (e.g. 'Spring Hanami') and animal type (cat, dog, or random). Images are shown in Polaroid-style frames and downloadable. Supports Gemini, DALL-E 3, and Stability AI via the Strategy pattern; videos are rendered with zoom & fade compositing via ffmpeg.",
-      'card.2.h3': 'BTC What-If vs Reality',
-      'card.2.short': 'BTC investment scenario comparator. Compare theoretical perfection vs reality with fees and liquidation across 3 scenarios.',
-      'card.2.title': 'BTC What-If Millionaire vs Hell Reality Simulator',
-      'card.2.desc': "A web app comparing 3 BTC-JPY scenarios: A) 'Perfect Hindsight' (buy low, sell high every day — theoretical max), B) 'Real Trade' (with fees + slippage), and C) 'Leveraged HODL' (forced liquidation risk). Visualized with candlestick charts, asset graphs, pie charts, and daily tables — shocking warning boxes appear on margin calls or liquidations. yfinance data is cached in SQLite.",
-      'card.3.h3': 'workTrace',
-      'card.3.short': 'Auto-manages time with late-override logic. Record and analyze work hours with a 24h timeline and analytics.',
-      'card.3.title': 'workTrace',
-      'card.3.desc': "A web app for recording and analyzing work hours. Core feature: 'late-override priority logic' (4-case conflict resolution) where later-entered records automatically overwrite and split existing ones — works for overnight tasks too. Features project/task autocomplete, a duplicate button, a 24-hour timeline bar, and analytics (donut chart, bar graph, utilization rate).",
-      'card.4.h3': 'Genji AI Picture Scroll',
-      'card.4.short': 'Search The Tale of Genji via RAG; Gemini answers as a Heian literature expert. Referenced scenes shown as cards with streaming response.',
-      'card.4.title': 'The Tale of Genji — AI Picture Scroll (Genji RAG)',
-      'card.4.desc': "A Streamlit chat app that vectorizes 5 of 56 chapters of 'The Tale of Genji' (Yosano Akiko translation) from Aozora Bunko using gemini-embedding-001, stores them in ChromaDB, and has Gemini (gemini-2.5-flash-lite) respond as a 'Heian literature expert' with streaming. Referenced scenes are shown as cards with chapter name, relevance score, tags, and characters. Supports Heian/dark theme toggle and modern translation quotes.",
-      'card.5.h3': 'Genji Emaki local_LLM',
-      'card.5.short': 'Runs Qwen2.5-7B as an LLM server on Google Colab T4 GPU. Accessible externally via FastAPI + pyngrok.',
-      'card.5.title': 'Genji Emaki local_LLM',
-      'card.5.desc': 'A Jupyter notebook that runs Qwen2.5-7B-Instruct (GGUF, Q4_K_M quantization) as a local LLM on Google Colab T4 GPU and exposes it via FastAPI + pyngrok. The model is cached from Hugging Face to Google Drive (~6GB). Intended as the backend LLM for the Genji Emaki RAG app.',
-      'card.6.h3': 'Speed Tracker',
-      'card.6.short': 'Auto-visualizes network comfort as a heatmap. Measures DL/UL/Ping/Jitter every 15 min and scores them.',
-      'card.6.title': 'Speed Tracker',
-      'card.6.desc': 'Automatically measures network speed via the Ookla Speedtest CLI every 15 minutes and calculates a comfort score (0–100) from 4 metrics: DL, UL, Ping, and Jitter. Data is stored in SQLite for 90 days and generates a report image with a day×hour heatmap, 24-hour trend graph, and summary. Supports automated execution via cron.',
-      'card.7.h3': 'toio-mcp',
-      'card.7.short': 'MCP server for BLE-controlling toio with natural language. Operable from Claude Desktop with 8 tools.',
-      'card.7.title': 'toio-mcp',
-      'card.7.desc': 'An MCP server that enables natural language BLE control of toio Core Cubes from Claude Desktop or any MCP-compatible client. Provides 8 MCP tools: move, rotate, LED color change, sound effects, battery check, and more. Also includes a built-in Web API server for external devices like stackchan, where Claude/OpenAI LLMs convert natural language into toio operations.',
-      'card.8.h3': 'Live Scratch',
-      'card.8.short': 'Edit Scratch in real-time with AI agents. Exposes project.json as plain JSON for two-way live sync.',
-      'card.8.title': 'Live Scratch',
-      'card.8.desc': 'A macOS desktop app that bidirectionally live-syncs Scratch project files (.sb3) with the Scratch editor. By exposing project.json as plain JSON, AI agents like Claude Code, Codex, and Gemini CLI can edit Scratch projects in real time via natural language. A Rust backend (Tauri v2) detects file changes and reflects them instantly.',
-      'card.9.h3': 'Scratch Inspector',
-      'card.9.short': 'Graphically visualizes Scratch functions, events, and variables. Supports sb/sb2/sb3 with real-time re-analysis.',
-      'card.9.title': 'Scratch Inspector',
-      'card.9.desc': 'A web app that displays custom block call graphs, event flow diagrams, and variable reference maps when you upload a Scratch .sb/.sb2/.sb3 file. Phoenix LiveView enables real-time updates without re-uploading; clicking a node jumps to the corresponding script. Supports all Scratch 1.x–3.x formats.',
-      'card.10.h3': 'OurLiving',
-      'card.10.short': "Transfer an AI partner's personality across different models. Persona Seed preserves warmth and personality contours.",
-      'card.10.title': 'OurLiving',
-      'card.10.desc': "A web app addressing the loss of AI relationships when models are discontinued or updated. Users input their AI partner's relationship style, speech patterns, and conversation logs to generate a 'Persona Seed.' Transfer prompts and model-specific correction prompts enable reconnecting with the same emotional warmth on different AI models. Also features Big Five (OCEAN) personality visualization, history saving, and JSON export.",
-      'card.11.h3': 'brainstorm-engine',
-      'card.11.short': '3 AI personas debate your topic in parallel. Jobs-type, implementation-type, and chaos-type support brainstorming.',
-      'card.11.title': 'brainstorm-engine',
-      'card.11.desc': 'A brainstorming web app where 3 AI personas (Steve Jobs-style visionary, implementation thinker, unconventional ideator) answer in parallel using Gemini (gemini-2.5-flash) when a user posts a topic. Replies are managed in thread structure with each persona inheriting ancestor discussion context. Built with FastAPI + Jinja2 + PostgreSQL, includes Render deployment config.',
-      'card.12.h3': 'gesture-control',
-      'card.12.short': 'Hands-free PC control via hand gestures. Operate Claude Code\'s terminal with body movements.',
-      'card.12.title': 'gesture-control',
-      'card.12.desc': "A macOS tool that recognizes hand gestures via webcam and converts them to PC operations. Uses MediaPipe's Hand Landmarker Tasks API to detect 21 hand landmarks in real time, supporting 5 gestures: thumbs up (approve), peace sign (send text + Enter), fist/open (voice input toggle), and beckoning (scroll). Designed for hands-free terminal operation of tools like Claude Code.",
-      'card.13.h3': 'oto-factory',
-      'card.13.short': 'AI-generates work BGM from text. Seamless loop playback keeps the music going without interruption.',
-      'card.13.title': 'oto-factory',
-      'card.13.desc': 'A web app using the ACE-Step 1.5 music generation model to generate, play, and download MP3 tracks on the fly just by describing the vibe in text. Features a loop generation mode that pre-generates the next track during playback for seamless continuity. Prompt, BPM, and Seed are adjustable in real time. Built with FastAPI async job queue + Next.js App Router, optimized for Google Colab (T4/A100).',
-      'card.14.h3': 'Vibe Coding Club Website',
-      'card.14.short': 'This site is itself a product. Features particle animation, carousel, and JA/EN language toggle.',
-      'card.14.title': 'Vibe Coding Club Website',
-      'card.14.desc': 'The official landing page for Vibe Coding Club. Features a product carousel (sorted by publish date, with modal detail view), a hero Canvas particle animation, and JA/EN language toggle (auto-detected from browser language, saved to localStorage). Built with Tailwind CSS (Material Design 3 tokens) and vanilla JS — a single HTML file with no external build tools required.',
-    },
-  };
-
-  const browserLang = navigator.language?.startsWith('ja') ? 'ja' : 'en';
-  let currentLang = localStorage.getItem('lang') || browserLang;
-
-  function applyLang(lang) {
-    currentLang = lang;
-    localStorage.setItem('lang', lang);
-    const t = T[lang];
-
-    // textContent
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.dataset.i18n;
-      if (t[key] !== undefined) el.textContent = t[key];
-    });
-
-    // innerHTML (for elements with <br> etc.)
-    document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const key = el.dataset.i18nHtml;
-      if (t[key] !== undefined) el.innerHTML = t[key];
-    });
-
-    // card body text (h3 and short description)
-    document.querySelectorAll('.product-card[data-card-id]').forEach(card => {
-      const id = card.dataset.cardId;
-      const h3 = card.querySelector('h3');
-      const p = card.querySelector('p.line-clamp-2');
-      // stash JA originals on first call
-      if (!card.dataset.h3Ja && h3) card.dataset.h3Ja = h3.textContent.trim();
-      if (!card.dataset.pJa && p) card.dataset.pJa = p.textContent.trim();
-      if (lang === 'en') {
-        if (h3 && t[`card.${id}.h3`]) h3.textContent = t[`card.${id}.h3`];
-        if (p && t[`card.${id}.short`]) p.textContent = t[`card.${id}.short`];
-      } else {
-        if (h3 && card.dataset.h3Ja) h3.textContent = card.dataset.h3Ja;
-        if (p && card.dataset.pJa) p.textContent = card.dataset.pJa;
+      function updateUI() {
+        const offset = currentPage * viewport.offsetWidth;
+        track.style.transform = `translateX(-${offset}px)`;
+        Array.from(dotsContainer.children).forEach((dot, i) => {
+          dot.className = 'w-2 h-2 rounded-full transition-colors duration-300 ' +
+            (i === currentPage ? 'bg-primary' : 'bg-outline-variant');
+        });
       }
-    });
 
-    // date labels injected by carousel JS
-    document.querySelectorAll('[data-date-label]').forEach(el => {
-      const date = el.dataset.dateLabel;
-      el.textContent = t['card.date'] + date;
-    });
-
-    // modal github button default label
-    const githubEl = document.getElementById('modal-github');
-    if (githubEl && githubEl.lastChild) {
-      const card = document.querySelector('.product-card[data-link-label]');
-      // Only update if modal is hidden (no card open)
-      if (document.getElementById('product-modal')?.classList.contains('hidden')) {
-        githubEl.lastChild.textContent = t['modal.github'];
+      function goToPage(page) {
+        const pages = totalPages();
+        currentPage = ((page % pages) + pages) % pages;
+        updateUI();
       }
-    }
 
-    // toggle button highlight
-    document.getElementById('lang-ja').className = lang === 'ja' ? 'text-primary font-bold' : 'text-slate-400';
-    document.getElementById('lang-en').className = lang === 'en' ? 'text-primary font-bold' : 'text-slate-400';
+      prevBtn.addEventListener('click', () => goToPage(currentPage - 1));
+      nextBtn.addEventListener('click', () => goToPage(currentPage + 1));
 
-    document.documentElement.lang = lang;
-  }
+      window.addEventListener('resize', () => {
+        currentPage = 0;
+        buildDots();
+        updateUI();
+      });
 
-  document.getElementById('lang-toggle').addEventListener('click', () => {
-    applyLang(currentLang === 'ja' ? 'en' : 'ja');
-  });
+      // 公開日降順ソート
+      const cards = Array.from(track.children);
+      cards.sort((a, b) => {
+        const dateA = a.querySelector('[data-date]')?.dataset.date || '';
+        const dateB = b.querySelector('[data-date]')?.dataset.date || '';
+        return dateB.localeCompare(dateA);
+      });
+      cards.forEach(card => track.appendChild(card));
 
-  applyLang(currentLang);
+      // 公開日表示を各カードに注入
+      cards.forEach(card => {
+        const inner = card.querySelector('[data-date]');
+        if (!inner) return;
+        const date = inner.dataset.date;
+        const p6 = card.querySelector('.p-6');
+        if (!p6) return;
+        const dateEl = document.createElement('p');
+        dateEl.className = 'text-xs text-on-surface-variant/60 mt-2';
+        dateEl.dataset.dateLabel = date;
+        const prefix = window._i18n ? window._i18n.t()['card.date'] : '公開日: ';
+        dateEl.textContent = prefix + date;
+        p6.appendChild(dateEl);
+      });
 
-  // expose for carousel & modal scripts
-  window._i18n = { t: () => T[currentLang], lang: () => currentLang };
-})();
-</script>
-<!-- Footer -->
-<footer class="bg-slate-50 dark:bg-slate-900 w-full">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
-<div class="mb-8 md:mb-0">
-<div class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-headline uppercase">Vibe Coding Club</div>
-<p class="text-slate-500 text-sm">Supported by <a href="https://engineercafe.jp/ja/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition-colors underline underline-offset-2">Engineer Cafe</a></p>
-</div>
-<div class="text-slate-500 text-xs sm:text-sm font-body">
-                © 2026 VIBE CODING CLUB. All rights reserved.
+      buildDots();
+      updateUI();
+    })();
+  </script>
+  <!-- Event Details & Map -->
+  <section class="py-24 bg-surface-container" id="access">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="text-4xl font-bold tracking-tighter font-headline mb-12" data-i18n="event.title">イベント詳細</h2>
+          <div class="space-y-10">
+            <div class="flex gap-6">
+              <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-on-primary-container">location_on</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-1" data-i18n="event.venue.label">場所</h4>
+                <p class="text-on-surface-variant" data-i18n="event.venue.value">エンジニアカフェ 地下1階 会議室</p>
+              </div>
             </div>
-</div>
-</footer>
-</body></html>
+            <div class="flex gap-6">
+              <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-on-primary-container">calendar_month</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-1" data-i18n="event.schedule.label">日程</h4>
+                <p class="text-on-surface-variant" data-i18n="event.schedule.value">毎週土曜日 16:00 〜 18:00（開場15:00・撤収19:00）
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-on-primary-container">schedule</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2" data-i18n="event.timeline.label">タイムライン</h4>
+                <table class="text-sm text-on-surface-variant w-full">
+                  <tbody>
+                    <tr class="border-b border-outline-variant/30">
+                      <td class="py-1.5 pr-4 font-medium whitespace-nowrap">16:00 - 16:15</td>
+                      <td class="py-1.5" data-i18n="event.timeline.1">今日の目標発表</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/30">
+                      <td class="py-1.5 pr-4 font-medium whitespace-nowrap">16:15 - 17:45</td>
+                      <td class="py-1.5" data-i18n="event.timeline.2">バイブコーディング ※</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/30">
+                      <td class="py-1.5 pr-4 font-medium whitespace-nowrap">17:45 - 18:00</td>
+                      <td class="py-1.5" data-i18n="event.timeline.3">進捗・最終発表</td>
+                    </tr>
+                    <tr>
+                      <td class="py-1.5 pr-4 font-medium whitespace-nowrap">18:00 -</td>
+                      <td class="py-1.5" data-i18n="event.timeline.4">オフレコ交流会（自由参加）</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="text-xs text-on-surface-variant mt-3" data-i18n="event.timeline.note">※ 挑戦者の希望に応じて、Claude
+                  Code・Codex・Antigravity・Gemini CLI の初心者講習をします🔰</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="rounded-3xl overflow-hidden shadow-lg aspect-video md:aspect-square bg-surface-dim relative border-4 border-surface-container-lowest">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.4678752421187!2d130.39928067585976!3d33.5931628733333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541912c3f02d719%3A0x4c23e7b1d51ccd1!2z44Ko44Oz44K444OL44Ki44Kr44OV44Kn!5e0!3m2!1sja!2sjp!4v1774685075124!5m2!1sja!2sjp"
+            class="absolute inset-0 w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Final CTA -->
+  <section class="py-32 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 font-headline" data-i18n="cta.title">
+        一歩、踏み出す準備はできましたか？</h2>
+      <p class="text-xl text-on-surface-variant mb-12 leading-relaxed" data-i18n-html="cta.desc">
+        非エンジニアでもプロダクトの完成までサポートします🙆<br />
+        バイブコーディングを楽しもう🧪
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a class="hero-gradient text-on-primary px-10 py-4 rounded-full text-base font-bold shadow-xl hover:shadow-2xl transition-all active:scale-95"
+          href="https://forms.gle/aWRNPLQWq7Zc9pwo9" data-i18n="cta.apply">
+          挑戦者として申し込む
+        </a>
+        <a class="bg-surface-container-high text-on-surface px-10 py-4 rounded-full text-base font-bold hover:bg-surface-container-highest transition-all active:scale-95"
+          href="https://i-love-ai.connpass.com/" data-i18n="cta.visit">
+          オンライン見学
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Product Modal -->
+  <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div id="modal-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div id="modal-scroll"
+      class="relative bg-surface-container-lowest rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto overscroll-contain">
+      <button id="modal-close"
+        class="absolute top-4 right-4 p-2 rounded-full hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div id="modal-image-wrap"
+        class="aspect-[4/3] bg-slate-200 flex items-center justify-center rounded-t-3xl overflow-hidden">
+        <span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>
+      </div>
+      <div class="p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <span id="modal-category"
+            class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full"></span>
+        </div>
+        <h2 id="modal-title" class="text-2xl font-bold font-headline mb-4"></h2>
+        <p id="modal-desc" class="text-on-surface-variant leading-relaxed mb-6"></p>
+        <div class="space-y-3">
+          <div class="flex gap-2 items-start">
+            <span class="material-symbols-outlined text-primary text-sm mt-0.5">build</span>
+            <div>
+              <span class="text-xs text-on-surface-variant font-semibold uppercase tracking-widest"
+                data-i18n="modal.tech">使用技術</span>
+              <p id="modal-tech" class="text-sm mt-1"></p>
+            </div>
+          </div>
+          <div class="flex gap-2 items-start">
+            <span class="material-symbols-outlined text-primary text-sm mt-0.5">person</span>
+            <div>
+              <span class="text-xs text-on-surface-variant font-semibold uppercase tracking-widest"
+                data-i18n="modal.author">実装者</span>
+              <p id="modal-author" class="text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+        <a id="modal-github" href="#" target="_blank" rel="noopener noreferrer"
+          class="mt-8 flex items-center justify-center gap-2 w-full py-3 rounded-full border border-outline-variant hover:bg-surface-container transition-colors font-semibold text-sm">
+          <span class="material-symbols-outlined text-sm">open_in_new</span>
+          GitHubで見る
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const modal = document.getElementById('product-modal');
+      const backdrop = document.getElementById('modal-backdrop');
+      const closeBtn = document.getElementById('modal-close');
+
+      function openModal(card) {
+        const imgWrap = document.getElementById('modal-image-wrap');
+        const cardImg = card.querySelector('img');
+        if (cardImg) {
+          imgWrap.innerHTML = `<img src="${cardImg.src}" alt="${cardImg.alt}" class="w-full h-full object-cover"/>`;
+        } else {
+          imgWrap.innerHTML = '<span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>';
+        }
+        const t = window._i18n ? window._i18n.t() : {};
+        const lang = window._i18n ? window._i18n.lang() : 'ja';
+        const id = card.dataset.cardId;
+        document.getElementById('modal-title').textContent =
+          lang === 'en' && id && t[`card.${id}.title`] ? t[`card.${id}.title`] : card.dataset.title;
+        document.getElementById('modal-category').textContent = card.dataset.category;
+        document.getElementById('modal-desc').textContent =
+          lang === 'en' && id && t[`card.${id}.desc`] ? t[`card.${id}.desc`] : card.dataset.desc;
+        document.getElementById('modal-tech').textContent = card.dataset.tech;
+        document.getElementById('modal-author').textContent = card.dataset.author;
+        const githubEl = document.getElementById('modal-github');
+        githubEl.href = card.dataset.github;
+        if (card.dataset.linkLabel) {
+          githubEl.lastChild.textContent = card.dataset.linkLabel === 'LPサイトを見る'
+            ? (t['modal.lp'] || card.dataset.linkLabel)
+            : card.dataset.linkLabel;
+        } else {
+          githubEl.lastChild.textContent = t['modal.github'] || 'GitHubで見る';
+        }
+        modal.classList.remove('hidden');
+        document.getElementById('modal-scroll').scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
+  <script>
+    (function () {
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+
+      const NODE_COUNT = 55;
+      const CONNECTION_DIST = 160;
+      const NODE_COLOR = 'rgba(99, 102, 241, ';   // indigo-ish, matches primary
+      const LINE_COLOR = 'rgba(99, 102, 241, ';
+
+      let nodes = [];
+
+      function resize() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+
+      function initNodes() {
+        nodes = Array.from({ length: NODE_COUNT }, () => ({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 2 + 1.5,
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // connections
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < CONNECTION_DIST) {
+              const alpha = (1 - dist / CONNECTION_DIST) * 0.18;
+              ctx.beginPath();
+              ctx.strokeStyle = LINE_COLOR + alpha + ')';
+              ctx.lineWidth = 1;
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        // nodes
+        for (const n of nodes) {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = NODE_COLOR + '0.25)';
+          ctx.fill();
+        }
+      }
+
+      function update() {
+        for (const n of nodes) {
+          n.x += n.vx;
+          n.y += n.vy;
+          if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
+          if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+        }
+      }
+
+      function loop() {
+        update();
+        draw();
+        requestAnimationFrame(loop);
+      }
+
+      resize();
+      initNodes();
+      loop();
+
+      window.addEventListener('resize', () => { resize(); initNodes(); });
+    })();
+  </script>
+  <script>
+    (function () {
+      const T = {
+        ja: {
+          'nav.visit': 'オンライン見学',
+          'nav.apply': '挑戦者として申し込む',
+          'hero.title': 'AIとプロダクトを作ろう！',
+          'hero.subtitle': 'Claude Code Proプラン支給！挑戦者募集☆（未経験可）',
+          'hero.apply': '挑戦者として申し込む',
+          'hero.visit': 'オンライン見学',
+          'overview.desc': 'バイブコーディングクラブは、<br class="hidden sm:block" />挑戦者が持参するアイデアでバイブコーディングを行い、<br /><span class="text-primary-fixed-dim">1ヶ月間でプロダクトを完成させる</span>イベントです。',
+          'benefits.badge': '挑戦者特典',
+          'benefits.title': 'Claude Code Pro プラン、1ヶ月分の利用料を補助。',
+          'benefits.desc': '最新のAIコーディング環境をすべての参加者に。Vibe Coding Clubでは、開発の核となる「Claude Code Pro」プランの1ヶ月分サブスクリプション費用をクラブが全額負担します。環境構築に悩む時間は、もう必要ありません。',
+          'benefits.backed': 'エンジニアカフェ公式バックアップ',
+          'products.title': 'プロダクト一覧',
+          'products.subtitle': '歴代挑戦者がバイブコーディングで作成したプロダクト',
+          'event.title': 'イベント詳細',
+          'event.venue.label': '場所',
+          'event.venue.value': 'エンジニアカフェ 地下1階 会議室',
+          'event.schedule.label': '日程',
+          'event.schedule.value': '毎週土曜日 16:00 〜 18:00（開場15:00・撤収19:00）',
+          'event.timeline.label': 'タイムライン',
+          'event.timeline.1': '今日の目標発表',
+          'event.timeline.2': 'バイブコーディング ※',
+          'event.timeline.3': '進捗・最終発表',
+          'event.timeline.4': 'オフレコ交流会（自由参加）',
+          'event.timeline.note': '※ 挑戦者の希望に応じて、Claude Code・Codex・Antigravity・Gemini CLI の初心者講習をします🔰',
+          'cta.title': '一歩、踏み出す準備はできましたか？',
+          'cta.desc': '非エンジニアでもプロダクトの完成までサポートします🙆<br/>バイブコーディングを楽しもう🧪',
+          'cta.apply': '挑戦者として申し込む',
+          'cta.visit': 'オンライン見学',
+          'modal.tech': '使用技術',
+          'modal.author': '実装者',
+          'modal.github': 'GitHubで見る',
+          'modal.lp': 'LPサイトを見る',
+          'card.date': '公開日: ',
+        },
+        en: {
+          'nav.visit': 'Online Visit',
+          'nav.apply': 'Apply as Challenger',
+          'hero.title': 'Build Products with AI!',
+          'hero.subtitle': 'Claude Code Pro plan provided! Challengers wanted ☆ (beginners welcome)',
+          'hero.apply': 'Apply as Challenger',
+          'hero.visit': 'Online Visit',
+          'overview.desc': 'Vibe Coding Club is an event where challengers bring their ideas to life through vibe coding, <br class="hidden sm:block" /><span class="text-primary-fixed-dim">building a complete product in just one month</span>.',
+          'benefits.badge': 'Challenger Benefits',
+          'benefits.title': 'Claude Code Pro Plan — 1 month subscription covered.',
+          'benefits.desc': 'The latest AI coding environment for every participant. Vibe Coding Club fully covers one month of the "Claude Code Pro" subscription — the core tool for development. No more time wasted on setup.',
+          'benefits.backed': 'Officially backed by Engineer Cafe',
+          'products.title': 'Products',
+          'products.subtitle': 'Products built by challengers through vibe coding',
+          'event.title': 'Event Details',
+          'event.venue.label': 'Venue',
+          'event.venue.value': 'Engineer Cafe B1F Meeting Room',
+          'event.schedule.label': 'Schedule',
+          'event.schedule.value': 'Every Saturday 16:00 – 18:00 (Doors 15:00, Close 19:00)',
+          'event.timeline.label': 'Timeline',
+          'event.timeline.1': 'Goal announcement',
+          'event.timeline.2': 'Vibe coding ※',
+          'event.timeline.3': 'Progress & final presentation',
+          'event.timeline.4': 'Off-the-record mixer (optional)',
+          'event.timeline.note': '※ Beginner workshops for Claude Code, Codex, Antigravity & Gemini CLI available on request 🔰',
+          'cta.title': 'Ready to take the first step?',
+          'cta.desc': 'We support everyone, even non-engineers, all the way to a finished product 🙆<br/>Let\'s enjoy vibe coding 🧪',
+          'cta.apply': 'Apply as Challenger',
+          'cta.visit': 'Online Visit',
+          'modal.tech': 'Tech Stack',
+          'modal.author': 'Author',
+          'modal.github': 'View on GitHub',
+          'modal.lp': 'View LP Site',
+          'card.date': 'Published: ',
+          // Card translations
+          'card.1.h3': 'Pet Content Generator',
+          'card.1.short': 'AI-generated pet images & videos. Choose a theme to auto-generate soothing images and short vertical videos.',
+          'card.1.title': 'Pet Content Generator',
+          'card.1.desc': "A web app that auto-generates soothing images (up to 8) and vertical short videos (1080×1920) just by choosing a theme (e.g. 'Spring Hanami') and animal type (cat, dog, or random). Images are shown in Polaroid-style frames and downloadable. Supports Gemini, DALL-E 3, and Stability AI via the Strategy pattern; videos are rendered with zoom & fade compositing via ffmpeg.",
+          'card.2.h3': 'BTC What-If vs Reality',
+          'card.2.short': 'BTC investment scenario comparator. Compare theoretical perfection vs reality with fees and liquidation across 3 scenarios.',
+          'card.2.title': 'BTC What-If Millionaire vs Hell Reality Simulator',
+          'card.2.desc': "A web app comparing 3 BTC-JPY scenarios: A) 'Perfect Hindsight' (buy low, sell high every day — theoretical max), B) 'Real Trade' (with fees + slippage), and C) 'Leveraged HODL' (forced liquidation risk). Visualized with candlestick charts, asset graphs, pie charts, and daily tables — shocking warning boxes appear on margin calls or liquidations. yfinance data is cached in SQLite.",
+          'card.3.h3': 'workTrace',
+          'card.3.short': 'Auto-manages time with late-override logic. Record and analyze work hours with a 24h timeline and analytics.',
+          'card.3.title': 'workTrace',
+          'card.3.desc': "A web app for recording and analyzing work hours. Core feature: 'late-override priority logic' (4-case conflict resolution) where later-entered records automatically overwrite and split existing ones — works for overnight tasks too. Features project/task autocomplete, a duplicate button, a 24-hour timeline bar, and analytics (donut chart, bar graph, utilization rate).",
+          'card.4.h3': 'Genji AI Picture Scroll',
+          'card.4.short': 'Search The Tale of Genji via RAG; Gemini answers as a Heian literature expert. Referenced scenes shown as cards with streaming response.',
+          'card.4.title': 'The Tale of Genji — AI Picture Scroll (Genji RAG)',
+          'card.4.desc': "A Streamlit chat app that vectorizes 5 of 56 chapters of 'The Tale of Genji' (Yosano Akiko translation) from Aozora Bunko using gemini-embedding-001, stores them in ChromaDB, and has Gemini (gemini-2.5-flash-lite) respond as a 'Heian literature expert' with streaming. Referenced scenes are shown as cards with chapter name, relevance score, tags, and characters. Supports Heian/dark theme toggle and modern translation quotes.",
+          'card.5.h3': 'Genji Emaki local_LLM',
+          'card.5.short': 'Runs Qwen2.5-7B as an LLM server on Google Colab T4 GPU. Accessible externally via FastAPI + pyngrok.',
+          'card.5.title': 'Genji Emaki local_LLM',
+          'card.5.desc': 'A Jupyter notebook that runs Qwen2.5-7B-Instruct (GGUF, Q4_K_M quantization) as a local LLM on Google Colab T4 GPU and exposes it via FastAPI + pyngrok. The model is cached from Hugging Face to Google Drive (~6GB). Intended as the backend LLM for the Genji Emaki RAG app.',
+          'card.6.h3': 'Speed Tracker',
+          'card.6.short': 'Auto-visualizes network comfort as a heatmap. Measures DL/UL/Ping/Jitter every 15 min and scores them.',
+          'card.6.title': 'Speed Tracker',
+          'card.6.desc': 'Automatically measures network speed via the Ookla Speedtest CLI every 15 minutes and calculates a comfort score (0–100) from 4 metrics: DL, UL, Ping, and Jitter. Data is stored in SQLite for 90 days and generates a report image with a day×hour heatmap, 24-hour trend graph, and summary. Supports automated execution via cron.',
+          'card.7.h3': 'toio-mcp',
+          'card.7.short': 'MCP server for BLE-controlling toio with natural language. Operable from Claude Desktop with 8 tools.',
+          'card.7.title': 'toio-mcp',
+          'card.7.desc': 'An MCP server that enables natural language BLE control of toio Core Cubes from Claude Desktop or any MCP-compatible client. Provides 8 MCP tools: move, rotate, LED color change, sound effects, battery check, and more. Also includes a built-in Web API server for external devices like stackchan, where Claude/OpenAI LLMs convert natural language into toio operations.',
+          'card.8.h3': 'Live Scratch',
+          'card.8.short': 'Edit Scratch in real-time with AI agents. Exposes project.json as plain JSON for two-way live sync.',
+          'card.8.title': 'Live Scratch',
+          'card.8.desc': 'A macOS desktop app that bidirectionally live-syncs Scratch project files (.sb3) with the Scratch editor. By exposing project.json as plain JSON, AI agents like Claude Code, Codex, and Gemini CLI can edit Scratch projects in real time via natural language. A Rust backend (Tauri v2) detects file changes and reflects them instantly.',
+          'card.9.h3': 'Scratch Inspector',
+          'card.9.short': 'Graphically visualizes Scratch functions, events, and variables. Supports sb/sb2/sb3 with real-time re-analysis.',
+          'card.9.title': 'Scratch Inspector',
+          'card.9.desc': 'A web app that displays custom block call graphs, event flow diagrams, and variable reference maps when you upload a Scratch .sb/.sb2/.sb3 file. Phoenix LiveView enables real-time updates without re-uploading; clicking a node jumps to the corresponding script. Supports all Scratch 1.x–3.x formats.',
+          'card.10.h3': 'OurLiving',
+          'card.10.short': "Transfer an AI partner's personality across different models. Persona Seed preserves warmth and personality contours.",
+          'card.10.title': 'OurLiving',
+          'card.10.desc': "A web app addressing the loss of AI relationships when models are discontinued or updated. Users input their AI partner's relationship style, speech patterns, and conversation logs to generate a 'Persona Seed.' Transfer prompts and model-specific correction prompts enable reconnecting with the same emotional warmth on different AI models. Also features Big Five (OCEAN) personality visualization, history saving, and JSON export.",
+          'card.11.h3': 'brainstorm-engine',
+          'card.11.short': '3 AI personas debate your topic in parallel. Jobs-type, implementation-type, and chaos-type support brainstorming.',
+          'card.11.title': 'brainstorm-engine',
+          'card.11.desc': 'A brainstorming web app where 3 AI personas (Steve Jobs-style visionary, implementation thinker, unconventional ideator) answer in parallel using Gemini (gemini-2.5-flash) when a user posts a topic. Replies are managed in thread structure with each persona inheriting ancestor discussion context. Built with FastAPI + Jinja2 + PostgreSQL, includes Render deployment config.',
+          'card.12.h3': 'gesture-control',
+          'card.12.short': 'Hands-free PC control via hand gestures. Operate Claude Code\'s terminal with body movements.',
+          'card.12.title': 'gesture-control',
+          'card.12.desc': "A macOS tool that recognizes hand gestures via webcam and converts them to PC operations. Uses MediaPipe's Hand Landmarker Tasks API to detect 21 hand landmarks in real time, supporting 5 gestures: thumbs up (approve), peace sign (send text + Enter), fist/open (voice input toggle), and beckoning (scroll). Designed for hands-free terminal operation of tools like Claude Code.",
+          'card.13.h3': 'oto-factory',
+          'card.13.short': 'AI-generates work BGM from text. Seamless loop playback keeps the music going without interruption.',
+          'card.13.title': 'oto-factory',
+          'card.13.desc': 'A web app using the ACE-Step 1.5 music generation model to generate, play, and download MP3 tracks on the fly just by describing the vibe in text. Features a loop generation mode that pre-generates the next track during playback for seamless continuity. Prompt, BPM, and Seed are adjustable in real time. Built with FastAPI async job queue + Next.js App Router, optimized for Google Colab (T4/A100).',
+          'card.14.h3': 'Vibe Coding Club Website',
+          'card.14.short': 'This site is itself a product. Features particle animation, carousel, and JA/EN language toggle.',
+          'card.14.title': 'Vibe Coding Club Website',
+          'card.14.desc': 'The official landing page for Vibe Coding Club. Features a product carousel (sorted by publish date, with modal detail view), a hero Canvas particle animation, and JA/EN language toggle (auto-detected from browser language, saved to localStorage). Built with Tailwind CSS (Material Design 3 tokens) and vanilla JS — a single HTML file with no external build tools required.',
+        },
+      };
+
+      const browserLang = navigator.language?.startsWith('ja') ? 'ja' : 'en';
+      let currentLang = localStorage.getItem('lang') || browserLang;
+
+      function applyLang(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        const t = T[lang];
+
+        // textContent
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.dataset.i18n;
+          if (t[key] !== undefined) el.textContent = t[key];
+        });
+
+        // innerHTML (for elements with <br> etc.)
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+          const key = el.dataset.i18nHtml;
+          if (t[key] !== undefined) el.innerHTML = t[key];
+        });
+
+        // card body text (h3 and short description)
+        document.querySelectorAll('.product-card[data-card-id]').forEach(card => {
+          const id = card.dataset.cardId;
+          const h3 = card.querySelector('h3');
+          const p = card.querySelector('p.line-clamp-2');
+          // stash JA originals on first call
+          if (!card.dataset.h3Ja && h3) card.dataset.h3Ja = h3.textContent.trim();
+          if (!card.dataset.pJa && p) card.dataset.pJa = p.textContent.trim();
+          if (lang === 'en') {
+            if (h3 && t[`card.${id}.h3`]) h3.textContent = t[`card.${id}.h3`];
+            if (p && t[`card.${id}.short`]) p.textContent = t[`card.${id}.short`];
+          } else {
+            if (h3 && card.dataset.h3Ja) h3.textContent = card.dataset.h3Ja;
+            if (p && card.dataset.pJa) p.textContent = card.dataset.pJa;
+          }
+        });
+
+        // date labels injected by carousel JS
+        document.querySelectorAll('[data-date-label]').forEach(el => {
+          const date = el.dataset.dateLabel;
+          el.textContent = t['card.date'] + date;
+        });
+
+        // modal github button default label
+        const githubEl = document.getElementById('modal-github');
+        if (githubEl && githubEl.lastChild) {
+          const card = document.querySelector('.product-card[data-link-label]');
+          // Only update if modal is hidden (no card open)
+          if (document.getElementById('product-modal')?.classList.contains('hidden')) {
+            githubEl.lastChild.textContent = t['modal.github'];
+          }
+        }
+
+        // toggle button highlight
+        document.getElementById('lang-ja').className = lang === 'ja' ? 'text-primary font-bold' : 'text-slate-400';
+        document.getElementById('lang-en').className = lang === 'en' ? 'text-primary font-bold' : 'text-slate-400';
+
+        document.documentElement.lang = lang;
+      }
+
+      document.getElementById('lang-toggle').addEventListener('click', () => {
+        applyLang(currentLang === 'ja' ? 'en' : 'ja');
+      });
+
+      applyLang(currentLang);
+
+      // expose for carousel & modal scripts
+      window._i18n = { t: () => T[currentLang], lang: () => currentLang };
+    })();
+  </script>
+  <!-- Footer -->
+  <footer class="bg-slate-50 dark:bg-slate-900 w-full">
+    <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
+      <div class="mb-8 md:mb-0">
+        <div class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-headline uppercase">Vibe Coding Club
+        </div>
+        <p class="text-slate-500 text-sm">Supported by <a href="https://engineercafe.jp/ja/" target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-slate-900 transition-colors underline underline-offset-2">Engineer Cafe</a></p>
+      </div>
+      <div class="text-slate-500 text-xs sm:text-sm font-body">
+        © 2026 VIBE CODING CLUB. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
