@@ -110,6 +110,17 @@
     .logo-breathe {
       animation: logo-breathe 3.5s ease-in-out infinite;
     }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fade-in-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
@@ -204,7 +215,7 @@
   <!-- Overview Section -->
   <section class="py-32 hero-gradient shadow-inner relative overflow-hidden" id="overview">
     <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-      <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-loose md:leading-relaxed text-white font-headline tracking-tighter"
+      <p class="fade-in-up text-2xl sm:text-3xl md:text-4xl font-extrabold leading-loose md:leading-relaxed text-white font-headline tracking-tighter"
         data-i18n-html="overview.desc" style="line-break: strict; overflow-wrap: anywhere;">
         バイブコーディングクラブは、<br class="hidden sm:block" />
         挑戦者が持参するアイデアでバイブコーディングを行い、<br />
@@ -1160,6 +1171,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    (function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    })();
+  </script>
 </body>
 
 </html>
