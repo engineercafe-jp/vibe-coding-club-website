@@ -16,7 +16,75 @@
 - **登録日時**: YYYY-MM-DD
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/...
 - **GitHub URL**: https://github.com/...
+- **デモURL**: https://...
 ```
+
+最新のプロダクトから記載する。
+
+---
+
+## みえるタイマー
+
+- **概要**: タスクカテゴリ選択付きのアナログカウントダウンタイマー
+- **詳細**: 円形のアナログUIでカウントダウンを可視化するタイマーWebアプリ。5・15・25・45・60分の時間プリセットと、勉強・仕事・休憩・読書・掃除・散歩・食事・その他の8カテゴリを選択でき、タスク名も任意入力できる。進捗が円の外縁で視覚的にわかる設計で、PWAとして端末にインストール可能。Vercelにデプロイ済み。
+- **使用技術**: TypeScript, HTML, CSS, JavaScript
+- **実装者**: hironari-taira
+- **登録日時**: 2026-05-05
+- **フォーク済みGitHub URL**: 非公開
+- **GitHub URL**: https://github.com/hironari-taira/mieruka-timer
+- **デモURL**: https://mieruka-timer.vercel.app/
+
+---
+
+## PILATES+
+
+- **概要**: AI姿勢診断とスタンプ制ワークで継続できるピラティスアプリ
+- **詳細**: MediaPipeの姿勢推定とスマホのジャイロセンサー・カメラガイドで骨格を予測し、猫背・スマホ首などの姿勢タイプを自動診断できるモバイルWebアプリ。トレーニング前後の写真比較保存、ジョイントバイジョイント理論に基づく姿勢タイプ別の筋肉情報表示、YouTubeレッスン動画との連携も備える。ワーク画面では呼吸・ロールダウン・マーメイドなど7種目のスタンプ制トレーニングで達成感を演出し、連続日数・累計回数・平均スコアをホーム画面のトレーニングログで確認できる。目標設定（MY GOAL）機能も搭載。Vercelにデプロイ済み。
+- **使用技術**: TypeScript, HTML, CSS, JavaScript
+- **実装者**: R.K
+- **登録日時**: 2026-05-05
+- **フォーク済みGitHub URL**: 非公開
+- **GitHub URL**: 非公開
+- **デモURL**: https://pilates-deploy.vercel.app/
+
+---
+
+## AIアシスト型 学習・ナレッジベース蓄積アプリ
+
+- **概要**: 書籍をAIと対話しながら学びナレッジを蓄積するPOCアプリ
+- **詳細**: 書籍『LLMs from Scratch』のコードを参照しながらAIと対話し、学んだ内容をナレッジとして蓄積するPOCアプリ。3ペイン構成のUIで、左ペインの章ツリーから書籍コンテンツを選択し、中央ペインでメモ・コードを確認、右ペインのAIチャットで質問できる。AIの回答はナレッジとして保存・検索でき、EnsembleRetriever（BM25 + Chroma）を使ったCorrective RAGで精度の高い検索を実現。書籍コンテンツ用の静的Chromaインデックスとユーザー記録用の動的Chromaインデックスを分けて管理する。LLMはTailscale VPN経由で自宅サーバーのOllamaに接続し、WSL2（Ubuntu 24.04）上で動作する。
+- **使用技術**: TypeScript, Next.js, Tailwind CSS, shadcn/ui, Python, FastAPI, SQLAlchemy, SQLite, LangChain, LangGraph, ChromaDB, Ollama (gemma4)
+- **実装者**: umino-tori
+- **登録日時**: 2026-05-05
+- **フォーク済みGitHub URL**: https://github.com/engineercafe-jp/ai-benkyo-knowledge
+- **GitHub URL**: https://github.com/umino-tori/ai-benkyo-knowledge
+- **デモURL**: 非公開
+
+---
+
+## muu-cms
+
+- **概要**: スキーマ定義からコンテンツAPIを公開するセルフホスト型ヘッドレスCMS
+- **詳細**: ユーザーが「モノ（コンテンツ型）」のスキーマ（スペック・パラメータ）を定義し、コンテンツをGET APIとして公開できるセルフホスティング型ヘッドレスCMS。OSSとしてレンタルサーバーからPaaSまで幅広く動作することを目標とする。管理単位は「ハコ → モノ → コンテンツ」の階層で整理され、モノは「ひとつ（シングルトン）」と「たくさん（コレクション）」の2タイプを持つ。認証はパスキーをプライマリとし、メールアドレス＋パスワードでリカバリ可能。MVPはシングル管理者ユーザー・文字列型パラメータ・GET APIの公開に絞り、将来の複数ユーザー対応を見据えたDB設計を採用。Docker Compose（PHP/Laravel + Nginx + MySQL 8）で開発環境を構築し、本番はSQLite・Turso（LibSQL）にも対応する。
+- **使用技術**: PHP, Laravel, Inertia.js, React, Tailwind CSS, Nginx, MySQL 8, SQLite, Docker
+- **実装者**: oonawa
+- **登録日時**: 2026-05-05
+- **フォーク済みGitHub URL**: https://github.com/engineercafe-jp/muu-cms
+- **GitHub URL**: https://github.com/oonawa/muu-cms
+- **デモURL**: 非公開
+
+---
+
+## MetalVoice
+
+- **概要**: 話すだけでトレーニング記録が完了する音声入力アプリ
+- **詳細**: 「話すだけで記録完了。手動入力もノートも不要」というコンセプトで、「ベンチプレス 60キロ 10回 3セット」のような自然な話し方でトレーニング内容を記録できるAndroidアプリ。AIが種目・重量・回数・セット数を自動解析し、自重トレーニング・ウェイト・有酸素運動の全ジャンルに対応。種目別に整理・分類された記録を一箇所で管理・比較できる。2026年5月頃のテスト運用を予定しており、メールアドレス登録で無料参加可能。LPはNext.js + TypeScriptで構築しVercelにデプロイ。
+- **使用技術**: Expo / React Native for Android, Next.js, TypeScript, Whisper
+- **実装者**: Shuheitkhs
+- **登録日時**: 2026-05-05
+- **フォーク済みGitHub URL**: https://github.com/engineercafe-jp/metalvoice-lp
+- **GitHub URL**: https://github.com/Shuheitkhs/metalvoice-lp
+- **デモURL**: https://metalvoice-lp.vercel.app/
 
 ---
 
@@ -27,7 +95,9 @@
 - **使用技術**: HTML, Tailwind CSS, JavaScript (Vanilla)
 - **実装者**: engineercafe-jp
 - **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: なし
 - **GitHub URL**: https://github.com/engineercafe-jp/vibe-coding-club-website
+- **デモURL**: https://engineercafe-jp.github.io/vibe-coding-club-website/
 
 ---
 
@@ -38,7 +108,9 @@
 - **使用技術**: Python 3.11, uv, FastAPI, Next.js, ACE-Step 1.5, Pydantic, CUDA / MPS / CPU
 - **実装者**: engineercafe-jp
 - **登録日時**: 2026-04-04
+- **フォーク済みGitHub URL**: なし
 - **GitHub URL**: https://github.com/engineercafe-jp/oto-factory
+- **デモURL**: 非公開
 
 ---
 
@@ -51,6 +123,7 @@
 - **登録日時**: 2026-04-04
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/brainstorm-engine-
 - **GitHub URL**: https://github.com/hirokazunakagawa1234-ui/brainstorm-engine-
+- **デモURL**: 非公開
 
 ---
 
@@ -63,6 +136,7 @@
 - **登録日時**: 2026-04-04
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/gesture-control
 - **GitHub URL**: https://github.com/k-kura84/gesture-control
+- **デモURL**: 非公開
 
 ---
 
@@ -75,6 +149,7 @@
 - **登録日時**: 2026-04-04
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/toio-mcp
 - **GitHub URL**: https://github.com/u-akira/toio-mcp
+- **デモURL**: 非公開
 
 ---
 
@@ -87,6 +162,7 @@
 - **登録日時**: 2026-04-04
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/live-scratch
 - **GitHub URL**: https://github.com/u-akira/live-scratch
+- **デモURL**: 非公開
 
 ---
 
@@ -99,6 +175,7 @@
 - **登録日時**: 2026-04-04
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/scratch-inspector
 - **GitHub URL**: https://github.com/u-akira/scratch-inspector
+- **デモURL**: 非公開
 
 ---
 
@@ -111,6 +188,7 @@
 - **登録日時**: 2026-04-04
 - **フォーク済みGitHub URL**: 非公開
 - **GitHub URL**: https://github.com/affectionate-insight-lab/Our-Living
+- **デモURL**: https://our-living.vercel.app/
 
 ---
 
@@ -123,6 +201,7 @@
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/pet_content_generater
 - **GitHub URL**: https://github.com/dssakamoto/pet_content_generater
+- **デモURL**: 非公開
 
 ---
 
@@ -135,6 +214,7 @@
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/bitc-tarareba
 - **GitHub URL**: https://github.com/umino-tori/bitc-tarareba
+- **デモURL**: 非公開
 
 ---
 
@@ -147,6 +227,7 @@
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/worktrace
 - **GitHub URL**: https://github.com/umino-tori/worktrace
+- **デモURL**: 非公開
 
 ---
 
@@ -159,6 +240,7 @@
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/genji-emaki
 - **GitHub URL**: https://github.com/umino-tori/genji-emaki
+- **デモURL**: 非公開
 
 ---
 
@@ -171,14 +253,16 @@
 - **登録日時**: 2026-03-01
 - **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/genji-emaki_google-colab
 - **GitHub URL**: https://github.com/umino-tori/genji-emaki_google-colab
+- **デモURL**: 非公開
 
 ---
 
 ## Speed Tracker
 
 - **概要**: 回線快適度をヒートマップで可視化する自動監視ツール
-- **詳細**: エンジニアカフェの回線速度をOokla Speedtest CLIで15分ごとに自動計測し、ダウンロード・アップロード・Ping・Jitterの4指標から快適度スコア（0〜100）を算出するWebアプリ。計測データはSQLiteに90日間保存し、曜日×時間帯のヒートマップ・直近24時間の速度推移グラフ・傾向サマリを1枚の画像にまとめて生成する。開館時間（9:00〜22:00）に絞った集計で、各指標の重みや閾値・開館時間はconfig.yamlで調整可能。cronによる自動実行に対応し、運用スクリプト・テストコードも整備されている。
+- **詳細**: エンジニアカフェの回線速度を Ookla Speedtest CLIで15分ごとに自動計測し、ダウンロード・アップロード・Ping・Jitterの4指標から快適度スコア（0〜100）を算出するWebアプリ。計測データはSQLiteに90日間保存し、曜日×時間帯のヒートマップ・直近24時間の速度推移グラフ・傾向サマリを1枚の画像にまとめて生成する。開館時間（9:00〜22:00）に絞った集計で、各指標の重みや閾値・開館時間はconfig.yamlで調整可能。cronによる自動実行に対応し、運用スクリプト・テストコードも整備されている。
 - **使用技術**: Python 3.12, uv, Ookla Speedtest CLI, SQLite, matplotlib, seaborn, numpy, PyYAML, pytest
 - **実装者**: engineercafe-jp
 - **登録日時**: 2026-03-01
 - **GitHub URL**: https://github.com/engineercafe-jp/speed-tracker
+- **デモURL**: 非公開
