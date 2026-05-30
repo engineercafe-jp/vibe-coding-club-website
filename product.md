@@ -23,6 +23,58 @@
 
 ---
 
+## 保育士試験一問一答
+
+- **概要**: 保育士試験対策の一問一答Webアプリ
+- **詳細**: 「保育の心理学」「保育原理」「子ども家庭福祉」などの科目に対応した、保育士試験対策の一問一答Webアプリ。テーマ別に問題を選択して解き進める形式で、正誤判定や解説表示、進捗状況（プログレスバー）の確認機能を備える。選択肢のランダムシャッフル機能もあり、効率的な知識定着をサポートする。外部フレームワークを使用せず、HTML、CSS、Vanilla JavaScriptによる単一ファイルで構成されている。
+- **使用技術**: HTML, CSS, JavaScript (Vanilla)
+- **実装者**: hamallergy
+- **登録日時**: 2026-05-30
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/-web-
+- **GitHub URL**: https://github.com/hamallergy/-web-
+- **デモURL**: 非公開
+
+---
+
+## TapCup
+
+- **概要**: NFC対応のBase44コーヒーアプリ
+- **詳細**: 消費者（consumer）と店舗（shop）のフローを持つBase44製コーヒーアプリ。NFCチップに保存された正規のTapCup URL（`personal_id`を含む）を読み取ることで、消費者プロファイルを解決する。ブラウザのNFC機能もオプションでサポートしている。ローカルプレビュー環境としてViteによる開発サーバー構成や、Caddyを用いたリバースプロキシ設定、本番環境向けのBase44デプロイフローが整備されている。
+- **使用技術**: Vite, Base44, Node.js
+- **実装者**: kistik1
+- **登録日時**: 2026-05-30
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/tapcup
+- **GitHub URL**: https://github.com/kistik1/tapcup
+- **デモURL**: https://tap-cup.base44.app/
+
+---
+
+## MTG JP Study
+
+- **概要**: MTGのカードで日本語を学習するアプリ
+- **詳細**: Magic: The Gatheringのカードを通じて日本語を学習するためのReact Nativeアプリ。カード名での検索やカメラでの実物スキャンに対応し、公式の日本語ルールテキストを色分けされたタップ可能なキーワード付きで表示する。キーワードをタップすると読み方（ふりがな）や英訳、使用例が確認できる対話型グロッサリーを搭載。カテゴリ別の用語集や、AnkiスタイルのSM-2アルゴリズムを用いた間隔反復（SRS）による単語帳学習機能も備え、カードゲームを通じた効率的な語学学習を支援する。
+- **使用技術**: React Native
+- **実装者**: flo-lan
+- **登録日時**: 2026-05-30
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/mtgjp
+- **GitHub URL**: https://github.com/flo-lan/mtgjp
+- **デモURL**: 非公開
+
+---
+
+## 投資アプリ
+
+- **概要**: 日本株投資を支援するスクリーニングアプリ
+- **詳細**: TOPIX Core30・Large70銘柄の投資判断をサポートするFlaskベースのWebアプリケーション。短期・中期・長期の3つの投資ロジックに基づき、全70銘柄をリアルタイムで自動スクリーニングしてスコアリング・分類する。ポートフォリオ管理機能では購入・ナンピン・売却の記録や損益計算が可能で、ナンピン水準や売り時のアラート通知にも対応。過去データを用いたバックテスト機能も備え、株式投資を多角的に支援する。
+- **使用技術**: Python, Flask, yfinance, pandas, Plotly, SQLite3, Bootstrap 5
+- **実装者**: sam1234gogo
+- **登録日時**: 2026-05-30
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/toushi_app
+- **GitHub URL**: https://github.com/sam1234gogo/toushi_app
+- **デモURL**: 非公開
+
+---
+
 ## みえるタイマー
 
 - **概要**: タスクカテゴリ選択付きのアナログカウントダウンタイマー
