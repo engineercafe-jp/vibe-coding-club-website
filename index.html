@@ -305,6 +305,48 @@
     <!-- Carousel -->
     <div class="overflow-hidden" id="carousel-viewport">
       <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
+        <!-- Card 25 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10 min-h-[260px] flex flex-col"
+            data-card-id="25" data-title="見える化タイマー2" data-category="Web App" data-author="hironari-taira"
+            data-tech="TypeScript, HTML, CSS, JavaScript, PWA, Google Tasks API, Google Calendar API, Vercel"
+            data-desc="「見える化タイマー」を改修し、作業名・作業タグ・実行中メモ・作業時間を記録できるようにした作業ログ対応版。タイマー終了後に開始時刻・終了時刻・作業時間・メモを「最近の作業ログ」としてブラウザ内に保存でき、予定より早く終わった作業も「完了して保存」可能。Google連携が使えない場合もローカル保存で利用でき、Google Tasksのnotesへのログ追記やGoogle Calendarへの作業時間登録にも対応する。Google連携は現在テストユーザー限定。"
+            data-github="https://mieruka-timer.vercel.app/" data-link-label="デモを見る" data-date="2026-06-30">
+            <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center overflow-hidden">
+              <span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex justify-between items-start mb-4 gap-3">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">見える化タイマー2</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">作業名・タグ・メモ・時間を保存できる作業ログ対応タイマー。ローカル保存とGoogle連携に対応。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 24 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10 min-h-[260px] flex flex-col"
+            data-card-id="24" data-title="Threads Auto" data-category="Web App" data-author="R.K"
+            data-tech="HTML, CSS, JavaScript (Vanilla), Google Sheets API, Threads API, Vercel Serverless Functions"
+            data-desc="Googleスプレッドシートをデータベースとして活用し、AIによるThreads向け投稿案の自動生成、ストック管理、承認、そしてThreads APIを利用した直接の投稿実行までをワンストップで実現する自動投稿・投稿管理システム。Vercel Serverless Functions経由で動作し、モバイルフレンドリーなUI設計とゲスト閲覧機能を備える。"
+            data-github="https://threads-deploy-sandy.vercel.app" data-link-label="デモを見る" data-date="2026-06-30">
+            <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center overflow-hidden">
+              <span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex justify-between items-start mb-4 gap-3">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0">Threads Auto</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Web App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2">Threads自動投稿・管理ツール。AIによる投稿案自動生成とThreadsへの直接投稿をサポート。</p>
+            </div>
+          </div>
+        </div>
         <!-- Card 1 -->
         <div class="flex-shrink-0 w-full md:w-1/3 px-3">
           <div
@@ -1068,13 +1110,12 @@
           imgWrap.innerHTML = '<span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>';
         }
         const t = window._i18n ? window._i18n.t() : {};
-        const lang = window._i18n ? window._i18n.lang() : 'ja';
         const id = card.dataset.cardId;
         document.getElementById('modal-title').textContent =
-          lang === 'en' && id && t[`card.${id}.title`] ? t[`card.${id}.title`] : card.dataset.title;
+          id && t[`card.${id}.title`] ? t[`card.${id}.title`] : card.dataset.title;
         document.getElementById('modal-category').textContent = card.dataset.category;
         document.getElementById('modal-desc').textContent =
-          lang === 'en' && id && t[`card.${id}.desc`] ? t[`card.${id}.desc`] : card.dataset.desc;
+          id && t[`card.${id}.desc`] ? t[`card.${id}.desc`] : card.dataset.desc;
         document.getElementById('modal-tech').textContent = card.dataset.tech;
         document.getElementById('modal-author').textContent = card.dataset.author;
         const githubEl = document.getElementById('modal-github');
@@ -1082,6 +1123,8 @@
         if (card.dataset.linkLabel) {
           githubEl.lastChild.textContent = card.dataset.linkLabel === 'LPサイトを見る'
             ? (t['modal.lp'] || card.dataset.linkLabel)
+            : card.dataset.linkLabel === 'デモを見る'
+              ? (t['modal.demo'] || card.dataset.linkLabel)
             : card.dataset.linkLabel;
         } else {
           githubEl.lastChild.textContent = t['modal.github'] || 'GitHubで見る';
@@ -1221,7 +1264,16 @@
           'modal.author': '実装者',
           'modal.github': 'GitHubで見る',
           'modal.lp': 'LPサイトを見る',
+          'modal.demo': 'デモを見る',
           'card.date': '公開日: ',
+          'card.24.h3': 'Threads Auto',
+          'card.24.short': 'Threads自動投稿・管理ツール。AIによる投稿案自動生成とThreadsへの直接投稿をサポート。',
+          'card.24.title': 'Threads Auto',
+          'card.24.desc': 'Googleスプレッドシートをデータベースとして活用し、AIによるThreads向け投稿案の自動生成、ストック管理、承認、そしてThreads APIを利用した直接の投稿実行までをワンストップで実現する自動投稿・投稿管理システム。Vercel Serverless Functions経由で動作し、モバイルフレンドリーなUI設計とゲスト閲覧機能を備える。',
+          'card.25.h3': '見える化タイマー2',
+          'card.25.short': '作業名・タグ・メモ・時間を保存できる作業ログ対応タイマー。ローカル保存とGoogle連携に対応。',
+          'card.25.title': '見える化タイマー2',
+          'card.25.desc': '「見える化タイマー」を改修し、作業名・作業タグ・実行中メモ・作業時間を記録できるようにした作業ログ対応版。タイマー終了後に開始時刻・終了時刻・作業時間・メモを「最近の作業ログ」としてブラウザ内に保存でき、予定より早く終わった作業も「完了して保存」可能。Google連携が使えない場合もローカル保存で利用でき、Google Tasksのnotesへのログ追記やGoogle Calendarへの作業時間登録にも対応する。Google連携は現在テストユーザー限定。',
         },
         en: {
           'nav.visit': 'Online Visit',
@@ -1257,6 +1309,7 @@
           'modal.author': 'Author',
           'modal.github': 'View on GitHub',
           'modal.lp': 'View LP Site',
+          'modal.demo': 'View Demo',
           'card.date': 'Published: ',
           // Card translations
           'card.1.h3': 'Pet Content Generator',
@@ -1351,6 +1404,14 @@
           'card.23.short': 'Stock screening app for Japanese stocks. Automatically classifies 70 stocks using 3 investment logics.',
           'card.23.title': 'Investment App',
           'card.23.desc': 'A Flask-based web application supporting investment decisions for TOPIX Core30 and Large70 stocks. It automatically screens, scores, and classifies all 70 stocks in real time based on short, medium, and long-term investment logics. Features portfolio management for recording purchases, averaging down, and sales with profit/loss calculation, plus alert notifications for buying/selling points. Includes a backtesting function using historical data to comprehensively support stock investing.',
+          'card.24.h3': 'Threads Auto',
+          'card.24.short': 'Auto-posts and manages Threads content. Automatically generates post ideas via AI, stores them in Google Sheets, and publishes to Threads.',
+          'card.24.title': 'Threads Auto',
+          'card.24.desc': 'A web application for auto-posting and managing Threads content. Using Google Sheets as a database, it automatically generates Threads post drafts (tailored to selected genres and target audiences) via AI (Vercel Serverless Functions), manages approval/deletion states, and publishes them directly to Threads via the Threads API. Fully responsive on mobile.',
+          'card.25.h3': 'Mieruka Timer 2',
+          'card.25.short': 'A work-log timer that saves task names, tags, notes, and time locally, with optional Google integration.',
+          'card.25.title': 'Mieruka Timer 2',
+          'card.25.desc': 'An upgraded version of Mieruka Timer with work-log features. It records task names, task tags, in-progress notes, and elapsed work time. After a timer ends, the start time, end time, duration, and notes are saved in the browser as recent work logs for later review. It works with local storage even when Google integration is unavailable, supports saving work that finishes earlier than planned, allows custom durations, and can append logs to Google Tasks notes or register work time in Google Calendar. Google integration is currently limited to test users because of OAuth review.',
         },
       };
 
@@ -1382,7 +1443,7 @@
           // stash JA originals on first call
           if (!card.dataset.h3Ja && h3) card.dataset.h3Ja = h3.textContent.trim();
           if (!card.dataset.pJa && p) card.dataset.pJa = p.textContent.trim();
-          if (lang === 'en') {
+          if (t[`card.${id}.h3`] || t[`card.${id}.short`]) {
             if (h3 && t[`card.${id}.h3`]) h3.textContent = t[`card.${id}.h3`];
             if (p && t[`card.${id}.short`]) p.textContent = t[`card.${id}.short`];
           } else {

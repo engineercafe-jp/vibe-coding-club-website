@@ -23,6 +23,32 @@
 
 ---
 
+## 見える化タイマー2
+
+- **概要**: 作業ログ対応の見える化タイマー
+- **詳細**: 「見える化タイマー」を改修し、作業名・作業タグ・実行中メモ・作業時間を記録できるようにした作業ログ対応版。タイマー終了後は開始時刻・終了時刻・作業時間・メモを「最近の作業ログ」としてブラウザ内に保存し、後から振り返れる。Google連携が使えない場合もローカル保存で利用でき、予定より早く終わった作業も「完了して保存」可能。詳細設定から任意分数の指定に対応し、Google Tasksのnotesへのログ追記やGoogle Calendarへの作業時間登録も設計。Google連携はOAuth審査の都合でテストユーザー限定。
+- **使用技術**: TypeScript, HTML, CSS, JavaScript, PWA, Google Tasks API, Google Calendar API, Vercel
+- **実装者**: hironari-taira
+- **登録日時**: 2026-06-30
+- **フォーク済みGitHub URL**: 非公開
+- **GitHub URL**: 非公開
+- **デモURL**: https://mieruka-timer.vercel.app/
+
+---
+
+## Threads Auto
+
+- **概要**: Threads自動投稿・投稿管理Webアプリ
+- **詳細**: Googleスプレッドシートをデータベースとして活用し、AI（Vercel Serverless Function経由）によるThreads向け投稿案（ジャンルやターゲットに応じた文面）の自動生成・ストック管理・承認・削除、そしてThreads APIを利用した直接の投稿実行までをカバーする自動投稿・投稿管理システム。認証機能も有し、ゲスト閲覧と管理者権限の切り替えが可能。PCからだけでなくモバイル（スマホ）向けレスポンシブデザインに最適化されている。
+- **使用技術**: HTML, CSS, JavaScript (Vanilla), Google Sheets API, Threads API, Vercel Serverless Functions
+- **実装者**: R.K
+- **登録日時**: 2026-06-30
+- **フォーク済みGitHub URL**: 非公開
+- **GitHub URL**: 非公開
+- **デモURL**: https://threads-deploy-sandy.vercel.app
+
+---
+
 ## 保育士試験一問一答
 
 - **概要**: 保育士試験対策の一問一答Webアプリ
