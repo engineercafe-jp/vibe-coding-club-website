@@ -23,6 +23,32 @@
 
 ---
 
+## FlexRoutine
+
+- **概要**: 予定が崩れても再開できるルーチンタイマー
+- **詳細**: 寝坊や急な予定変更でルーチンを完遂しにくい時に、やるべきことを減らしながら再開を助けるAndroid向けアプリ（MVP）。行動の優先度を「MUST_DO」「SHRINKABLE」「OPTIONAL」に分類し、緊急・時短モードで最低限の行動だけに絞ったプランを提案する。自動／手動進行や一時停止、実行履歴の保存、完了カードの画像共有機能などを備え、ExpoとSQLiteを用いて構築されている。
+- **使用技術**: Expo, React Native, TypeScript, SQLite
+- **実装者**: hironari-taira
+- **登録日時**: 2026-07-14
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/flexroutine
+- **GitHub URL**: https://github.com/hironari-taira/flexroutine
+- **デモURL**: 非公開
+
+---
+
+## SO-101 Sponge Pickup (ACT Policy)
+
+- **概要**: スポンジを掴んで箱に入れるロボットアーム制御
+- **詳細**: LeRobotフレームワークとSO-101ロボットアーム（フロント・天井の2カメラ構成）を用い、「スポンジを掴んで箱に入れる」タスクをACT (Action Chunking Transformer) ポリシーで学習・推論するプロジェクト。Hugging Face HubとGoogle Colabを活用してモデルを学習し、Jetson上（CPU）で自律的なピッキング推論を実行する。
+- **使用技術**: Python, LeRobot, PyTorch, OpenCV, SO-101
+- **実装者**: sam1234gogo
+- **登録日時**: 2026-07-14
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/so101_pickup_sponge
+- **GitHub URL**: https://github.com/sam1234gogo/so101_pickup_sponge
+- **デモURL**: https://huggingface.co/satoshi36/act-sponge-pickup-v2
+
+---
+
 ## 見える化タイマー2
 
 - **概要**: 作業ログ対応の見える化タイマー

@@ -305,6 +305,48 @@
     <!-- Carousel -->
     <div class="overflow-hidden" id="carousel-viewport">
       <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
+        <!-- Card 27 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10 min-h-[260px] flex flex-col"
+            data-card-id="27" data-title="FlexRoutine" data-category="Mobile App" data-author="hironari-taira"
+            data-tech="Expo, React Native, TypeScript, SQLite"
+            data-desc="寝坊や急な予定変更でルーチンを完遂しにくい時に、やるべきことを減らしながら再開を助けるAndroid向けアプリ（MVP）。行動の優先度を「MUST_DO」「SHRINKABLE」「OPTIONAL」に分類し、緊急・時短モードで最低限の行動だけに絞ったプランを提案する。自動／手動進行や一時停止、実行履歴の保存、完了カードの画像共有機能などを備え、ExpoとSQLiteを用いて構築されている。"
+            data-github="https://github.com/hironari-taira/flexroutine" data-link-label="GitHubで見る" data-date="2026-07-14">
+            <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center overflow-hidden">
+              <img src="asset/flexroutine.png" alt="FlexRoutine" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex justify-between items-start mb-4 gap-3">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0" data-i18n="card.27.h3">FlexRoutine</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Mobile App</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2" data-i18n="card.27.short">予定が崩れても再開できるルーチンタイマー</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 26 -->
+        <div class="flex-shrink-0 w-full md:w-1/3 px-3">
+          <div
+            class="product-card group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border border-outline-variant/10 min-h-[260px] flex flex-col"
+            data-card-id="26" data-title="SO-101 Sponge Pickup (ACT Policy)" data-category="Robotics" data-author="sam1234gogo"
+            data-tech="Python, LeRobot, PyTorch, OpenCV, SO-101"
+            data-desc="LeRobotフレームワークとSO-101ロボットアーム（フロント・天井の2カメラ構成）を用い、「スポンジを掴んで箱に入れる」タスクをACT (Action Chunking Transformer) ポリシーで学習・推論するプロジェクト。Hugging Face HubとGoogle Colabを活用してモデルを学習し、Jetson上（CPU）で自律的なピッキング推論を実行する。"
+            data-github="https://github.com/sam1234gogo/so101_pickup_sponge" data-link-label="GitHubで見る" data-date="2026-07-14">
+            <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center overflow-hidden">
+              <img src="asset/so101-pickup-sponge.png" alt="SO-101 Sponge Pickup" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex justify-between items-start mb-4 gap-3">
+                <h3 class="text-xl font-bold font-headline truncate min-w-0" data-i18n="card.26.h3">SO-101 Sponge Pickup</h3>
+                <span
+                  class="text-xs font-bold text-on-primary-fixed px-3 py-1 bg-primary-fixed rounded-full whitespace-nowrap">Robotics</span>
+              </div>
+              <p class="text-sm text-on-surface-variant line-clamp-2" data-i18n="card.26.short">スポンジを掴んで箱に入れるロボットアーム制御</p>
+            </div>
+          </div>
+        </div>
         <!-- Card 25 -->
         <div class="flex-shrink-0 w-full md:w-1/3 px-3">
           <div
@@ -314,7 +356,7 @@
             data-desc="「見える化タイマー」を改修し、作業名・作業タグ・実行中メモ・作業時間を記録できるようにした作業ログ対応版。タイマー終了後に開始時刻・終了時刻・作業時間・メモを「最近の作業ログ」としてブラウザ内に保存でき、予定より早く終わった作業も「完了して保存」可能。Google連携が使えない場合もローカル保存で利用でき、Google Tasksのnotesへのログ追記やGoogle Calendarへの作業時間登録にも対応する。Google連携は現在テストユーザー限定。"
             data-github="https://mieruka-timer.vercel.app/" data-link-label="デモを見る" data-date="2026-06-30">
             <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center overflow-hidden">
-              <span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>
+              <img src="asset/mieruka-timer-2.png" alt="見える化タイマー2" class="w-full h-full object-cover" />
             </div>
             <div class="p-6 flex flex-col flex-1">
               <div class="flex justify-between items-start mb-4 gap-3">
@@ -335,7 +377,7 @@
             data-desc="Googleスプレッドシートをデータベースとして活用し、AIによるThreads向け投稿案の自動生成、ストック管理、承認、そしてThreads APIを利用した直接の投稿実行までをワンストップで実現する自動投稿・投稿管理システム。Vercel Serverless Functions経由で動作し、モバイルフレンドリーなUI設計とゲスト閲覧機能を備える。"
             data-github="https://threads-deploy-sandy.vercel.app" data-link-label="デモを見る" data-date="2026-06-30">
             <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center overflow-hidden">
-              <span class="material-symbols-outlined text-slate-400 scale-[4]">image</span>
+              <img src="asset/threads-auto.png" alt="Threads Auto" class="w-full h-full object-cover" />
             </div>
             <div class="p-6 flex flex-col flex-1">
               <div class="flex justify-between items-start mb-4 gap-3">
@@ -1125,6 +1167,8 @@
             ? (t['modal.lp'] || card.dataset.linkLabel)
             : card.dataset.linkLabel === 'デモを見る'
               ? (t['modal.demo'] || card.dataset.linkLabel)
+            : card.dataset.linkLabel === 'GitHubで見る'
+              ? (t['modal.github'] || card.dataset.linkLabel)
             : card.dataset.linkLabel;
         } else {
           githubEl.lastChild.textContent = t['modal.github'] || 'GitHubで見る';
@@ -1274,6 +1318,14 @@
           'card.25.short': '作業名・タグ・メモ・時間を保存できる作業ログ対応タイマー。ローカル保存とGoogle連携に対応。',
           'card.25.title': '見える化タイマー2',
           'card.25.desc': '「見える化タイマー」を改修し、作業名・作業タグ・実行中メモ・作業時間を記録できるようにした作業ログ対応版。タイマー終了後に開始時刻・終了時刻・作業時間・メモを「最近の作業ログ」としてブラウザ内に保存でき、予定より早く終わった作業も「完了して保存」可能。Google連携が使えない場合もローカル保存で利用でき、Google Tasksのnotesへのログ追記やGoogle Calendarへの作業時間登録にも対応する。Google連携は現在テストユーザー限定。',
+          'card.26.h3': 'SO-101 Sponge Pickup',
+          'card.26.short': 'スポンジを掴んで箱に入れるロボットアーム制御',
+          'card.26.title': 'SO-101 Sponge Pickup (ACT Policy)',
+          'card.26.desc': 'LeRobotフレームワークとSO-101ロボットアーム（フロント・天井の2カメラ構成）を用い、「スポンジを掴んで箱に入れる」タスクをACT (Action Chunking Transformer) ポリシーで学習・推論するプロジェクト。Hugging Face HubとGoogle Colabを活用してモデルを学習し、Jetson上（CPU）で自律的なピッキング推論を実行する。',
+          'card.27.h3': 'FlexRoutine',
+          'card.27.short': '予定が崩れても再開できるルーチンタイマー',
+          'card.27.title': 'FlexRoutine',
+          'card.27.desc': '寝坊や急な予定変更でルーチンを完遂しにくい時に、やるべきことを減らしながら再開を助けるAndroid向けアプリ（MVP）。行動の優先度を「MUST_DO」「SHRINKABLE」「OPTIONAL」に分類し、緊急・時短モードで最低限の行動だけに絞ったプランを提案する。自動／手動進行や一時停止、実行履歴の保存、完了カードの画像共有機能などを備え、ExpoとSQLiteを用いて構築されている。',
         },
         en: {
           'nav.visit': 'Online Visit',
@@ -1412,6 +1464,14 @@
           'card.25.short': 'A work-log timer that saves task names, tags, notes, and time locally, with optional Google integration.',
           'card.25.title': 'Mieruka Timer 2',
           'card.25.desc': 'An upgraded version of Mieruka Timer with work-log features. It records task names, task tags, in-progress notes, and elapsed work time. After a timer ends, the start time, end time, duration, and notes are saved in the browser as recent work logs for later review. It works with local storage even when Google integration is unavailable, supports saving work that finishes earlier than planned, allows custom durations, and can append logs to Google Tasks notes or register work time in Google Calendar. Google integration is currently limited to test users because of OAuth review.',
+          'card.26.h3': 'SO-101 Sponge Pickup',
+          'card.26.short': 'Robotic arm control to pick up a sponge and place it in a box.',
+          'card.26.title': 'SO-101 Sponge Pickup (ACT Policy)',
+          'card.26.desc': 'A project using the LeRobot framework and SO-101 robotic arm (2-camera setup: front & top) to train and infer the task of "picking up a sponge and placing it in a box" using the ACT (Action Chunking Transformer) policy. It uses Hugging Face Hub and Google Colab for training, and performs autonomous picking inference on a Jetson (CPU).',
+          'card.27.h3': 'FlexRoutine',
+          'card.27.short': 'A routine timer that helps you resume even if your schedule is disrupted.',
+          'card.27.title': 'FlexRoutine',
+          'card.27.desc': 'An Android app (MVP) that helps you resume routines when you wake up late or have sudden schedule changes. It categorizes actions into "MUST_DO", "SHRINKABLE", and "OPTIONAL", suggesting a shortened plan with only the minimum required actions in emergency/shortcut mode. Features include auto/manual progression, pause, run history saving, and completion card image sharing. Built with Expo and SQLite.',
         },
       };
 
