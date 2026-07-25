@@ -23,6 +23,19 @@
 
 ---
 
+## Garmin Watchface Stress Cat
+
+- **概要**: ストレス値に応じた猫を表示
+- **詳細**: Garminスマートウォッチ用のConnect IQウォッチフェイス。ユーザーのストレススコアや歩数、心拍数、Body Battery、UVインデックスなどの生体・環境データを取得し、ストレス状態に応じて画面の猫のキャラクターが5段階の姿に変化する。画面には猫のアニメーションのほか、Body Batteryを表すリングや歩数などの情報も直感的に配置されている。Monkey Cで開発されており、動作確認用のデモモードも搭載。
+- **使用技術**: Monkey C, Connect IQ
+- **実装者**: maya0424
+- **登録日時**: 2026-07-25
+- **フォーク済みGitHub URL**: https://github.com/engineercafe-jp/garmin_watchface_stresscat
+- **GitHub URL**: https://github.com/engineercafe-jp/garmin_watchface_stresscat
+- **デモURL**: 非公開
+
+---
+
 ## ツウジルAI
 
 - **概要**: 会話サポート内容をRokidに表示
