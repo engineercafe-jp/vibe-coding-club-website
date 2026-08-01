@@ -23,6 +23,19 @@
 
 ---
 
+## Inquivora
+
+- **概要**: 会議・メモ・タスクを統合する業務アプリ
+- **詳細**: 会議の録音・文字起こし・AI議事録、メモ、タスク、カレンダー、通知、横断検索を一つにまとめたWindows向けローカルファースト・ワークスペース。会議ではマイクとPC音声を同時録音し、内蔵Whisperによるローカル文字起こし、またはChatGPT／Geminiを使った文字起こし・要約・決定事項・タスク候補の抽出に対応する。Monaco Editorによるメモ編集、期日・優先度・担当で管理できるタスク、月・週・日表示のカレンダーを備え、データは原則PC内に保存される。
+- **使用技術**: Tauri 2, React, TypeScript, Vite, Rust, SQLite (FTS5), .NET, Whisper.net, Monaco Editor, FullCalendar
+- **実装者**: miki-826
+- **登録日時**: 2026-08-01
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/Inquivora
+- **GitHub URL**: https://github.com/miki-826/Inquivora
+- **デモURL**: https://github.com/miki-826/Inquivora/releases/tag/v0.1.0-alpha.43
+
+---
+
 ## Garmin Watchface Stress Cat
 
 - **概要**: ストレス値に応じた猫を表示
