@@ -23,6 +23,19 @@
 
 ---
 
+## MiraiList
+
+- **概要**: アイデアを共有・育成する投稿プラットフォーム
+- **詳細**: アイデアの「種」を投稿し、タグによる分類、コメント、リアクションを通じてユーザー同士で育てるWebアプリ。メールアドレスとパスワードによるアカウント登録・ログインに対応し、投稿の作成・編集・削除、投稿詳細の閲覧、コメントの追加・編集・削除、リアクション、タグ別の絞り込み、ランキング表示を備える。プロフィール編集と管理者によるユーザー管理機能も提供する。
+- **使用技術**: TypeScript, React, Vite, Node.js, Express, PostgreSQL, Vercel, Render
+- **実装者**: yona-git1130
+- **登録日時**: 2026-08-29
+- **フォーク済みGitHub URL**: https://github.com/EngineerCafeJP/MiraiList
+- **GitHub URL**: https://github.com/yona-git1130/MiraiList
+- **デモURL**: https://idea-no-tane.vercel.app/login
+
+---
+
 ## landmark3d
 
 - **概要**: モーションキャプチャ座標の後処理ツール
